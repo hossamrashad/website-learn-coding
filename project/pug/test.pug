@@ -1,0 +1,84 @@
+include variables/variables.pug
+include mixin/mixin.pug
+doctype 
+html(lang="ar" dir="rtl" data-theme="light") 
+    html(lang="en" data-theme="light")
+    //- html(lang='ar' dir="rtl") 
+
+    head 
+        //- start head  
+        include head/head.pug
+
+        block pageTitle
+            title Test
+
+        block Bootstrap
+            //- Bootstrap 5.0.1 en
+            // Bootstrap 5.0.1 en
+            //- link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/bootstrap/bootstrap.min.css")
+            link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.min.css")
+
+        //- global framework
+        block Framework
+            link(rel="stylesheet" href="css/style.css")
+            link(rel="stylesheet" href="css/test.css")
+
+        //- Babel
+        //- script(src="https://unpkg.com/babel-standalone@6/babel.min.js")
+        //- script(src="https://babeljs.io/docs/setup/#babel_in_browser") 
+        //- script(src="js/libs/babel/browser.js") 
+        //- end head
+
+        body 
+            //- start body
+            include header/header.pug
+            
+            
+
+
+
+
+
+    //- +btnTow('read')
+    include footer/footer.pug
+
+
+
+
+    //- Start Global
+    include global/global.pug
+    //- End Global
+
+    //- Start Explain Jquery 
+    //- progress Bar
+    include progressBar/progressBar.pug
+
+
+
+
+
+
+
+
+    include fixedMenu/fixedMenu.pug
+    include script/script.pug
+
+    //- Javascript
+    script(src="js/js/js.js")
+    //- Jquery Tools
+    script(src="js/jquery/jquery.js")
+    //- Es6
+    script(src="js/es6/es6.js" type="text/babel")
+    //- script(src="js/es6/main.js" type="module")
+    //- script(src="js/es6/app.js" type="module")
+    //- script(src="js/React/React-Tool.js" type="text/babel")
+    //- Vue App
+    script(src="js/vue/vue-app.js" type="text/babel")
+    script(src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js")
+    script 
+        
+    //- Live Reload
+    script(src="http://localhost:35729/livereload.js")
+
+
+    //- end body

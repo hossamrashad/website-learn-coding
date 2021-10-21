@@ -1,0 +1,974 @@
+include variables/variables.pug
+include mixin/mixin.pug
+doctype 
+html(lang="ar" dir="rtl" data-theme="light") 
+    //- html(lang="en" data-theme="light")
+    //- html(lang='ar' dir="rtl") 
+
+    head 
+        //- start head  
+        include head/head.pug
+
+        block pageTitle
+            title Gulp
+
+        block Bootstrap
+            //- Bootstrap 5.0.1 ar
+            // Bootstrap 5.0.1 ar
+            //- link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/bootstrap/bootstrap.rtl.min.css")
+            link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.rtl.min.css")
+
+        //- global framework
+        block Framework
+            link(rel="stylesheet" href="css/style.css")
+        link(rel="stylesheet" href="css/gulp.css")
+
+        //- Babel
+        //- script(src="https://unpkg.com/babel-standalone@6/babel.min.js")
+        //- script(src="https://babeljs.io/docs/setup/#babel_in_browser") 
+        //- script(src="js/libs/babel/browser.js") 
+        //- end head
+
+        body 
+            //- start body
+            include header/header.pug
+            div(class='container-fluid')
+                div(class='row')
+                    div(class='grid-sm-2')
+                        img(src="images/gulp/1.png" alt="")
+                        img(src="images/gulp/2.png" alt="")
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 1 - انشاء ملاف المشروع
+                                textarea(class="form-control text-end copy")
+                                    |mkdir project-name
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 2 - الدخول جوة الفلدار المشروع
+                                textarea(class="form-control text-end copy")
+                                    |cd project-name
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 3 - قالب المشروع 
+                                textarea(class="form-control text-end copy")
+                                    |npm init
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul(class="grid-sm-2") 
+                                li package name
+                                li اسم المشروع
+                                li version 
+                                li enter
+                                li description 
+                                li واصف المشروع
+                                li entry point 
+                                li enter
+                                li test command
+                                li enter
+                                li git repository
+                                li enter
+                                li keywords
+                                li enter
+                                li author
+                                li Hossam Rashad
+                                li license 
+                                li enter
+                                li is this ok (yes)
+                                li enter
+
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 4 - تنزيل الجالب جلوبال فى النظام
+                                textarea(class="form-control text-end copy")
+                                    |npm i gulp -g
+
+
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 5 - تنزيل الجالب فى المشروع
+                                textarea(class="form-control text-end copy")
+                                    |npm i --save-dev gulp
+                                p(class='lead')  تنزيل الجالب فى  المشروع بي اصدار معين
+                                textarea(class="form-control text-end copy")
+                                    |npm i --save-dev gulp@3.9.1
+
+
+
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 6 - انشاء فولدار
+                                textarea(class="form-control text-end copy")
+                                    |project
+
+
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 7 - انشاء فولدار
+                                textarea(class="form-control text-end copy")
+                                    |dist
+
+
+
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 8 - انشاء ملاف
+                                textarea(class="form-control text-end copy")
+                                    |gulpfile.js
+
+
+
+
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 font-bold text-center") فى ملاف gulpfile.js
+
+
+
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 1 - بتستدعى الجالب 
+                                textarea(class="form-control text-end copy")
+                                    |var gulp = require("gulp");
+
+
+
+
+                    div(class='col-sm-8')
+                        div(class='explain')
+                            div(class='grid-sm-2')
+                                ul 
+                                    li اسم التاسك
+                                    li(class="mt-100")  
+                                        span(class='main-color') src
+                                        | اللى هو الملفات اللى انا هتشتغل عليها
+                                    li(class="mt-120") 
+                                        span(class='main-color') pipe
+                                        | هى ميثاد بياخد مناك الملف و تعمال عليها التتعديلات المطلوبة فى جميع التاسكات ورا بعض
+                                    li(class="mt-120") 
+                                        span(class='main-color') gulp.dest
+                                        |اللى هو مسار الملاف اللى هيخارج فية الملاف اللى معملو تاسك
+                                    li(class="mt-120") بينقال ملاف 
+                                    li(class="mt-70") بينقال جميع الملفات اللى نوعها html 
+                                    li(class="mt-70") بينقال جميع الملفات  بجميع الامتدادات  
+                                    li(class="mt-70") بينقال  ملفات   معينه انت عاوز تنقلها هى بس  
+                                    li(class="mt-70") بينقال جميع الملفات ما عدا ملاف معين  
+                                div(class='form-floating parent-code')
+                                    textarea(class="form-control text-end copy" style="height:100px") gulp.task('taskName', function (){
+                                        | 
+                                        | });
+                                    br
+                                    textarea(class="form-control text-end copy" style="height:130px") gulp.task('taskName', function (){
+                                        | 
+                                        | return gulp.src('project/pug/*.pug')
+                                        | });
+
+                                    br
+                                    textarea(class="form-control text-end copy" style="height:150px") gulp.task('taskName', function (){
+                                        | 
+                                        | return gulp.src('project/pug/*.pug')
+                                        | .pipe()
+                                        | });
+
+                                    br
+                                    textarea(class="form-control text-end copy" style="height:150px") gulp.task('taskName', function (){
+                                        | 
+                                        | return gulp.src('project/pug/*.pug')
+                                        | .pipe(gulp.dest("dist"))
+                                        | });
+
+
+
+                                    br
+                                    textarea(class="form-control text-end copy" style="height:70px")
+                                        |return gulp.src('project/index.html')
+
+
+
+
+
+                                    br
+                                    textarea(class="form-control text-end copy" style="height:70px") 
+                                        | return gulp.src('project/*.html')
+
+
+
+
+                                    br
+                                    textarea(class="form-control text-end copy" style="height:70px") 
+                                        | return gulp.src('project/*.*')
+
+
+
+                                    br
+                                    textarea(class="form-control text-end copy" style="height:70px") 
+                                        | return gulp.src(['project/index.html','style.css'])
+
+
+
+
+                                    br
+                                    textarea(class="form-control text-end copy" style="height:70px") 
+                                        | return gulp.src(['project/scss/**/*.scss','!one.scss'])
+
+
+
+                    //- start بلاجان
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") بلاجان  
+
+                    //- plugin gulp-concat
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 1 - gulp-concat
+                            p(class='lead') بلاجان لدامج الملفات /  بيحتاج اسم الملاف اللى انت هتجمع فيه الملفات
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm install --save-dev gulp-concat
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var concat = require("gulp-concat");
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى التاسك 
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |.pipe(concat("main.css"))
+
+
+                    //- plugin gulp-autoprefixer
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 2 - gulp-autoprefixer
+                            p(class='lead')  هى خاصة بى البرفكسار الخاصة للمتصفحات فى خواص الس اس 3
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm install --save-dev gulp-autoprefixer
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var autoprefixer = require("gulp-autoprefixer");
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى التاسك 
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |.pipe(autoprefixer("last 20 versions"))
+
+
+
+                    //- plugin gulp-sass
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 3 - gulp-sass
+                            p(class='lead')  بلاجان خاص بى تشغيل الساس
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm install sass gulp-sass --save-dev
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var sass = require("gulp-sass")(require("sass"));
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى التاسك 
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |.pipe(sass({ outputStyle: "compressed" }))
+
+
+                    //- plugin gulp-pug
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 4 - gulp-pug
+                            p(class='lead')  بلاجان  الجالب
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm i gulp-pug
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var pug = require("gulp-pug");
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى التاسك 
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |.pipe(pug({ pretty: true }))
+
+
+
+                    //- plugin static-server
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 5 - static-server
+                            p(class='lead')  لوكال سايرفار
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm i static-server -save
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead')  انشاء ملاف 
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |server.js
+                                br
+                                textarea(class="form-control text-end copy" style="height:290px")
+                                    |var StaticServer = require("static-server");
+                                    | 
+                                    | var server = new StaticServer({
+                                    |     rootPath: "./dist/",
+                                    |     port: 1010,
+                                    | });
+                                    | 
+                                    | server.start(function() {
+                                    |     console.log("Server Started At Port ", server.port);
+                                    | });
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى التاسك الواتش 
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |require("./server.js");
+
+
+
+                    //- plugin gulp-livereload
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 6 - gulp-livereload
+                            p(class='lead') اضافة الليف رايلود
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm install --save-dev gulp-livereload
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var livereload = require('gulp-livereload');
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى  جميع التاسك  
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |.pipe(livereload());
+                                p(class='lead') استخدام الاضافة فى التاسك الواتش  
+                                textarea(class="form-control text-end copy" style="height:70px") 
+                                    | livereload.listen();
+                                p(class='lead')  فى ملاف الباج اللى هيجمع جميع الصفحات اللى هو الانداكس
+                                textarea(class="form-control text-end copy" style="height:70px") 
+                                    | script(src="http://localhost:35729/livereload.js")
+
+
+
+                    //- plugin gulp-sourcemaps
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 7 - gulp-sourcemaps
+                            p(class='lead') اضافة خاصة بى الماب فى تاسك السي اس اس علشان تعملك خريطة للملف اللى مكتوب فية
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm i gulp-sourcemaps --save-dev
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var sourcemaps = require("gulp-sourcemaps");
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى التاسك الساس
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |.pipe(sourcemaps.init())
+                                br
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |.pipe(sourcemaps.write("."))
+
+
+                    //- plugin gulp-uglify
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 8 - gulp-uglify
+                            p(class='lead')  اضافه بتضغاط ملاف الجافا اسكربت
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm install --save-dev gulp-uglify
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var uglify = require("gulp-uglify");
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى التاسك js
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |.pipe(uglify())
+
+
+
+                    //- plugin gulp-notify
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 9 - gulp-notify
+                            p(class='lead')  اضافة تنبية بى انو التاسك خالص
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm i gulp-notify --save-dev
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var notify = require("gulp-notify");
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى جميع التاسك 
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |.pipe(notify("Libs Css Task Is Done"));
+
+
+
+
+                    //- plugin gulp-zip
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 10 - gulp-zip
+                            p(class='lead')  اضافة لعمال المشروع مضغوط
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm install --save-dev gulp-zip
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var zip = require("gulp-zip");
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى تاسك لوحدها 
+                                textarea(class="form-control text-end copy" style="height:210px")
+                                    |gulp.task("compress", function () {
+                                    |  return gulp
+                                    |    .src("dist/**/*.*")
+                                    |    .pipe(zip("website.zip"))
+                                    |    .pipe(gulp.dest("."))
+                                    |    .pipe(notify("Files Is Compressed To Zip "));
+                                    |   });
+
+
+
+
+                    //- plugin vinyl-ftp
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="h2 text-center") 11 - vinyl-ftp
+                            p(class='lead')  اضافة لرافع الموقع على الهواست 
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') تنزيل الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |npm i vinyl-ftp
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استدعا الاضافة
+                                textarea(class="form-control text-end copy" style="height:70px")
+                                    |var ftp = require( 'vinyl-ftp' );
+                                ul 
+                                    li - host: "mywebsite.tld", اسم الموقع || hossam.net
+                                    li - user: "me", اليوسار نيم بتاع الاستضافة
+                                    li - password: "mypass", الباسوارد
+                                    li - parallel: 10, عدد الفيلات اللى بتترفع فى نفس الحظه
+                                    li - .src(["output/**/*.*"] مسار الملفات اللى هتترفع من على جهازك
+                                    li - .pipe(conn.newer("/htdocs")) مسار الملف اللى كل ما تحدث فية يرفع الملفات اللى جواه
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') استخدام الاضافة فى تاسك لوحدها 
+                                textarea(class="form-control text-end copy" style="height:590px")
+                                    |// ===== Task Ftp =====
+                                    |gulp.task("deploy", function() {
+                                    |    var conn = ftp.create({
+                                    |        host: "ftpupload.net",
+                                    |        user: "epiz_29431807",
+                                    |        password: "vz5QI9xYpD",
+                                    |        parallel: 10,
+                                    |   });
+                                    |
+                                    |    return (
+                                    |        gulp
+                                    |        .src(["dist/**/*.*"], { base: ".", buffer: false })
+                                    |        // .pipe(conn.newer("/public_html"))
+                                    |        // .pipe(conn.newer("/htdocs/output"))
+                                    |        .pipe(conn.newer("/htdocs"))
+                                    |        //   .pipe(conn.dest("/public_html"))
+                                    |        // .pipe(conn.dest("/htdocs/output"))
+                                    |        .pipe(conn.dest("/htdocs"))
+                                    |
+                                    |        .pipe(livereload())
+                                    |        .pipe(notify("Files Is Upload To Host "))
+                                    |    );
+                                    |});
+
+
+
+
+
+
+
+
+
+
+                    //- Task html 
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="text-center") Task html 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li Task html 
+                    div(class='col-sm-6') 
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:260px")
+                                    |// ===== Task Html =====
+                                    |gulp.task("html", function () {
+                                    |     return gulp
+                                    |     .src("project/pug/*.pug")
+                                    |     .pipe(pug({ pretty: true }))
+                                    |     .pipe(gulp.dest("dist"))
+                                    |     .pipe(livereload())
+                                    |     .pipe(notify("Html Task Is Done"));
+                                    | });
+
+
+
+
+
+                    //- Task scss 
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="text-center") Task scss 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li Task Scss En
+                    div(class='col-sm-6') 
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:350px")
+                                    |// ===== Task Scss En =====
+                                    |gulp.task("scss-en", function () {
+                                    |     return gulp
+                                    |     .src("project/scss-en/*.scss")
+                                    |     .pipe(sourcemaps.init())
+                                    |     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+                                    |     .pipe(autoprefixer("last 20 versions"))
+                                    |     .pipe(concat("style-en.css"))
+                                    |     .pipe(sourcemaps.write("."))
+                                    |     .pipe(gulp.dest("dist/css"))
+                                    |     .pipe(livereload())
+                                    |     .pipe(notify("Scss Task Is Done"));
+                                    | });
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li Task Scss Ar
+                    div(class='col-sm-6') 
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:350px")
+                                    |// ===== Task Scss Ar =====
+                                    |gulp.task("scss-ar", function () {
+                                    |     return gulp
+                                    |     .src("project/scss-ar/*.scss")
+                                    |     .pipe(sourcemaps.init())
+                                    |     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+                                    |     .pipe(autoprefixer("last 20 versions"))
+                                    |     .pipe(concat("style-ar.css"))
+                                    |     .pipe(sourcemaps.write("."))
+                                    |     .pipe(gulp.dest("dist/css"))
+                                    |     .pipe(livereload())
+                                    |     .pipe(notify("Scss Task Is Done"));
+                                    | });
+
+
+
+
+                    //- Task Libs Css 
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="text-center") Task Libs Css 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li Task Libs Css 
+                    div(class='col-sm-6') 
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:230px")
+                                    |// ===== Task Libs Css =====
+                                    |gulp.task("libs-css", function () {
+                                    |     return gulp
+                                    |     .src("project/libs-css/**/*")
+                                    |     .pipe(gulp.dest("dist/css/libs"))
+                                    |     .pipe(livereload())
+                                    |     .pipe(notify("Libs Css Task Is Done"));
+                                    | });
+
+
+
+
+                    //- Task Js
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="text-center") Task Js
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li Task Js
+                    div(class='col-sm-6') 
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:330px")
+                                    |// ===== Task Js =====
+                                    |gulp.task("js", function () {
+                                    |     return gulp
+                                    |     .src("project/js/js/**/*.js")
+                                    |     .pipe(sourcemaps.init())
+                                    |     .pipe(concat("script.js"))
+                                    |     .pipe(uglify())
+                                    |     .pipe(sourcemaps.write("."))
+                                    |     .pipe(gulp.dest("dist/js"))
+                                    |     .pipe(notify("Js Task Is Done"))
+                                    |     .pipe(livereload());
+                                    | });
+
+
+
+                    //- Task Libs Js 
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="text-center") Task Libs Js 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li Task libs js 
+                    div(class='col-sm-6') 
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:230px")
+                                    |// ===== Task Libs Js =====
+                                    |gulp.task("libs-js", function () {
+                                    |     return gulp
+                                    |     .src("project/libs-js/**/*")
+                                    |     .pipe(gulp.dest("dist/js/libs"))
+                                    |     .pipe(livereload())
+                                    |     .pipe(notify("Libs js Task Is Done"));
+                                    | });
+
+
+
+
+
+                    //- Task Images Compress 
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="text-center") Task Images Compress 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li Task Images Compress 
+                    div(class='col-sm-6') 
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:260px")
+                                    |// ===== Task Images Compress =====
+                                    |gulp.task("compressImages", function () {
+                                    |     return gulp
+                                    |     .src("project/images/**/*")
+                                    |     // .pipe(imagemin({ progressive: true }))
+                                    |     .pipe(gulp.dest("dist/images"))
+                                    |     .pipe(livereload())
+                                    |     .pipe(notify("compress Images Task Is Done"));
+                                    | });
+
+
+
+
+
+
+
+
+                    //- Task Zpi Compress 
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="text-center") Task Zpi Compress 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li Task zip compress 
+                    div(class='col-sm-6') 
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:240px")
+                                    |// ===== Task Zpi Compress =====
+                                    |gulp.task("compress", function () {
+                                    |     return gulp
+                                    |     .src("dist/**/*")
+                                    |     .pipe(zip("website.zip"))
+                                    |     .pipe(gulp.dest("."))
+                                    |     .pipe(notify("Files Is Compressed To Zip "));
+                                    | });
+
+
+
+
+
+                    //- Task Watch 
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="text-center") Task Watch 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li تاسك الواتش بيعمال مراقبة لجميع التاسكات اللى انت عملها
+                                li **/* يعنى جميع الفلدرات بي جميع الفيلات
+                    div(class='col-sm-6') 
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:550px")
+                                    |// ===== Task Watch =====
+                                    |gulp.task('watch', function (){
+                                    |   require("./server.js");
+                                    |   livereload.listen();
+                                    |   // = Html
+                                    |   gulp.watch("project/pug/**/*.pug", gulp.series("html"));
+                                    |   // = Css
+                                    |   gulp.watch("project/scss/**/*.scss", gulp.series("scss"));
+                                    |   gulp.watch("project/libs-css/**/*", gulp.series("libs-css"));
+                                    |   // = Javascript
+                                    |   gulp.watch("project/js/js/**/*.js", gulp.series("js"));
+                                    |   gulp.watch("project/libs-js/**/*", gulp.series("libs-js"));
+                                    |   // = Images
+                                    |   gulp.watch("project/images/**/*", gulp.series("compressImages"));
+                                    |   // = Zip
+                                    |   gulp.watch("dist/**/*.*", gulp.series("compress"));
+                                    |   // = Upload
+                                    |   // gulp.watch("dist/**/*.*", gulp.series("deploy"));
+                                    | });
+                                    | // = Default
+                                    | gulp.task("default", gulp.series("watch"));
+
+                    div(class='grid-sm-2')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px") npm i gulp -g
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px") var gulp = require("gulp");
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm install --save-dev gulp-concat
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  var concat = require("gulp-concat");
+
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm install --save-dev gulp-autoprefixer
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  var autoprefixer = require("gulp-autoprefixer");
+
+
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm install sass gulp-sass --save-dev
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  var sass = require("gulp-sass")(require("sass"));
+
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm i gulp-pug
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  var pug = require("gulp-pug");
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm i static-server -save
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px") server.js
+                                br
+                                textarea(class="form-control text-end copy" style="height:260px") 
+                                    |  var StaticServer = require("static-server");
+
+                                    |   var server = new StaticServer({
+                                    |       rootPath: "./dist/",
+                                    |       port: 1010,
+                                    |   });
+                                    |   
+                                    |   server.start(function() {
+                                    |       console.log("Server Started At Port ", server.port);
+                                    |   });
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm install --save-dev gulp-livereload
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  livereload = require('gulp-livereload');
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm i gulp-sourcemaps --save-dev
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  var sourcemaps = require("gulp-sourcemaps");
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm install --save-dev gulp-uglify
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  var uglify = require("gulp-uglify");
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm i gulp-notify --save-dev
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  var notify = require("gulp-notify");
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm install --save-dev gulp-zip
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  var zip = require("gulp-zip");
+
+
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  npm i vinyl-ftp
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                textarea(class="form-control text-end copy" style="height:70px")  var ftp = require( 'vinyl-ftp' );
+
+
+
+
+
+
+
+    //- +btnTow('read')
+    include footer/footer.pug
+
+
+
+
+    //- Start Global
+    include global/global.pug
+    //- End Global
+
+    //- Start Explain Jquery 
+    //- progress Bar
+    include progressBar/progressBar.pug
+
+
+
+
+
+
+
+
+    include fixedMenu/fixedMenu.pug
+    include script/script.pug
+
+    //- Javascript
+    script(src="js/js/js.js")
+    //- Jquery Tools
+    script(src="js/jquery/jquery.js")
+    //- Gulp
+    script(src="js/gulp/gulp.js" type="text/babel")
+    //- script(src="js/es6/main.js" type="module")
+    //- script(src="js/es6/app.js" type="module")
+    //- script(src="js/React/React-Tool.js" type="text/babel")
+    //- Vue App
+    script(src="js/vue/vue-app.js" type="text/babel")
+    //- Live Reload
+    script(src="http://localhost:35729/livereload.js")
+
+    //- end body

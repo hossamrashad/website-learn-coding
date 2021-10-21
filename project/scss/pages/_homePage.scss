@@ -1,0 +1,95 @@
+.parent-overlay {
+  background-color: #eee;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  @include prefix(animation, fadeInOut 2s infinite linear, webkit);
+  @include prefix(box-shadow, 10px 10px 100px rgb(0, 0, 0), webkit moz o ms);
+  .overlay {
+    @include overlay;
+    //@include transition(0.5s);
+
+    @include hover {
+      background-color: rgba($text-color, 0.5);
+      @include prefix(box-shadow, 10px 10px 10px #ccc, webkit moz o ms);
+    }
+  }
+}
+@include KeyFrame(fadeInOut) {
+  0% {
+    opacity: 0.5;
+    background-color: aqua;
+  }
+  50% {
+    opacity: 1;
+    background-color: chocolate;
+  }
+  100% {
+    opacity: 0.5;
+    background-color: darkgreen;
+  }
+}
+
+// add parent have class home-page-slider
+.css-home-page-slider {
+  border: 20px solid #333;
+
+  // All Img
+  img {
+    background-size: cover;
+  }
+  #carouselExampleCaptions {
+    border: 20px solid rgb(105, 96, 96);
+    // ol
+    .carousel-indicators {
+      border: 3px solid #3498db;
+      // li
+      li.active {
+        background-color: #333;
+      }
+      li {
+        background-color: aquamarine;
+      }
+    }
+    // div carousel-inner
+    .carousel-inner {
+      // div carousel-item active
+      .carousel-item.active {
+        // img
+        img {
+          border: 5px solid #080;
+        }
+        // div center-position carousel-caption d-none d-md-block
+        > div {
+          background-color: rgba(14, 197, 253, 0.404);
+          padding: 50px;
+        }
+      }
+      // div carousel-item
+      .carousel-item {
+        // img
+        img {
+        }
+        // div
+        > div {
+          background-color: rgba(51, 51, 51, 0.801);
+          padding: 50px;
+          @include positionCenter;
+          @include transitionAll(all, 0.5s, linear);
+        }
+      }
+      // a
+      .carousel-control-prev,
+      .carousel-control-next {
+        // span
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+        }
+        .sr-only {
+        }
+      }
+    }
+  }
+}

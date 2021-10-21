@@ -1,0 +1,401 @@
+include variables/variables.pug
+include mixin/mixin.pug
+doctype 
+html(lang="ar" dir="rtl" data-theme="light") 
+    //- html(lang="en" data-theme="light")
+    //- html(lang='ar' dir="rtl") 
+
+    head 
+        //- start head  
+        include head/head.pug
+
+        block pageTitle
+            title Javascript Es6
+
+        block Bootstrap
+            //- Bootstrap 5.0.1 ar
+            // Bootstrap 5.0.1 ar
+            //- link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/bootstrap/bootstrap.rtl.min.css")
+            link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.rtl.min.css")
+
+        //- global framework
+        block Framework
+            link(rel="stylesheet" href="css/style.css")
+
+        //- Babel
+        //- script(src="https://unpkg.com/babel-standalone@6/babel.min.js")
+        //- script(src="https://babeljs.io/docs/setup/#babel_in_browser") 
+        //- script(src="js/libs/babel/browser.js") 
+        //- end head
+
+        body 
+            //- start body
+            include header/header.pug
+
+            //- Start Explain
+            div(class="container-fluid")
+                h2(class="h1 text-center title-lang") ECMAScript Es6
+                div(class="lead preface") 
+                    span(class="span-preface") المقدمة :
+                    p(class="lead")  يتم اختصار ECMAScript كـ ES ، وهو معيار لغة برمجة لـ WWW تم تطويره بواسطة ECMA International. كان يعتمد في الأصل على Javascript ، ويتم استخدامه الآن كمعيار لتوحيد لغات البرمجة النصية مثل Javascript
+                    ul(class="")
+                        li(class="lead") 1 -  في عام 2015 ، تم إصدار ECMAScript6. وفي نفس العام ، تقرر تغيير إصدار إصدار جديد كامل مرة واحدة سنويًا إلى إصدار ميزة جديدة مرة واحدة في العام ، لذلك يُطلق على ES6 أيضًا اسم ES2015
+                div(class="row")
+                    div(class="head-code-explain d-sm-none d-md-block")
+                        div(class="code-en")
+                            h4(class="h3") طريقة جديدة لإنشاء متغير - var 
+                                span(class="font-bold") let const
+                        div(class="code-ar")
+                            h4(class="h3") New Way To Create Variable – var 
+                                span(class="font-bold") Let const
+                    div(class="col-sm-4")
+                        div(class="explain")
+                            h2(class="h2") Var
+                            ul(class="li-padding")
+                                li 1 - Function Scope 
+                                li - يمكن الوصول إليها في جميع الانحاء 
+                                li 2 - Can Be Redeclare 
+                                li -  يمكن إعادة التصريح ( هو اعادة كتابة نفس المتغير بى نفس الاسم )
+                                li 3 - Undefined When Accessing A Variable Before It's Declared
+                                li - غير محدد عند الوصول إلى متغير قبل إعلانه
+                                li 4 - Create Properties in The Window Object
+                                li - إنشاء خصائص في كائن النافذة
+                    div(class="col-sm-4")
+                        div(class="explain")
+                            h2(class="h2") Let
+                            ul(class="li-padding")
+                                li 1 - Block Scope 
+                                li -  تكون في نطاق محدد 
+                                li 2 - Cannot Be Redeclare 
+                                li - لا يمكن إعادة التصريح ( هو عدم اعادة كتابة نفس المتغير بى نفس الاسم )
+                                li 3 - Reference Error When Accessing A Variable Before It's Declared
+                                li - خطأ مرجعي عند الوصول إلى متغير قبل إعلانه
+                                li 4 - Does Not Create Properties in The Window Object
+                                li - لا يخلق خصائص في كائن النافذة
+                    div(class="col-sm-4")
+                        div(class="explain")
+                            h2(class="h2") Const
+                            ul(class="li-padding")
+                                li 1 - Block Scope 
+                                li -  تكون في نطاق محدد 
+                                li 2 - Cannot Be Redeclare
+                                li - لا يمكن إعادة التصريح ( هو عدم اعادة كتابة نفس المتغير بى نفس الاسم )
+                                li 3 - Reference Error When Accessing A Variable Before It's Declared
+                                li - خطأ مرجعي عند الوصول إلى متغير قبل إعلانه
+                                li 4 - Does Not Create Properties in The Window Object
+                                li - لا يخلق خصائص في كائن النافذة
+                    //- var
+                    div(class="col-sm-4")
+                        div(class="code d-sm-none d-md-block")
+                            p.lead 1 - Function Scope
+                            div(class='parent-disc-code')
+                                pre(class='pre-language-javascript')
+                                    code(class='code-language-javascript')
+                                        span(class="function") function 
+                                        span(class="var-name") varTest
+                                        span(class="token") () {
+                                        br
+                                        span(class="var pl-30") var 
+                                        span(class="var-name") x 
+                                        span(class="token") = 
+                                        span(class="var-value") 1
+                                        span(class="token") ;
+                                        br
+                                        span(class="if pl-30") if 
+                                        span(class="token") (
+                                        span(class="condition") true
+                                        span(class="token") ) {
+                                        br
+                                        span(class="comment pl-40") // Code 
+                                        br
+                                        span(class="var pl-40") var 
+                                        span(class="var-name") x 
+                                        span(class="token") = 
+                                        span(class="var-value") 2
+                                        span(class="token") ;
+                                        br
+                                        span(class="console pl-40") console
+                                        span(class="dot") .
+                                        span(class="loge") log
+                                        span(class="token") (
+                                        span(class="var-name") x
+                                        span(class="token") );
+                                        br
+                                        span(class="token pl-30") }
+                                        br
+                                        span(class="console pl-40") console
+                                        span(class="dot") .
+                                        span(class="loge") log
+                                        span(class="token") (
+                                        span(class="var-name") x
+                                        span(class="token") );
+                                        br
+                                        span(class="return pl-40") return
+                                        span(class="string") 'Done'
+                                        span(class="token") ;
+                                        br
+                                        span(class="token ") }
+                                        br
+                                        span(class="console") console
+                                        span(class="dot") .
+                                        span(class="loge") log
+                                        span(class="token") (
+                                        span(class="var-name") varTest
+                                        span(class="return") ()
+                                        span(class="token") );
+                        div(class="output-code")
+                            h4(class="disc-Output") Output
+                            p 2
+                            p 2
+                            p Done
+                    //- let
+                    div(class="col-sm-4")
+                        div(class="code d-sm-none d-md-block")
+                            p.lead 2 - Block Scope
+                            div(class='parent-disc-code')
+                                pre(class='pre-language-javascript')
+                                    code(class='code-language-javascript')
+                                        span(class="function") function 
+                                        span(class="var-name") letTest
+                                        span(class="token") () {
+                                        br
+                                        span(class="var pl-30") let 
+                                        span(class="var-name") x 
+                                        span(class="token") = 
+                                        span(class="var-value") 1
+                                        span(class="token") ;
+                                        br
+                                        span(class="if pl-30") if 
+                                        span(class="token") (
+                                        span(class="condition") true
+                                        span(class="token") ) {
+                                        br
+                                        span(class="comment pl-40") // Code 
+                                        br
+                                        span(class="var pl-40") let 
+                                        span(class="var-name") x 
+                                        span(class="token") = 
+                                        span(class="var-value") 2
+                                        span(class="token") ;
+                                        br
+                                        span(class="console pl-40") console
+                                        span(class="dot") .
+                                        span(class="loge") log
+                                        span(class="token") (
+                                        span(class="var-name") x
+                                        span(class="token") );
+                                        br
+                                        span(class="token pl-30") }
+                                        br
+                                        span(class="console pl-40") console
+                                        span(class="dot") .
+                                        span(class="loge") log
+                                        span(class="token") (
+                                        span(class="var-name") x
+                                        span(class="token") );
+                                        br
+                                        span(class="return pl-40") return
+                                        span(class="string") 'Done'
+                                        span(class="token") ;
+                                        br
+                                        span(class="token ") }
+                                        br
+                                        span(class="console") console
+                                        span(class="dot") .
+                                        span(class="loge") log
+                                        span(class="token") (
+                                        span(class="var-name") letTest
+                                        span(class="return") ()
+                                        span(class="token") );
+                        div(class="output-code")
+                            h4(class="disc-Output") Output
+                            p 2
+                            p 1
+                            p Done
+                    //- const
+                    div(class="col-sm-4")
+                        div(class="code d-sm-none d-md-block")
+                            p.lead 3 - Block Scope
+                            div(class='parent-disc-code')
+                                pre(class='pre-language-javascript')
+                                    code(class='code-language-javascript')
+                                        span(class="function") function 
+                                        span(class="var-name") constTest
+                                        span(class="token") () {
+                                        br
+                                        span(class="var pl-30") const 
+                                        span(class="var-name") x 
+                                        span(class="token") = 
+                                        span(class="var-value") 1
+                                        span(class="token") ;
+                                        br
+                                        span(class="if pl-30") if 
+                                        span(class="token") (
+                                        span(class="condition") true
+                                        span(class="token") ) {
+                                        br
+                                        span(class="comment pl-40") // Code 
+                                        br
+                                        span(class="var pl-40") const 
+                                        span(class="var-name") x 
+                                        span(class="token") = 
+                                        span(class="var-value") 2
+                                        span(class="token") ;
+                                        br
+                                        span(class="console pl-40") console
+                                        span(class="dot") .
+                                        span(class="loge") log
+                                        span(class="token") (
+                                        span(class="var-name") x
+                                        span(class="token") );
+                                        br
+                                        span(class="token pl-30") }
+                                        br
+                                        span(class="console pl-40") console
+                                        span(class="dot") .
+                                        span(class="loge") log
+                                        span(class="token") (
+                                        span(class="var-name") x
+                                        span(class="token") );
+                                        br
+                                        span(class="return pl-40") return
+                                        span(class="string") 'Done'
+                                        span(class="token") ;
+                                        br
+                                        span(class="token ") }
+                                        br
+                                        span(class="console") console
+                                        span(class="dot") .
+                                        span(class="loge") log
+                                        span(class="token") (
+                                        span(class="var-name") constTest
+                                        span(class="return") ()
+                                        span(class="token") );
+                        div(class="output-code")
+                            h4(class="disc-Output") Output
+                            p 2
+                            p 1
+                            p Done
+                    //- Can Be Redeclare
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2.text-center.font-bold Redeclare
+                    div(class='col-md-4')
+                        div(class='explain')
+                            div(class='parent-disc-code')
+                                pre(class='pre-language-javascript')
+                                    code(class='code-language-javascript')
+                                        span(class='var') var 
+                                        span(class='var-name') x 
+                                        span(class='token') = 
+                                        span(class='var-value') 1;
+                                        br
+                                        span(class='var') var 
+                                        span(class='var-name') x 
+                                        span(class='token') = 
+                                        span(class='var-value') 2;
+                                        br
+                                        span(class='console') consol
+                                        span(class='dot') .
+                                        span(class='loge') loge
+                                        span(class='token') (
+                                        span(class='var-name') x
+                                        span(class='token') );
+                        div(class='output-code')
+                            div(class='disc-output') output 
+                            p(class="lead") 2
+                    div(class='col-md-4')
+                        div(class='explain')
+                            div(class='parent-disc-code')
+                                pre(class='pre-language-javascript')
+                                    code(class='code-language-javascript')
+                                        span(class='var') var 
+                                        span(class='var-name') x 
+                                        span(class='token') = 
+                                        span(class='var-value') 1;
+                                        br
+                                        span(class='var') var 
+                                        span(class='var-name') x 
+                                        span(class='token') = 
+                                        span(class='var-value') 2;
+                                        br
+                                        span(class='console') consol
+                                        span(class='dot') .
+                                        span(class='loge') loge
+                                        span(class='token') (
+                                        span(class='var-name') x
+                                        span(class='token') );
+                        div(class='output-code')
+                            div(class='disc-output') output
+                            p(class="lead") 2
+                    div(class='col-md-4')
+                        div(class='explain')
+                            div(class='parent-disc-code')
+                                pre(class='pre-language-javascript')
+                                    code(class='code-language-javascript')
+                                        span(class='var') var 
+                                        span(class='var-name') x 
+                                        span(class='token') = 
+                                        span(class='var-value') 1;
+                                        br
+                                        span(class='var') var 
+                                        span(class='var-name') x 
+                                        span(class='token') = 
+                                        span(class='var-value') 2;
+                                        br
+                                        span(class='console') consol
+                                        span(class='dot') .
+                                        span(class='loge') loge
+                                        span(class='token') (
+                                        span(class='var-name') x
+                                        span(class='token') );
+                        div(class='output-code')
+                            div(class='disc-output') output
+                            p(class="lead") 2
+
+
+
+
+
+
+
+
+    //- +btnTow('read')
+    include footer/footer.pug
+
+
+
+
+    //- Start Global
+    include global/global.pug
+    //- End Global
+
+    //- Start Explain Jquery 
+    //- progress Bar
+    include progressBar/progressBar.pug
+
+
+
+
+
+
+
+
+    include fixedMenu/fixedMenu.pug
+    include script/script.pug
+
+    //- Javascript
+    script(src="js/js/js.js")
+    //- Jquery Tools
+    script(src="js/jquery/jquery.js")
+    //- Es6
+    script(src="js/es6/es6.js" type="text/babel")
+    //- script(src="js/es6/main.js" type="module")
+    //- script(src="js/es6/app.js" type="module")
+    //- script(src="js/React/React-Tool.js" type="text/babel")
+    //- Vue App
+    script(src="js/vue/vue-app.js" type="text/babel")
+    //- Live Reload
+    script(src="http://localhost:35729/livereload.js")
+
+    //- end body

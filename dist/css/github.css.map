@@ -1,0 +1,1 @@
+{"version":3,"sources":["github/_github.scss"],"names":[],"mappings":"AAIA,SACE,0BAAA,CAEF,YACE,aAAA,CACA,iBAAA","file":"github.css","sourcesContent":["@import \"../mixin/mixin\";\r\n\r\nbody {\r\n}\r\ntextarea {\r\n  min-height: 70px !important;\r\n}\r\n.main-color {\r\n  color: #3498db;\r\n  padding-left: 20px;\r\n}\r\n"]}

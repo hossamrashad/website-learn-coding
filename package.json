@@ -1,0 +1,55 @@
+{
+    "name": "hossam",
+    "version": "1.0.0",
+    "description": "Finance Company",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Hossam rashad",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.15.5",
+        "@babel/preset-env": "^7.15.6",
+        "@babel/preset-typescript": "^7.15.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "babelify": "^10.0.0",
+        "browserify": "^17.0.0",
+        "csswring": "^7.0.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-babel": "^7.0.1",
+        "gulp-changed": "^4.0.3",
+        "gulp-concat": "^2.6.1",
+        "gulp-imagemin": "^8.0.0",
+        "gulp-livereload": "^4.0.2",
+        "gulp-notify": "^4.0.0",
+        "gulp-postcss": "^9.0.1",
+        "gulp-pug": "^5.0.0",
+        "gulp-sass": "^5.0.0",
+        "gulp-smushit": "^1.2.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-uglify": "^3.0.2",
+        "gulp-webp": "^4.0.1",
+        "gulp-zip": "^5.1.0",
+        "postcss": "^8.3.6",
+        "sass": "^1.39.2",
+        "vinyl-source-stream": "^2.0.0"
+    },
+    "dependencies": {
+        "babel": "^6.23.0",
+        "imagemin": "^8.0.1",
+        "imagemin-jpegtran": "^7.0.0",
+        "imagemin-pngquant": "^9.0.2",
+        "imagemin-webp": "^6.0.0",
+        "postcss-scss": "^4.0.0",
+        "static-server": "^2.2.1",
+        "vinyl-ftp": "^0.6.1"
+    },
+    "babel": {
+        "presets": [
+            "env"
+        ]
+    }
+}

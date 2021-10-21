@@ -1,0 +1,528 @@
+include variables/variables.pug
+include mixin/mixin.pug
+doctype 
+html(lang="ar" dir="rtl" data-theme="light") 
+    //- html(lang="en" data-theme="light")
+    //- html(lang='ar' dir="rtl") 
+
+    head 
+        //- start head  
+        include head/head.pug
+
+        block pageTitle
+            title Github
+
+        block Bootstrap
+            //- Bootstrap 5.0.1 ar
+            // Bootstrap 5.0.1 ar
+            //- link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/bootstrap/bootstrap.rtl.min.css")
+            link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.rtl.min.css")
+
+        //- global framework
+        block Framework
+            link(rel="stylesheet" href="css/style.css")
+        link(rel="stylesheet" href="css/github.css")
+
+        //- Babel
+        //- script(src="https://unpkg.com/babel-standalone@6/babel.min.js")
+        //- script(src="https://babeljs.io/docs/setup/#babel_in_browser") 
+        //- script(src="js/libs/babel/browser.js") 
+        //- end head
+
+        body 
+            //- start body
+            include header/header.pug
+            div(class='container-fluid')
+                div(class='row')
+                    div(class='grid-sm-2 inner-img')
+                        img(src="images/github/1.png" alt="")
+                        img(src="images/github/2.png" alt="")
+                        img(src="images/github/3.png" alt="")
+                        img(src="images/github/4.png" alt="")
+                        img(src="images/github/5.png" alt="")
+                    //- End Img
+                    //- Start
+                    //-  1 - تنزيل  new repo فى المشروع بعد الانشاء
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 1 - تنزيل  new repo فى المشروع بعد الانشاء
+                                textarea(name="" class="form-control text-end copy")
+                                    |git clone https://github.com/hossamrashad/projectName.git
+
+                    //- هو امر يظهرلاك ايه الجديد فى مشروعك( ما هو الجديد فى المشروع )
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') هو امر يظهرلاك ايه الجديد فى مشروعك( ما هو الجديد فى المشروع )
+                                textarea( class="form-control text-end copy")
+                                    |git status
+
+
+                    //- 2 -اضافة الملف الجديد فى staging area
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 2 -اضافة الملف الجديد فى staging area
+                                textarea(name="" class="form-control text-end copy")
+                                    |git add fileName
+                                div(class='empty')
+                                textarea(name="" class="form-control text-end copy")
+                                    |git add *
+
+
+                    //- لو عاوز تشيل ملاف من staging area
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead')  لو عاوز تشيل ملاف من staging area
+                                textarea(name="" class="form-control text-end copy")
+                                    |git reset head fileName
+
+                    //- 3 - انشاء الكمانت على التغيرات اللى تامت فى الملف
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 3 - انشاء  الكمانت على التغيرات اللى تامت فى الملف
+                                textarea(name="" class="form-control text-end copy")
+                                    |git commit -m "Created The Main Project Structure"
+
+
+                    //- بيجيب جميع الفروع اللى فى remote repo
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') بيجيب جميع الفروع اللى فى remote repo
+                                textarea(name="" class="form-control text-end copy") git branch
+
+                    //- بيجيب الريموات اللى هو ( repositories = مستودعات) remote repo
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') بيجيب الريموات اللى هو ( repositories = مستودعات)  remote repo
+                                textarea(name="" class="form-control text-end copy") git remote -v
+
+
+                    //- 4 - رافع الملفات على الجات اب
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 4 - رافع الملفات على الجات اب
+                                textarea(name="" class="form-control text-end copy")
+                                    |git push origin main
+
+
+                    //- 5 - بيجيب الملفات اللى على الجات اب و فى حالة انو انت شغال مع تيم بينزال الملفات الجديدة اللى مش موجودة عندك
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') 5 - بيجيب الملفات اللى على الجات اب و فى حالة انو انت شغال مع تيم بينزال الملفات الجديدة اللى مش موجودة عندك
+                                textarea(name="" class="form-control text-end copy")
+                                    |git pull origin
+
+                    //- بيجيب قامة الاوامر المتاحة فى الكماند لبن للتعديل
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') بيجيب قامة الاوامر المتاحة فى الكماند لبن للتعديل 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git config -l
+
+                    //- بيجيب جميع الاعدادات اللى فى الجات و بيفتاح على النت
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') بيجيب جميع الاعدادات اللى فى الجات و بيفتاح على النت
+                                textarea(name="" class="form-control text-end copy")
+                                    |git help config
+
+                    //- لو عاوز تجيب قيمة معينة
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') لو عاوز تجيب قيمة معينة 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git config --global user.name
+
+                    //- لو عاوز تغيار قيمة معينة
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') لو عاوز تغيار قيمة معينة 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git config --global user.name "HossamRashad"
+
+
+                    //- لو عاوز تشيل قيمة معينة يعنى تمسحها
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') لو عاوز تشيل قيمة معينة يعنى تمسحها  
+                                textarea(name="" class="form-control text-end copy")
+                                    |git config --global --unset user.name
+
+                    //- لو عاوز تغيار قيمة معينة بي المحاار
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead')  لو عاوز تغيار قيمة  معينة بي المحاار 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git config --global core.editor "code --wait"
+
+
+                    //- لو عاوز تعراف الاعدادات اللى فى الجات بيجيبها من فين
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead')  لو عاوز تعراف الاعدادات اللى فى الجات بيجيبها من فين 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git config -l --show-origin
+
+                    //- لو عاوز إنشاء ملاف
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') لو عاوز إنشاء ملاف 
+                                textarea(name="" class="form-control text-end copy")
+                                    |touth fileName.html
+
+
+                    //- لو عاوز اجيب المسار اللى انت فيه 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') لو عاوز اجيب المسار اللى انت فيه 
+                                textarea(name="" class="form-control text-end copy")
+                                    |pwd
+
+
+
+                    //- انشاء بابلاك كى
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                            p(class='lead') انشاء بابلاك كى
+                            textarea(name="" class="form-control text-end copy")
+                                |ssh-keygen -t rsa -b 4096 -C "hossamrashadhegezy@gmail.com"
+                            p(class='lead') انشاء باسوارد و الباس وارد بيكون مخفى وانت بتكتبو 
+                            img(src="images/github/public-key.png" alt="" class="mt-3 img-thumbnail img-fluid")
+                            p(class='lead') الامر داه بيجيب محتو الملف اللى بتدهولو
+                            textarea(name="" class="form-control text-end copy")
+                                |cat ~/.ssh/id_rsa.pub
+                            p(class='lead') بعد كدا بتروح على الجات اب و على السيتانج و تختار ssh and gpg keays 
+                                br
+                                | و بعدين new ssh key
+                            img(src="images/github/ssk-key.png" alt="" class="img-fluid img-thumbnail mt-3")
+                            p(class='lead') الاتصال بى البابلك كى 
+                            textarea(name="" class="form-control text-end copy")
+                                |ssh -T git@github.com
+
+                    //-  طريقة انشاء ريبو من الجهاز
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                h3(class='h2')  طريقة انشاء ريبو من الجهاز ورافع المشروع على الجات اب لو امشروع موجود و جاهز بالفعل 
+                                br
+                                p(class='lead') بتروح على الجات اب و بتعمال نيو ريبو 
+                                br
+                                p(class='lead') تبدا تاخد الاوامر و تتاكد انو انت على ssh 
+                                img(src="images/github/existing-project.png" alt="" class="img-thumbnail")
+                                br
+                                p(class='lead') بتدخال جوه الفلدار 
+                                textarea(name="" class="form-control text-end copy")
+                                    |cd folderName
+                                br
+                                p(class='lead') انشاء ريبو للمشروع 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git init
+                                br
+                                p(class='lead') اضافة الملف الجديد فى staging area
+                                textarea(name="" class="form-control text-end copy")
+                                    |git add *
+                                br
+                                p(class='lead') انشاء الكمانت على التغيرات اللى تامت فى الملف
+                                textarea(name="" class="form-control text-end copy")
+                                    |git commit -m "Created The Main Project Structure"
+                                br
+                                p(class='lead') بتغيار البرانش من ماستار الى مين
+                                textarea(name="" class="form-control text-end copy")
+                                    |git branch -M main
+                                br
+                                p(class='lead') الامر داه بياخد الريبو اللى انت انشاتو و بيحطو على الريموات
+                                textarea(name="" class="form-control text-end copy")
+                                    |git remote add origin git@github.com:hossamrashad/existing-project.git
+                                p(class='lead') الامر داه بيرفاع الملاف على الجات اب و حرف اليو معناه يجيب اخر تعديلات من على الجات لانو انت لو شغال مع تيم و بيرفعو حجات يجيب اخر تعديلات تامت و بعدين يرفاع الملفات الجديدة اللى انت عملتها
+                                textarea(name="" class="form-control text-end copy")
+                                    |git push -u origin main
+
+                    //- Pull Request 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') Pull Request 
+                                p(class='lead') هو فى حالة انو انت مش فى التيم اللى شغال على المشروع و حابب تضيف تعديل او حاجة انت شيفها بتبعت بول ريكواست 
+                                p(class='lead') فى المشروع اللى على الجات اب بدوس على fork 
+                                p(class='lead') بتدوس على pull request 
+                                p(class='lead') و بعدين بتدوس على Create pull request
+                                p(class='lead') بتختار الهيدانج المناسب للتاسك اللى انت عملتو 
+                                p(class='lead') بتكتاب فى الدسكربشان ايه اللى انت عملتو 
+                                p(class='lead') و بعدين بى تدوس على Create pull request
+                                p(class='lead') فى حالة انو التعديات تم الموافقة عليها بيجيلاك كلمة Merged فى حاله انو لسه لم يتم الموافقه بيكون كلمة open
+
+                    //- aliases اللى هو الاختصارات فى الاوامر 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') طريقة استخدام الاسم المستعار فى الاوامر Aliases
+                                p(class='lead') بتكتاب اسم الاختصار اللى انت عاوز تعملو و بعدين بتكتب اسم الاملا اللى عمالو اختصار 
+                                p(class='lead') الالياس اللى هو الاسم المستعار مش بيلغى الامر هو بيعمل اسم مستعار بس ممكن تكتب بى الامر عادى 
+                                textarea(name="" class="form-control text-end copy")
+                                |git config --global alias.st status
+                                p(class='lead') طريقة انو انت تجيب الاختصار يتاع الامر اللى انت عاملو 
+                                textarea(name="" class="form-control text-end copy")
+                                |git config --global alias.st
+                                p(class='lead') اختصار لامر البرانش اللى هى الفروع 
+                                textarea(name="" class="form-control text-end copy")
+                                |git config --global alias.br branch
+                                p(class='lead') الامر اللي فيه مسافه بتكتبو بين ضابال كوت 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git config --global alias.cm "commit -m"
+                                p(class='lead') ممكن تبحث في جوجال على 
+                                a(href="https://www.google.com.eg/search?q=git+alias+list&newwindow=1&dcr=0&sxsrf=AOaemvKlIkfJ4opT59z62ASdoKyhn5rIZw%3A1634772071362&ei=Z6RwYZDIFaKejLsPqrGxoAk&oq=git+alias+list&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywE6BwgAEEcQsAM6BwgjECcQnQI6BAgjECc6BAgAEEM6BwgAELEDEEM6CwguEIAEEMcBENEDOgUIABCABDoLCC4QxwEQ0QMQywFKBAhBGABQ5yBY1HZgjIABaARwAngBgAGdBYgB6Q-SAQgwLjEwLjUtMZgBAKABAaABAsgBCMABAQ&sclient=gws-wiz" class="btn  btn-primary d-block" target='_blank') git alias list 
+
+                    //- كل ما يخص الفرع
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead h2')  كل ما يخص الفرع
+                                p(class='lead') علشان تجيب الفروع اللى فى المشروع
+                                textarea(name="" class="form-control text-end copy")
+                                    |git branch 
+                                p(class='lead') علشان تنشار فارع جديد
+                                textarea(name="" class="form-control text-end copy")
+                                    |git branch first
+                                p(class='lead') علشان تدخال فى الفلرع اللى انت انشاتو 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git checkout first
+                                p(class='lead') علشان تحزاف فارع انت انشاتو 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git branch -d first
+                                p(class='lead') عالشان تحزاف فارع حت لو معملتش دامج بينو و بين الفارع الرايسى حت و لو فيه تعديلات 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git branch -D first 
+                                p(class='lead') علشان تنشاء فارع و تدخال عليها
+                                textarea(name="" class="form-control text-end copy")
+                                    |git checkout -b first
+                                p(class='lead') علشان تغير اسم الفارع اللى انت انشاتو 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git branch -m branch-name
+                                p(class='lead') علشان اعمال دامج بين البرانش الاساسى اللى فى الجات  و الفارع اللى انا انشاتو بتدخال على الفارع الاساسى اللى فى الجات اب اللى هو المين او الماستار على حساب انت الفارع الاساسى ايه عنداك وبعدين بتكتب الامر ده و بتكتب اسم الفارع اللى انت انشاتو  
+                                textarea(name="" class="form-control text-end copy")
+                                    |git merge branch-name
+                                p(class='lead') ممكن ترفع الملفات من على الفار اللى انت انشاتو و من على الجات اب تعمال دامج بين الفرع الاساى و الفارع اللى انت انشاتو 
+
+                    //- لو عاوز تعراف المسار اللى انت فيه فيه ملفا يع 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead')  لو عاوز تعراف المسار اللى انت فيه فيه ملفا يع 
+                                textarea(name="" class="form-control text-end copy")
+                                    |ls
+
+
+                    //- stash هو مخباء لملفات انت مش عاوزها تترفع دلوات على المشروع و فى نفس الواقت ميظهاروش فى امر الجات استيتاس اللى بيعرفك ايه الجديد فى المشروع
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') stash هو مخباء لملفات انت مش عاوزها تترفع دلوات على المشروع و فى نفس الواقت ميظهاروش فى امر الجات استيتاس اللى بيعرفك ايه الجديد فى المشروع
+                                textarea(name="" class="form-control text-end copy")
+                                    |git add fileName 
+                                p(class='lead') الامر داه بيشيل الملف كمان من الفلدرات يعنى بيخبيه كمان فى الصندوق مش بيكون فى محتو الملفات اللى فى الفلدار
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash
+                                p(class='lead') الامر داه بيجيب صفر لو فية ملفات فى الصندوق 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash list
+                                p(class='lead') الامر ده بيجيب الملفات اللى انا خبيتها فى الصندوق علشان استخدما او ارفعها و امر الباب بيجيب اخر ملاف تم اضافتو فى الصندوق 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash pop
+
+
+                    //- اوامر فى الاستاش stash 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') اوامر فى الاستاش stash 
+                                p(class='lead') فى حالة انو انا عندى اكتار من صندوق مخبى فية فيلات امر الباب بيجيب اخر صندوق
+                                p(class='lead') فى حالة انو انا عاوز و انا بضيف الملف فى الصندوق غاوز اسيف تاكسات يفكرتى ايه الملاف اللى فى الصندوق 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash save "your massage"
+                                p(class='lead') الابلاي بيجيب الملاف من الصندوق بس بيسيبو فى الصندوق
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash apply
+                                p(class='lead') لو عاوز تجيب صندوق معين بى الايدي الخاص بيه 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash pop stash@{1}
+                                p(class='lead') لو عاوز تحزاف صندوق من الصناديق من غير ما تكتب رقم الايدى بتاع الصندوق بيحزاف اخر صندوق تام انشاء
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash drop
+                                br
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash drop stash@{1}
+                                p(class='lead') امر الشاو بيجيب اخر ملاف تام تاخباته و لو عاوز تعراف الفيل اللى جوه الصندوق بتكتاب رقم الايدي
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash show
+                                textarea(name="" class="form-control text-end copy")
+                                    |git stash show stash@{1}
+                                p(class='lead') امر الكلير بيحزاف جميع الصناديق بى الملفات اللى جوها 
+                                    textarea(name="" class="form-control text-end copy")
+                                    |git stash clear
+
+
+                    //-  طريقة الرجوع ملاف من الاستاج اريا بعد كتابه امر الاد restore
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead')  restore طريقة الرجوع ملاف من الاستاج اريا بعد كتابه امر الاد 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git restore --staged fileName.css
+                                p(class='lead') طريقه فاتح ملاف فى visual studio code 
+                                textarea(name="" class="form-control text-end copy")
+                                    |code fileName.css
+                                p(class='lead') طريقة انو انا انزال الملاف من الاستاج اريا بى visual studio code 
+                                img(src="images/github/unstage.png" alt="alt")
+                                p(class='lead') طريقة انو انا ارفع الملاف الى الاستاج اريا بى visual studio code 
+                                img(src="images/github/stage.png" alt="alt")
+                                p(class='lead') الامر داه بيعرضلاك الملفات اللى انت هتحزفها لو انت نزلته من الاساجان ارياء
+                                p(class='lead') لانو انت لو عاوز ترجاع ملاف الى الاستاجان اريا بترجعو قابل الحزف
+                                textarea(name="" class="form-control text-end copy")
+                                    |git clean -n
+                                p(class='lead') الامر ده بيحزاف الملفات اللى مش على الاستاجان اريا 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git clean -f
+
+                    //- restting هو حزف الكمانت اللى انت مش محتاجو 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') restting هو حزف الكمانت اللى انت مش محتاجو 
+                                p(class='lead') طريقة الحازف هى انو انت تخالى الكمانت اللى انت عاوزة هو الهاد و تشيل اللى قابلو 
+                                p(class='lead') الامر داه بيجيب ايه اللى تام فى المشروع من كمانت و الموالف و التاريخ
+                                textarea(name="" class="form-control text-end copy")
+                                    |git log
+                                p(class='lead') علشان تحزاف كمانت لازم تجيب الهاش بتاعو 
+                                p(class='lead') علشان تعمال كمانت هو الهاد بتاع الفارع 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git reset --hard 090affc1dbdb6e69ff7774edb65e580c299385b4
+                                p(class='lead') بتحتاج تعمال ابديت للتعديل اللى تام
+                                textarea(name="" class="form-control text-end copy")
+                                    |git push origin main --force
+
+
+                    //- طريقة الغاء ملاف ميترفاعش مع المشروع
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') طريقة الغاء ملاف ميترفاعش مع المشروع
+                                textarea(name="" class="form-control text-end copy")
+                                    |touth .gitignore
+                                p(class='lead') داخال الملاف 
+                                ul 
+                                    li *.log يعنى جميع الملفات اللى نوعه log ما تترفعش 
+                                    li !test.log فى حالة انو انا عاوز ملاف وحيد امتتدادو log عاوزه يترفاع
+                                    li text.txt ممكن تكتاب اسم ملاف بعينو ميرفعوش
+                                    li node_modules/ فى حالة انو انت مش عاوز الملفات اللى جوة الفلداى دة ماتترفعش 
+                                textarea(name="" class="form-control text-end copy")
+                                    |*.log
+                                textarea(name="" class="form-control text-end copy")
+                                    |!test.log
+                                textarea(name="" class="form-control text-end copy")
+                                    |node_modules/
+                                p(class='lead') فى حالة انو انت عاوز ترفع ملاف حت و لو هو موجو فى ملاف الاجنوار اللى هو ميشفوش فى رافع الملفات
+                                textarea(name="" class="form-control text-end copy")
+                                    |git add -f text.txt
+                                textarea(name="" class="form-control text-end copy")
+                                    |git add -force text.txt
+                                p(class='lead') ممكن تبحس على النت على 
+                                a(href="https://www.google.com.eg/search?q=git+ignore+patterns&newwindow=1&dcr=0&sxsrf=AOaemvLOnmCyRN4vsXcCkpgJswCQGTQFSg%3A1634790496612&source=hp&ei=YOxwYY2DI4qca6-srpAN&iflsig=ALs-wAMAAAAAYXD6cNyVE1LmDKNrhP23LT8rHtHG3MLg&ved=0ahUKEwiNs9KW1drzAhUKzhoKHS-WC9IQ4dUDCAc&uact=5&oq=git+ignore+patterns&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHlCmElimEmCdF2gAcAB4AIABhQGIAYUBkgEDMC4xmAEAoAECoAEB&sclient=gws-wiz" class="btn  btn-primary " target='_blank') git ignore patterns 
+
+
+                    //- التاج هو عباره عان علامة للاصدارات 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead')  التاج هو عباره عان علامة للاصدارات 
+                                p(class='lead') لاظهار جميع التجات اللى فى المشروع 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git tag
+                                p(class='lead') # Add New Lightweight Tag هو التاج اللى انت بتكتبو 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git tag v1.0
+                                p(class='lead') بترفاع التاج على الجات اب
+                                textarea(name="" class="form-control text-end copy")
+                                    |git push origin v1.0
+                                p(class='lead') # Add New Annotated Tag هو تاج بتاخد الكمانت بتعتها من الرسالة اللى انت كتبها 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git tag -a v2.0 -m "Description Or Message"
+
+
+                    //- طريقة الباحث فى التاج بى اصدار معين 
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead')  طريقة الباحث فى التاج بى اصدار معين 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git tag -l "v1.*"
+                                p(class='lead')  طريق مسح تاج 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git tag -d v1.0
+                                p(class='lead')  طريق مسح تاج من على الجات اب 
+                                textarea(name="" class="form-control text-end copy")
+                                    |git push origin --delete v1.0
+
+                    //- End
+
+
+
+
+
+
+    //- +btnTow('read')
+    include footer/footer.pug
+
+
+
+
+    //- Start Global
+    include global/global.pug
+    //- End Global
+
+    //- Start Explain Jquery 
+    //- progress Bar
+    include progressBar/progressBar.pug
+
+
+
+
+
+
+
+
+    include fixedMenu/fixedMenu.pug
+    include script/script.pug
+
+    //- Javascript
+    script(src="js/js/js.js")
+    //- Jquery Tools
+    script(src="js/jquery/jquery.js")
+    //- Gulp
+    script(src="js/github/github.js")
+    //- script(src="js/es6/main.js" type="module")
+    //- script(src="js/es6/app.js" type="module")
+    //- script(src="js/React/React-Tool.js" type="text/babel")
+    //- Vue App
+    script(src="js/vue/vue-app.js" type="text/babel")
+    //- Live Reload
+    script(src="http://localhost:35729/livereload.js")
+
+    //- end body

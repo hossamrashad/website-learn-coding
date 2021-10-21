@@ -1,0 +1,691 @@
+include variables/variables.pug
+include mixin/mixin.pug
+doctype 
+html(lang="ar" dir="rtl" data-theme="light") 
+    //- html(lang="en" data-theme="light")
+    //- html(lang='ar' dir="rtl") 
+
+    head 
+        //- start head  
+        include head/head.pug
+
+        block pageTitle
+            title Scss
+
+        block Bootstrap
+            //- Bootstrap 5.0.1 ar
+            // Bootstrap 5.0.1 ar
+            //- link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/bootstrap/bootstrap.rtl.min.css")
+            link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.rtl.min.css")
+
+        //- global framework
+        block Framework
+            link(rel="stylesheet" href="css/style.css")
+        link(rel="stylesheet" href="css/scss.css")
+
+        //- Babel
+        //- script(src="https://unpkg.com/babel-standalone@6/babel.min.js")
+        //- script(src="https://babeljs.io/docs/setup/#babel_in_browser") 
+        //- script(src="js/libs/babel/browser.js") 
+        //- end head
+
+        body 
+            //- start body
+            include header/header.pug
+
+            //- Start Explain
+            div(class="container-fluid")
+                h2(class="h1 text-center title-lang") Learn Scss
+                div(class="lead preface") 
+                    span(class="span-preface") المقدمة :
+                    p(class="lead")  ساس (بالإنجليزية: Sass اختصارًا لأوراق الأنماط الرائعة تركيبًا) هي لغة تنسيق صفحات الويب صممها في البداية هامبتون كاتلن وطورتها ناتالي ويزنباوم. بعد إصداراتها الأولية،
+                    ul(class="")
+                        li(class="lead") 1 -ساس لغة برمجة نصية معالجة مسبقًا تفسر أو تجمع إلى لغة أوراق الأنماط المتتالية (سي إس إس).
+                div(class="row")
+                    div(class="head-code-explain d-sm-none d-md-block")
+                        div(class="code-en")
+                            h4(class="h3") CSS preprocessor
+                                span(class="font-bold") 
+                        div(class="code-ar")
+                            h4(class="h3") معالج CSS المسبق هو برنامج يتيح لك إنشاء CSS من بناء الجملة الفريد الخاص بالمعالج الأولي.
+                                span(class="font-bold") 
+                    div(class="col-sm-4")
+                        div(class="explain")
+                            h2(class="h2") 
+                            ul(class="li-padding")
+                                li هناك العديد من معالجات CSS الأولية للاختيار من بينها ، ولكن معظم معالجات CSS الأولية ستضيف بعض الميزات غير الموجودة في CSS الخالص ، مثل mixin ، ومحدد التداخل ، ومحدد الوراثة ، وما إلى ذلك. تجعل هذه الميزات بنية CSS أكثر قابلية للقراءة وأسهل في الصيانة.
+                                li لاستخدام معالج CSS المسبق ، يجب عليك تثبيت مترجم CSS على خادم الويب الخاص بك ؛ أو استخدم معالج CSS المسبق للتجميع في بيئة التطوير ، ثم قم بتحميل ملف CSS مترجم إلى خادم الويب.
+                    div(class="col-sm-4")
+                        div(class="explain")
+                            h2(class="h2") 
+                            ul(class="li-padding text-end")
+                                li There are many CSS preprocessors to choose from, however most CSS preprocessors will add some features that don't exist in pure CSS, such as mixin, nesting selector, inheritance selector, and so on. These features make the CSS structure more readable and easier to maintain.
+                                li To use a CSS preprocessor, you must install a CSS compiler on your web server; Or use the CSS preprocessor to compile on the development environment, and then upload compiled CSS file to the web server.
+                    div(class="col-sm-4")
+                        div(class="explain")
+                            h2(class="h2 text-end") See also
+                            ul(class="li-padding text-end")
+                                p(class="lead text-end pt-3 ") A few of most popular CSS preprocessors:
+                                p(class="lead text-start pt-3 ") عدد قليل من معالجات CSS الأولية الأكثر شيوعًا:
+                                li 1 - sass
+                                li 2 - lesss
+                                li 3 - stylus
+                                li 4 - postcss
+                    div(class='empty')
+                    div(class="col-sm-4")
+                        div(class="explain")
+                            h3(class="h2 text-center") موقع لكتابة الساس اون لاين 
+                                a(href="https://www.sassmeister.com/" target='_blank' class="btn  btn-primary ") sassmeister
+                    div(class="col-sm-8")
+                        div(class="explain")
+                            h3(class="h2") تثبيت Scss
+                            iframe(src="https://sass-lang.com/install" frameborder="0" width="100%" height="400") 
+                    div(class='empty')
+                    div(class='col-sm-12')
+                        div(class="explain")
+                            h3(class="text-center") طريقة تثبيت scss 
+                    div(class='empty')
+                    div(class='col-sm-4')
+                        div(class="explain")
+                            div(class='form-floating parent-code')
+                                p(class="lead") تنزيل الساس جلوبال فى النظام
+                                textarea(class='form-control text-end copy' placeholder='Leave a comment here' style='height: 70px') npm install -g sass
+                    div(class='col-sm-4')
+                        div(class="explain")
+                            img(src="images/scss/install.png" alt="" class="img-fluid width-100")
+                    div(class='col-sm-4')
+                    div(class='empty')
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            p الطريقة الأكثر مباشرة لتحقيق ذلك هي من خلال جهازك الطرفي. بمجرد تثبيت Sass ، يمكنك ترجمة Sass إلى CSS باستخدام الأمر sass. ستحتاج إلى إخبار Sass بالملف الذي تريد الإنشاء منه ومكان إخراج CSS. على سبيل المثال ، قد يستغرق تشغيل sass input.scss output.css من جهازك الطرفي ملف Sass واحدًا ، ومدخلات. scss ، ويترجم هذا الملف إلى output.css.
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            p(class="text-end") The most direct way to make this happen is in your terminal. Once Sass is installed, you can compile your Sass to CSS using the sass command. You'll need to tell Sass which file to build from, and where to output CSS to. For example, running sass input.scss output.css from your terminal would take a single Sass file, input.scss, and compile that file to output.css.
+                    div(class='empty')
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            h4(class="h3 text-end") Compile Style With All Methods
+                            h4(class="h3") تجميع النمط بكل الطرق
+                            ul 
+                                li 1 - input.scss
+                                li - مكان الملف اللى انت عاوز تعملو واتش 
+                                li 2 - output.css 
+                                li - مكان الملف اللى هيخرج كا ملف سى اس اس
+                                li 3 - input
+                                li - مكان فايل اللى انت عاوز تعملو واتش    
+                                li 4 - output 
+                                li - مكان فايل اللى هيخرج كا ملف سى اس اس  
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class="lead") عمال مراقبة للملاف
+                                textarea(class='form-control text-end copy' placeholder='Leave a comment here' style='height: 70px') sass --watch input.scss output.css
+                                br
+                                p(class="lead") عمال مراقبة لفيل
+                                br
+                                textarea(class='form-control text-end copy' placeholder='Leave a comment here' style='height: 70px') sass --watch input:output
+                                p(class="lead") عمال مراقبة لفيل و كمان شكل الاوت بات 
+                                br
+                                textarea(class='form-control text-end copy' placeholder='Leave a comment here' style='height: 70px') sass --watch input:output --style expanded
+                                br
+                                textarea(class='form-control text-end copy' placeholder='Leave a comment here' style='height: 70px') sass --watch input:output --style compact
+                                br
+                                textarea(class='form-control text-end copy' placeholder='Leave a comment here' style='height: 70px') sass --watch input:output --style compressed
+                    div(class='empty')
+                    div(class='col-sm-12')
+                        div(class='explain') 
+                            h3(class="h2 text-center") المتغيرات :  Variables
+                    div(class='empty')
+                    div(class='col-sm-4')
+                        div(class='explain') 
+                            h4(class="h3") متغيرات الاسترانج ( النصوص )
+                            p(class="lead text-end" dir="ltr") $arFont: "Driod Arabic Kufi";
+                    div(class='col-sm-4')
+                        div(class='explain') 
+                            h4(class="h3") متغيرات النامبار ( الارقام )
+                            p(class="lead text-end" dir="ltr") $mainMargin: 10px;
+                    div(class='col-sm-4')
+                        div(class='explain') 
+                            h4(class="h3") متغيرات الكالار ( الالوان )
+                            p(class="lead text-end" dir="ltr") $mainColor: #f00;
+                    div(class='empty')
+                    //- Nesting
+                    div(class='col-sm-12')
+                        div(class='explain') 
+                            h3(class="h2 text-center") الناستانج هى كتابة الابن من الاب فى الساس :  Nesting
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class='row')
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul 
+                                        li 1 - parent هو العنصار الاب
+                                        li 2 - child هو العنصار الابن من الاب
+                                        li 3 - & هى علامة الافاكت فى العنصار 
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss") 
+                                                span(class="element-parent") .parent 
+                                                span(class="token") {
+                                                br
+                                                span(class="comment pl-30" dir="rtl")  خواص الاب //
+                                                br
+                                                span(class="property pl-30") font-size
+                                                span(class="token") : 
+                                                span(class="number") 10px;
+                                                br
+                                                span(class="element-child pl-30") .child 
+                                                span(class="token") {
+                                                br
+                                                span(class="comment pl-50" dir="rtl")  خواص الابن //
+                                                br
+                                                span(class="property pl-50") font-size
+                                                span(class="token") : 
+                                                span(class="number") 10px;
+                                                br
+                                                span(class="token pl-30") }
+                                                br
+                                                span(class="comment pl-30" dir="rtl")  خواص الاب مع الافاكت //
+                                                br
+                                                span(class="pl-50") &:hover {
+                                                br
+                                                span(class="property pl-50") font-size
+                                                span(class="token") : 
+                                                span(class="number") 10px;
+                                                br
+                                                span(class="token pl-30") }
+                                                br
+                                                span(class="token ") }
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            iframe(src="https://sass-lang.com/guide#topic-3" frameborder="0" width="100%" height="436") 
+                    div(class='empty')
+                    //- math
+                    div(class='col-sm-12')
+                        div(class='explain') 
+                            h3(class="h2 text-center")      الماس اللى هو العمليات الحسابية الجمع و الطرح و القسمة  :  sass:math
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class='row')
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul(dir="ltr") 
+                                        li  $mainFont: 16px;
+                                        li font-size: $mainFont + 10;
+                                        li(class="text-start")    26px; = 16 + 10 : النتيجة
+                                        li font-size: $mainFont - 5;
+                                        li(class="text-start")    11px; = 16 - 5 : النتيجة
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss") 
+                                                span $mainFont: 16px;
+                                                br
+                                                span(class="element-parent") .parent 
+                                                span(class="token") {
+                                                br
+                                                span(class="property pl-30") font-size
+                                                span(class="token") : 
+                                                span(class="number") $mainFont + 10;
+                                                br
+                                                span(class="element-child pl-30") .child 
+                                                span(class="token") {
+                                                br
+                                                span(class="property pl-50") font-size
+                                                span(class="token") : 
+                                                span(class="number") $mainFont - 5;
+                                                br
+                                                span(class="token pl-30") }
+                                                br
+                                                span(class="token ") }
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            iframe(src="https://sass-lang.com/documentation/modules/math" frameborder="0" width="100%" height="100%") 
+                    div(class='empty')
+                    //- extend
+                    div(class='col-sm-12')
+                        div(class='explain') 
+                            h3(class="h2 text-center")        الاكستاند هو جلب جميع الخواص للعنصار و اضافتة لعنصار تانى  :  @extend
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class="row")
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul 
+                                        li 1 - extend هو دمج جميع العناصر اللى واخدة الاكستاند مع العنصر الاساسى اللى فية جميع الخواص
+                                        li * - الاستخدام ميثال زاى خواص السي اس 3 اللى بتحتاج برفاكس ممكن تعمل اسم الاكستاند بى اسم الخاصية و تستدعي الاكستاند فى العنصار اللى انت بتكتب فية خواص السي اس 3
+                                        li * - بتخالى الاكستاند فى اخر الصفحة علشان الخواص تشتغل بعد ما تجيب العنصار 
+                                        li * فى حالة انو انت مش عاوز تعمال جروب فى العنصار لانو الاكستاند بى الدات بيعمال جروب للعنصار اللى متاخد منو الاكستاند و العناصر اللى انت مستخدم معها الاكستاند بتعمال علامة فى المية و فى الحالة دى مش بيكريات جروب فى الخواص اللى انت مستعمال فيها الاكستاند يدوب بيضيف الخواص 
+                                        li ممكن تعمال اكتار من اكستاند للعنصار كل اكستاند منفاصل
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss") 
+                                                span(class="element-parent") .main 
+                                                span(class="token") {
+                                                br
+                                                span(class="property pl-30") font-size
+                                                span(class="token") : 
+                                                span(class="number") 10px;
+                                                br
+                                                span(class="property pl-30") color
+                                                span(class="token") : 
+                                                span(class="number") #3498db;
+                                                br
+                                                span(class="token") }
+                                                br
+                                                span(class="element-child") .child 
+                                                span(class="token") {
+                                                br
+                                                span(class="property pl-30") @extend .main;
+                                                br
+                                                span(class="token ") }
+                                                br
+                                                span(class="element-parent") %main 
+                                                span(class="token") {
+                                                br
+                                                span(class="property pl-30") font-size
+                                                span(class="token") : 
+                                                span(class="number") 10px;
+                                                br
+                                                span(class="property pl-30") color
+                                                span(class="token") : 
+                                                span(class="number") #3498db;
+                                                br
+                                                span(class="token") }
+                                                br
+                                                span(class="element-child") .child 
+                                                span(class="token") {
+                                                br
+                                                span(class="property pl-30") @extend %main;
+                                                br
+                                                span(class="token ") }
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            iframe(src="https://sass-lang.com/documentation/at-rules/extend" frameborder="0" width="100%" height="100%") 
+                    div(class='empty')
+                    //- import
+                    div(class='col-sm-12')
+                        div(class='explain') 
+                            h3(class="h2 text-center")        هو استدعا الملفات :  @import
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class='row')
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul 
+                                        li استيراد الملفات 
+                                        li انشاء ملاف بى اندار اسكول يعني متحولش الملف داه الى سى اس اس 
+                                        li استدعاء الملف للاستخدام
+                                        li ممكن تعمال امبارت لكلاس جوة عنصار مكين فى الصفحة
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss") 
+                                                span(class="element-parent") @import 'folderName/fileName.scss';
+                                    div(class="form-floating parent-code")
+                                        p(class="lead text-start") استيراد ملاف 
+                                        textarea(class="form-control text-end copy" placeholder="Leave a comment here" style="height: 250px") @import 'folderName/fileName.scss';
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            iframe(src="https://sass-lang.com/documentation/at-rules/import" frameborder="0" width="100%" height="100%") 
+                    div(class='empty')
+                    //- @mixin and @include
+                    div(class='col-sm-12')
+                        div(class='explain') 
+                            h3(class="h2 text-center")          الماكسان   :  @mixin and @include
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class='row')
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul 
+                                        li الماكسان هو استدعا الخاصية بي قيم مختلفة
+                                        li اكثر اشياء تستخدم فيها المكسان خواص السي اس 3
+                                        li 
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss") 
+                                                span(class="element-parent") @mixin borderRadius($number) 
+                                                span(class="token") {
+                                                br
+                                                span(class="property") border-radius: $number; 
+                                                br
+                                                span(class="property") -webkit-border-radius: $number;
+                                                br
+                                                span(class="property") -moz-border-radius: $number;
+                                                br
+                                                span(class="property") -ms-border-radius: $number;
+                                                br
+                                                span(class="property") -o-border-radius: $number;
+                                                br
+                                                span(class="token") }
+                                                br
+                                                span(class="element-parent") .element 
+                                                span(class="token") {
+                                                br
+                                                span(class="property pl-30") @include borderRadius(5px);
+                                                br
+                                                span(class="token") }
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            iframe(src="https://sass-lang.com/documentation/at-rules/mixin" frameborder="0" width="100%" height="100%") 
+                    div(class='empty')
+                    //- @if and @else
+                    div(class='col-sm-12')
+                        div(class='explain') 
+                            h3(class="h2 text-center") الاف و الالس :  @if and @else
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class='row')
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul 
+                                        li الاف و الالس اللى هو الشروح 
+                                        li بيعتمد على الكنداشان 
+                                        li الاف هى فى حالة انو الشرط تم التحقق منهو
+                                        li الالس فى حالة عدام تحققك الشرط
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss")
+                                                span(class="var") $direction: ltr;
+                                                br
+                                                span(class="var") $floatLeft: left;
+                                                br
+                                                span(class="var") $floatRight: right;
+                                                br
+                                                span(class="element-parent") @if $direction == ltr
+                                                span(class="token") {
+                                                br
+                                                span(class="var pl-30") $floatLeft: left;
+                                                br
+                                                span(class="var pl-30") $floatRight: right;
+                                                br
+                                                span(class="token") }
+                                                span(class="element-parent") @else 
+                                                span(class="token") {
+                                                br
+                                                span(class="var pl-30") $floatLeft: right;
+                                                br
+                                                span(class="var pl-30") $floatRight: left;
+                                                br
+                                                span(class="token") }
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            iframe(src="https://sass-lang.com/documentation/at-rules/control/if" frameborder="0" width="100%" height="100%") 
+                    div(class='empty')
+                    //- @for
+                    div(class='col-sm-12')
+                        div(class='explain') 
+                            h3(class="h2 text-center")  الفور لواب اللى هو التقرار :  @for
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class='row')
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul 
+                                        li الفور لواب هو التقرار 
+                                        li through = النهاية 
+                                        li to = بيجيب العنصار اللى قبل النهاية
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss")
+                                                span(class='var') @for $i from 1 through 12
+                                                span(class='token') {
+                                                br
+                                                span(class='element-parent pl-30') .class# {$i}
+                                                span(class='token') {
+                                                br
+                                                span(class='property pl-30') font-size: 16px + $i
+                                                br
+                                                span(class='token pl-30') }
+                                                br
+                                                span(class='token') }
+                                    div(class='form-floating parent-code')
+                                        p(class='lead text-start') through  التقرار
+                                        textarea(class="form-control text-end copy" placeholder="Leave a comment here" style="height: 170px" dir="ltr") 
+                                            | @for $i from 1 through 12 {
+                                            |   .class# {$i}{
+                                            |       font-size: 16px + $i
+                                            |   }
+                                            | }
+                                        p(class='lead text-start') to  التقرار
+                                        textarea(class="form-control text-end copy" placeholder="Leave a comment here" style="height: 170px" dir="ltr") 
+                                            | @for $i from 1 to 12 {
+                                            |   .class# {$i}{
+                                            |       font-size: 16px + $i
+                                            |   }
+                                            | }
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            iframe(src="https://sass-lang.com/documentation/at-rules/control/for" frameborder="0" width="100%" height="100%") 
+                    //- each@
+                    div(class='empty')
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            p(class='h2 text-center') الفور اتش : each@
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class='row')
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul 
+                                        li(class="text-end") each $var in $list@
+                                        li - لكال فاريبال فى الاست ياخد الخواص اللى انت تتديهالهم
+                                        li * ممكن يكون اسماي الفاريبال اللى فى السته هى اسماي صوار 
+                                        li 
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss")
+                                                span(class='var') $socialList: facebook twitter youtube instgram;
+                                                br
+                                                span(class='var') @each $social in $socialList 
+                                                span(class='token') {
+                                                br
+                                                span(class='element-parent') .# {$social} 
+                                                span(class='token') {
+                                                br
+                                                span(class='property pl-30') background: url('images/# {$social}.png')
+                                                br
+                                                span(class='token pl-30') }
+                                                br
+                                                span(class='token') }
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            iframe(src="https://sass-lang.com/documentation/at-rules/control/each" frameborder="0" width="100%" height="100%") 
+                    //-  each with multiple assignments@
+                    div(class='empty')
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            p(class='h2 text-center' ) الفور اتش : each with multiple assignments@
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class='row')
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul 
+                                        li المالتبال خواص فى الاتش
+                                        li هو انو انت تداى لكال فاريبار اكتار من خصية و كل فاريبال يكون لية خاصية غير التانى 
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss")
+                                                span(class='var') @each $social, $color in (facebook, blue), (twitter, #3498db) 
+                                                span(class='token') {
+                                                br
+                                                span(class='element-parent') .# {$social} 
+                                                span(class='token') {
+                                                br
+                                                span(class='property pl-30') background: url('images/# {$social}.png')
+                                                br
+                                                span(class='property pl-30') color: $color;
+                                                br
+                                                span(class='token pl-30') }
+                                                br
+                                                span(class='token') }
+                    div(class='col-sm-4')
+                    //- each with map@
+                    div(class='empty')
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            p(class='h2 text-center' ) الفور اتش : each with map@
+                    div(class='empty')
+                    div(class='col-sm-8')
+                        div(class='row')
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    ul 
+                                        li الاتش ماب بتتحط بين قوسين
+                                        li الاتش ماب بتحتوي على كى و فاليو
+                                        li الاتش ماب هى تقرار كل عنصار بى القيم اللى فى الماب فى الفاليو
+                                        li 
+                            div(class='col-sm-6')
+                                div(class='explain')
+                                    div(class='parent-disc-code')
+                                        pre(class='pre-language-scss')
+                                            code(class="code-language-scss")
+                                                span(class='var') $map: (h1: bold,h2: bold,h3: bold,h4: bold,h5: bold,h6: bold);
+                                                br
+                                                span(class='var') @each $key, $val in $map
+                                                span(class='token') {
+                                                br
+                                                span(class='element-parent') # {$key} 
+                                                span(class='token') {
+                                                br
+                                                span(class='property pl-30') font-weight: $val
+                                                br
+                                                span(class='token pl-30') }
+                                                br
+                                                span(class='token') }
+                    div(class='col-sm-4')
+                    div(class='empty')
+                    div(class='col-sm-12')
+                        div(class='explain')
+                            h2(class="text-center") معلومات عامة 
+                    div(class='empty')
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            ul 
+                                li فى خواص الكود فى الار جي بي اي ممكن تكتب اسم اللون او الهيكس كود بتاعو و درجة الشفافية
+                                li
+                    div(class='col-sm-6')
+                        div(class='explain')
+                            div(class='parent-disc-code')
+                                pre(class='pre-language-scss')
+                                    code(class="code-language-scss") 
+                                        span(class='property') background
+                                        span(class='token') : 
+                                        span(class='value') rgba(red, .1)
+                                        br
+                                        span(class='property') background
+                                        span(class='token') : 
+                                        span(class='value') rgba(#f00, .1)
+                    div(class='empty')
+                    div(class='col-6')
+                        div(class='explain')
+                            ul 
+                                li خاصية الكالك فى السي اس اس ممكن تكتبها بالطريقىه دى 
+                    div(class='col-6')
+                        div(class='explain')
+                            div(class='parent-disc-code')
+                                pre(class='pre-language-scss')
+                                    code(class='code-language-scss')
+                                        span(class='property') width 
+                                        span(class='token') : 
+                                        span(class='value') (100% / 3)
+                    div(class='empty')
+                    div(class="col-sm-12")
+                        div(class='explain')
+                            h2(class="text-center") Global IMAGES 
+                    
+                    div(class='grid-xs-1 grid-md-3')
+                        img(src="images/scss/abs.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/boolean.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/ceil.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/color-function.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/comparable.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/equality-relational.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/floor.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/function-color.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/function-sass3.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/function.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/global-function.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/install.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/map-function.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/max.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/min.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/mixin-syntax.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/mixin.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/number-function.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/percentage.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/random-1.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/random.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/round.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 191632.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 192416.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 192439.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 192520.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 192607.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 192647.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 193110.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 193225.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 193252.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 193329.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 193432.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 193513.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 193802.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/Screenshot 2021-10-10 212522.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/string-function.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/syntax-function.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/unique-id.png", alt="" class="img-thumbnail")
+                        img(src="images/scss/unit.png", alt="" class="img-thumbnail")
+            //- end contener
+
+
+    include footer/footer.pug
+
+
+
+
+    //- Start Global
+    include global/global.pug
+    //- End Global
+
+    //- Start Explain Jquery 
+    //- progress Bar
+    include progressBar/progressBar.pug
+
+
+
+
+
+
+
+
+    include fixedMenu/fixedMenu.pug
+    include script/script.pug
+
+    //- Jquery Tools
+    script(src="js/jquery/jquery.js")
+    //- Javascript
+    script(src="js/js/js.js")
+    //- js for scss
+    script(src="js/scss/scss.js")
+    //- Live Reload
+    script(src="http://localhost:35729/livereload.js")
+
+    //- end body

@@ -1,0 +1,107 @@
+include variables/variables.pug
+include mixin/mixin.pug
+doctype 
+html(lang="ar" dir="rtl" data-theme="light") 
+    //- html(lang="en" data-theme="light")
+    //- html(lang='ar' dir="rtl") 
+
+    head 
+        //- start head  
+        include head/head.pug
+
+        block pageTitle
+            title Commend Line
+
+        block Bootstrap
+            //- Bootstrap 5.0.1 ar
+            // Bootstrap 5.0.1 ar
+            //- link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/bootstrap/bootstrap.rtl.min.css")
+            link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.rtl.min.css")
+
+        //- global framework
+        block Framework
+            link(rel="stylesheet" href="css/style.css")
+        link(rel="stylesheet" href="css/command-line.css")
+
+        //- Babel
+        //- script(src="https://unpkg.com/babel-standalone@6/babel.min.js")
+        //- script(src="https://babeljs.io/docs/setup/#babel_in_browser") 
+        //- script(src="js/libs/babel/browser.js") 
+        //- end head
+
+        body 
+            //- start body
+            include header/header.pug
+            div(class='container-fluid')
+                div(class='row')
+
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') مسار الفلدار اللى انت فاتحو 
+                                textarea(class="form-control text-end copy") chdir
+
+
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') اصدار النود
+                                textarea(class="form-control text-end copy") npm -v
+
+
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') للخروج من الكماند لاين / لقفل
+                                textarea(class="form-control text-end copy") exit
+
+
+
+                    div(class='col-sm-4')
+                        div(class='explain')
+                            div(class='form-floating parent-code')
+                                p(class='lead') لماسح الاوامار اللي فى الشاشة
+                                textarea(class="form-control text-end copy") cls
+
+
+
+
+    //- +btnTow('read')
+    include footer/footer.pug
+
+
+
+
+    //- Start Global
+    include global/global.pug
+    //- End Global
+
+    //- Start Explain Jquery 
+    //- progress Bar
+    include progressBar/progressBar.pug
+
+
+
+
+
+
+
+
+    include fixedMenu/fixedMenu.pug
+    include script/script.pug
+
+    //- Javascript
+    script(src="js/js/js.js")
+    //- Jquery Tools
+    script(src="js/jquery/jquery.js")
+    //- Gulp
+    script(src="js/command-line/command-line.js" type="text/babel")
+    //- script(src="js/es6/main.js" type="module")
+    //- script(src="js/es6/app.js" type="module")
+    //- script(src="js/React/React-Tool.js" type="text/babel")
+    //- Vue App
+    script(src="js/vue/vue-app.js" type="text/babel")
+    //- Live Reload
+    script(src="http://localhost:35729/livereload.js")
+
+    //- end body
