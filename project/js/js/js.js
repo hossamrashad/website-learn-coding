@@ -220,50 +220,50 @@ let elColorSwitcher = document.querySelectorAll(".color-switcher li");
 let classListColorSwitcher = [];
 
 for (let i = 0; i < elColorSwitcher.length; i++) {
-    // Get Element Classes List
-    classListColorSwitcher.push(elColorSwitcher[i].getAttribute("data-color"));
-    elColorSwitcher[i].addEventListener(
-        "click",
-        function() {
-            // Remove All Old Classes
-            document.body.classList.remove(...classListColorSwitcher);
-            // Add Current Class From Li Data Attribute
-            document.body.classList.add(this.getAttribute("data-color"));
-            // Add Dta To Local Storage
-            localStorage.setItem("pageColor", this.getAttribute("data-color"));
-        },
-        false
-    );
+  // Get Element Classes List
+  classListColorSwitcher.push(elColorSwitcher[i].getAttribute("data-color"));
+  elColorSwitcher[i].addEventListener(
+    "click",
+    function () {
+      // Remove All Old Classes
+      document.body.classList.remove(...classListColorSwitcher);
+      // Add Current Class From Li Data Attribute
+      document.body.classList.add(this.getAttribute("data-color"));
+      // Add Dta To Local Storage
+      localStorage.setItem("pageColor", this.getAttribute("data-color"));
+    },
+    false
+  );
 }
 // فانكشان اول حارف فى الاسترانج بيكون كابتال
 function capitalizeLetters(string) {
-    "use strict";
-    // = Code
-    let oldArray = string.split(" ");
-    let newArray = [];
-    for (let i = 0; i < oldArray.length; i++) {
-        newArray.push(oldArray[i].charAt(0).toUpperCase() + oldArray[i].slice(1));
-    }
-    return newArray.join(" ");
+  "use strict";
+  // = Code
+  let oldArray = string.split(" ");
+  let newArray = [];
+  for (let i = 0; i < oldArray.length; i++) {
+    newArray.push(oldArray[i].charAt(0).toUpperCase() + oldArray[i].slice(1));
+  }
+  return newArray.join(" ");
 }
 let text = capitalizeLetters("hossam rashad");
 // console.log(text);
 
 // الساعة
 function showTime() {
-    "use strict";
-    let now = new Date();
-    // = Get Hours 0-23
-    let hours = now.getHours();
-    // = Get Minutes 0-59
-    let minutes = now.getMinutes();
-    // = Get Seconds 0-59
-    let seconds = now.getSeconds();
-    document.getElementById("clock").textContent =
-        hours + ":" + minutes + ":" + seconds;
+  "use strict";
+  let now = new Date();
+  // = Get Hours 0-23
+  let hours = now.getHours();
+  // = Get Minutes 0-59
+  let minutes = now.getMinutes();
+  // = Get Seconds 0-59
+  let seconds = now.getSeconds();
+  document.getElementById("clock").textContent =
+    hours + ":" + minutes + ":" + seconds;
 }
 // = Window Event
-window.onload = function() {
-    "use strict";
-    setInterval(showTime, 500);
+window.onload = function () {
+  "use strict";
+  setInterval(showTime, 500);
 };
