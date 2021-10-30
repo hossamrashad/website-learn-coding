@@ -595,7 +595,6 @@
   }
 }
 
-
 // animation
 // @include KeyFrame(animation-name)
 @mixin KeyFrame($animation-name) {
@@ -609,7 +608,6 @@
     @content;
   }
 }
-
 
 // @include grid(1);
 @mixin grid($i) {

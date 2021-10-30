@@ -5,5 +5,7 @@ html {
 }
 
 * {
+  padding: 0;
+  margin: 0;
   @include prefix(box-sizing, border-box, webkit moz o ms);
 }
