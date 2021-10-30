@@ -1,0 +1,1 @@
+{"version":3,"sources":["css.scss"],"names":[],"mappings":"AAEA,GACE,yDAAA,CAAA,oDAAA,CAAA,iDAAA","file":"css.css","sourcesContent":["@import \"./mixin/mixin\";\r\n// @import \"./css/css\";\r\n.s {\r\n  background-image: linear-gradient(to top #ccc 50%);\r\n}\r\n"]}
