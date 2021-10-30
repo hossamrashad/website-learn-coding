@@ -92,7 +92,7 @@ var sourcemaps = require("gulp-sourcemaps");
 var uglify = require("gulp-uglify");
 var notify = require("gulp-notify");
 var zip = require("gulp-zip");
-var ftp = require("vinyl-ftp");
+// var ftp = require("vinyl-ftp");
 
 // var babel = require("gulp-babel");
 // var browserify = require("browserify");
@@ -329,8 +329,8 @@ gulp.task("github-css", function () {
     .pipe(notify("github Task Is Done"));
 });
 
-// =========================== Task For Learn github ============================ //
-// --------------------------- Task For Learn github ---------------------------- //
+// =========================== Task For Learn css ============================ //
+// --------------------------- Task For Learn css ---------------------------- //
 gulp.task("css-js", function () {
   return (
     gulp
@@ -403,28 +403,28 @@ gulp.task("compress", function () {
 //
 //
 
-gulp.task("deploy", function () {
-  var conn = ftp.create({
-    host: "ftpupload.net",
-    user: "epiz_29431807",
-    password: "vz5QI9xYpD",
-    parallel: 10,
-  });
+// gulp.task("deploy", function () {
+//   var conn = ftp.create({
+//     host: "ftpupload.net",
+//     user: "epiz_29431807",
+//     password: "vz5QI9xYpD",
+//     parallel: 10,
+//   });
 
-  return (
-    gulp
-      .src(["dist/**/*.*"], { base: ".", buffer: false })
-      // .pipe(conn.newer("/public_html"))
-      // .pipe(conn.newer("/htdocs/output"))
-      .pipe(conn.newer("/htdocs"))
-      //   .pipe(conn.dest("/public_html"))
-      // .pipe(conn.dest("/htdocs/output"))
-      .pipe(conn.dest("/htdocs"))
+//   return (
+//     gulp
+//       .src(["dist/**/*.*"], { base: ".", buffer: false })
+//       // .pipe(conn.newer("/public_html"))
+//       // .pipe(conn.newer("/htdocs/output"))
+//       .pipe(conn.newer("/htdocs"))
+//       //   .pipe(conn.dest("/public_html"))
+//       // .pipe(conn.dest("/htdocs/output"))
+//       .pipe(conn.dest("/htdocs"))
 
-      .pipe(livereload())
-      .pipe(notify("Files Is Upload To Host "))
-  );
-});
+//       .pipe(livereload())
+//       .pipe(notify("Files Is Upload To Host "))
+//   );
+// });
 
 // ============================ Task watch ================================== //
 gulp.task("watch", function () {
@@ -450,7 +450,7 @@ gulp.task("watch", function () {
   gulp.watch("project/js/gulp/gulp.js", gulp.series("gulp-js"));
   // = Learn gulp
   gulp.watch("project/scss/css/*.scss", gulp.series("css-css"));
-  gulp.watch("project/js/gulp/css.js", gulp.series("css-js"));
+  gulp.watch("project/js/css/css.js", gulp.series("css-js"));
   // = Learn command line
   gulp.watch("project/scss/command-line.scss", gulp.series("command-line-css"));
   gulp.watch("project/js/command-line/**/*.js", gulp.series("command-line-js"));
@@ -463,7 +463,7 @@ gulp.task("watch", function () {
   gulp.watch("project/images/**/*", gulp.series("compressImages"));
   // = Zip
   gulp.watch("dist/**/*.*", gulp.series("compress"));
-  gulp.watch("dist/**/*.*", gulp.series("deploy"));
+  // gulp.watch("dist/**/*.*", gulp.series("deploy"));
 });
 // = Default
 // gulp.task("default", ["watch"]);
