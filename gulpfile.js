@@ -300,8 +300,8 @@ gulp.task("command-line-css", function () {
     .pipe(livereload())
     .pipe(notify("command-line Task Is Done"));
 });
-// =========================== Task For Learn command line ============================ //
-// --------------------------- Task For Learn command line ---------------------------- //
+// =========================== Task For Learn github ============================ //
+// --------------------------- Task For Learn github ---------------------------- //
 gulp.task("github-js", function () {
   return (
     gulp
@@ -327,6 +327,35 @@ gulp.task("github-css", function () {
     .pipe(gulp.dest("dist/css"))
     .pipe(livereload())
     .pipe(notify("github Task Is Done"));
+});
+
+// =========================== Task For Learn github ============================ //
+// --------------------------- Task For Learn github ---------------------------- //
+gulp.task("css-js", function () {
+  return (
+    gulp
+      .src("project/js/css/**/*.js")
+      .pipe(sourcemaps.init())
+      // .pipe(babel({ presets: ["@babel/env"] }))
+      .pipe(concat("css.js"))
+      .pipe(uglify())
+      .pipe(sourcemaps.write("."))
+      .pipe(gulp.dest("dist/js/css"))
+      .pipe(notify("Js css Task Is Done"))
+      .pipe(livereload())
+  );
+});
+gulp.task("css-css", function () {
+  return gulp
+    .src("project/scss/css.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(autoprefixer("last 20 versions"))
+    .pipe(concat("css.css"))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("dist/css"))
+    .pipe(livereload())
+    .pipe(notify("Css Task Is Done"));
 });
 
 // =========================== Test Task ===================================== //
@@ -362,7 +391,6 @@ gulp.task("compress", function () {
     .pipe(notify("Files Is Compressed To Zip "));
 });
 
-
 // ============================================================== //
 
 // Upload Design With Ftp
@@ -372,33 +400,31 @@ gulp.task("compress", function () {
 // parallel: 10, عدد الفيلات اللى بتترفع فى نفس الحظه
 // .src(["output/**/*.*"] مسار الملفات اللى هتترفع من على جهازك
 // .pipe(conn.newer("/htdocs")) مسار الملف اللى كل ما تحدث فية يرفع الملفات اللى جواه
-// 
-// 
+//
+//
 
+gulp.task("deploy", function () {
+  var conn = ftp.create({
+    host: "ftpupload.net",
+    user: "epiz_29431807",
+    password: "vz5QI9xYpD",
+    parallel: 10,
+  });
 
-gulp.task("deploy", function() {
-    var conn = ftp.create({
-        host: "ftpupload.net",
-        user: "epiz_29431807",
-        password: "vz5QI9xYpD",
-        parallel: 10,
-    });
+  return (
+    gulp
+      .src(["dist/**/*.*"], { base: ".", buffer: false })
+      // .pipe(conn.newer("/public_html"))
+      // .pipe(conn.newer("/htdocs/output"))
+      .pipe(conn.newer("/htdocs"))
+      //   .pipe(conn.dest("/public_html"))
+      // .pipe(conn.dest("/htdocs/output"))
+      .pipe(conn.dest("/htdocs"))
 
-    return (
-        gulp
-        .src(["dist/**/*.*"], { base: ".", buffer: false })
-        // .pipe(conn.newer("/public_html"))
-        // .pipe(conn.newer("/htdocs/output"))
-        .pipe(conn.newer("/htdocs"))
-        //   .pipe(conn.dest("/public_html"))
-        // .pipe(conn.dest("/htdocs/output"))
-        .pipe(conn.dest("/htdocs"))
-
-        .pipe(livereload())
-        .pipe(notify("Files Is Upload To Host "))
-    );
+      .pipe(livereload())
+      .pipe(notify("Files Is Upload To Host "))
+  );
 });
-
 
 // ============================ Task watch ================================== //
 gulp.task("watch", function () {
@@ -422,6 +448,9 @@ gulp.task("watch", function () {
   // = Learn gulp
   gulp.watch("project/scss/gulp/*.scss", gulp.series("gulp-css"));
   gulp.watch("project/js/gulp/gulp.js", gulp.series("gulp-js"));
+  // = Learn gulp
+  gulp.watch("project/scss/css/*.scss", gulp.series("css-css"));
+  gulp.watch("project/js/gulp/css.js", gulp.series("css-js"));
   // = Learn command line
   gulp.watch("project/scss/command-line.scss", gulp.series("command-line-css"));
   gulp.watch("project/js/command-line/**/*.js", gulp.series("command-line-js"));
