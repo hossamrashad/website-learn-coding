@@ -1,2 +1,2 @@
-$(document).ready(function(){$("body").on("click",".parent-code .copy",function(){$(this).select(),document.execCommand("copy")})});
+$(document).ready(function(){$("body").on("click",".parent-code .copy",function(){$(this).select(),document.execCommand("copy")})}),$(function(){$(document).ready(function(){"use strict";$(".btn-show-popup").click(function(){$($(this).data("popup")).fadeIn()}),$(".popup").click(function(){$(this).fadeOut()}),$(".popup .inner").click(function(n){n.stopPropagation()}),$(".popup .close").click(function(n){n.preventDefault(),$(this).parentsUntil(".popup").parent().fadeOut()}),$(document).keydown(function(n){27==n.keyCode&&$(".popup").fadeOut()})})});
 //# sourceMappingURL=css.js.map

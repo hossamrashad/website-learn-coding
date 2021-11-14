@@ -14,6 +14,7 @@
 
 // = Snippet
 // error                                                      => Fixed An Error Javascript
+//
 // = انواع البينات
 // data boolean                                               => Data Boolean Syntax
 // boolean                                                    => Data Boolean Syntax
@@ -167,7 +168,7 @@ myPrice = Variable Name
 /* // = Data Types
 Boolean: True, False
 Array: ["facebook.com", "youtube.com", "google.com"]
-Object: {firstName: "Osama", lastName: "Mohamed"}
+Object: {firstName: "Hossam", lastName: "Rashad"}
 String: "JavaScript"
 Number: 32
 Undefined
@@ -213,7 +214,7 @@ if (Condition 1) {
 // onmouseout
 // onchange
 // =============
-
+// Star Javascript Bootcamp
 // Add Default Local Storage Class On Body
 document.body.classList.add(localStorage.getItem("pageColor") || "gray");
 let elColorSwitcher = document.querySelectorAll(".color-switcher li");
@@ -267,3 +268,5 @@ window.onload = function () {
   "use strict";
   setInterval(showTime, 500);
 };
+
+//

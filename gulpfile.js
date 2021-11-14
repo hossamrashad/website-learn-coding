@@ -92,6 +92,8 @@ var sourcemaps = require("gulp-sourcemaps");
 var uglify = require("gulp-uglify");
 var notify = require("gulp-notify");
 var zip = require("gulp-zip");
+// var zip = require("gulp-zip");
+
 // var ftp = require("vinyl-ftp");
 
 // var babel = require("gulp-babel");
@@ -358,6 +360,21 @@ gulp.task("css-css", function () {
     .pipe(notify("Css Task Is Done"));
 });
 
+// --------------------------- Task For Learn css ---------------------------- //
+gulp.task("bootstrap-tool", function () {
+  return (
+    gulp
+      .src("project/js/bootstrap-tool/**/*.js")
+      .pipe(sourcemaps.init())
+      // .pipe(babel({ presets: ["@babel/env"] }))
+      .pipe(concat("bootstrap-tool.js"))
+      .pipe(uglify())
+      .pipe(sourcemaps.write("."))
+      .pipe(gulp.dest("dist/js/bootstrap-tool"))
+      .pipe(notify("bootstrap tool Task Is Done"))
+      .pipe(livereload())
+  );
+});
 // =========================== Test Task ===================================== //
 
 gulp.task("scss-test", function () {
@@ -457,6 +474,8 @@ gulp.task("watch", function () {
   // = learn github
   gulp.watch("project/scss/github.scss", gulp.series("github-css"));
   gulp.watch("project/js/github/**/*.js", gulp.series("github-js"));
+  // = learn github
+  gulp.watch("project/js/bootstrap-tool", gulp.series("bootstrap-tool"));
   //= Test
   gulp.watch("project/scss/test/*.scss", gulp.series("scss-test"));
   // = Images

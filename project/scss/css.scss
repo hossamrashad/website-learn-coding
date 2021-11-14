@@ -1,5 +1,9 @@
 @import "./mixin/mixin";
 // @import "./css/css";
+textarea {
+  min-height: fit-content;
+  height: 150px;
+}
 .s {
   background-image: linear-gradient(to top #ccc 50%);
 }

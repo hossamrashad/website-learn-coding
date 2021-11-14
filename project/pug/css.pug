@@ -29,1230 +29,1429 @@ html(lang="ar" dir="rtl" data-theme="light")
         //- script(src="js/libs/babel/browser.js") 
         //- end head
 
-        body 
-            //- start body
-            include header/header.pug
-            div(class='container-fluid')
-                div(class='row')
-                    div(class='col-12')
-                        div(class='explain')
-                            h2(class='h1 text-center') Learn Css
-                    div(class='grid-sm-2')
-                        //-  اختيار  العناصر
-                        div(class='explain')
-                            h4(class='h3 text-center') اختيار  العناصر
-                            p(class='lead') اختيار العناصر عن طريق نوعها على مستو الصفحة او داخل الاب اللى هو فية
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p> Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy')
-                                        |p {
-                                        |   color: red;
-                                        |}
-                            p(class='lead') اختيار جميع العناصر اللى تحتوى على كلاس او داخل الاب اللى هو فية
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p class='class-nam'> Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy')
-                                        |.class-nam {
-                                        |   color: red;
-                                        |}
-                            p(class='lead') اختيار جميع العناصر اللى تحتوى على اي دى او داخل الاب اللى هو فية 
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p id='id-nam'> Lorem ipsum dolor sit amen</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy')
-                                        |#id-nam {
-                                        |   color: red;
-                                        |}
-                        //-  الاماكن اللى ممكن تكتب فيها صفات العناصر 
-                        div(class='explain') 
-                            h4(class='h3 text-center') الاماكن اللى ممكن تكتب فيها صفات العناصر 
-                            p(class='lead') inline style
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p style='color: red;' > Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy')
-                                        |p {
-                                        |   color: red;
-                                        |}
-                            p(class='lead') Internal style
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p> Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy' style='height: 140px')
-                                        |<style> 
-                                        |p {
-                                        |   color: red;
-                                        |}
-                                        |</style> 
-                            p(class='lead') External style
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p> Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy' )
-                                        |link rel="stylesheet" href="css/style.css"
-                        //- اختيار الالوان 
-                        div(class='explain')
-                            h4(class='h3 text-center') اختيار الالوان 
-                            p(class='lead text-end') color name
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p> Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy')
-                                        |p {
-                                        |   color: red;
-                                        |}
-                            p(class='lead text-end') color rgb
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p> Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy')
-                                        |p {
-                                        |   color: rgb(255, 255, 255);
-                                        |}
-                            p(class='lead ') 
-                                span(class='text-end float-end') color rgba
-                                span(class='text-start') الشفافية
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p> Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy')
-                                        |p {
-                                        |   color: rgba(255, 255, 255, 0.5);
-                                        |}
-                            p(class='lead ')  Hex Code
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p> Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy')
-                                        |p {
-                                        |   color: #ff0000;
-                                        |}
-                        //- اختيار الصورة فى الباك جراوند 
-                        div(class='explain')
-                            h4(class='h3 text-center')  اختيار الصورة فى الباك جراوند
-                            p(class='lead wrapper-float') 
-                                span(class='float-end') background image
-                                span(class='float-start')
-                                    span(class='h2') 1 
-                                    span(class='') - مكان الصورة
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-end copy')
-                                        |<p> Lorem ipsum dolor sit amet</p>
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy')
-                                        |p {
-                                        |   background-image: url(../images/img.jpg);
-                                        |}
-                            p(class='lead wrapper-float')
-                                span(class='float-end') background repeat
-                                span(class='float-start')
-                                    span(class='h2') 2 
-                                    span(class='') - تقرار الصورة   
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-start copy' style='height:170px')
-                                        |<div> Lorem ipsum dolor sit amet</div>
-                                        |  تقرار الصورة و ده الديقوالت فاليو
-                                        |   ماترارش الصورة
-                                        |   تقرار الصورة بى العرض
-                                        |   تقرار الصورة بى الطول
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy' style='height:170px')
-                                        |div {
-                                        |   background-repeat: repeat;
-                                        |   background-repeat: no-repeat;
-                                        |   background-repeat: repeat-x;
-                                        |   background-repeat: repeat-y;
-                                        |}
-                            p(class='lead wrapper-float')
-                                span(class='float-end') background attachment
-                                span(class='float-start')
-                                    span(class='h2') 3 
-                                    span(class='') - هو شكل الباك جروند img
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-start copy' style='height:170px')
-                                        |<div> Lorem ipsum dolor sit amet</div>
-                                        |  ثبات الصورة فى مكانها و ده الديقوالت فاليو
-                                        |   نزول الصورة و طلوعها مع الاسكرال 
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy' style='height:170px')
-                                        |div {
-                                        |   background-attachment: scroll;
-                                        |   background-attachment: fixed;
-                                        |}
-                            p(class='lead wrapper-float')
-                                span(class='float-end') background position
-                                span(class='float-start')
-                                    span(class='h2') 4 
-                                    span(class='') - هو مكان الصورة
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-start copy' style='height:190px')
-                                        |<div> Lorem ipsum dolor sit amet</div>
-                                        |   هو المكان اللى هتبدا منو اصورة و لو كتبت قيمة وحدة بيدي للقيمة التانية center
-                                        |   ممكن تحارك بى اسم الاتجهات
-                                        |   ممكن تحارك بى الباكسال 
-                                        |   ممكن تحارك بى النثبة الماوية 
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy' style='height:190px')
-                                        |div {
-                                        |   background-position: center;
-                                        |
-                                        |   background-position: top left;
-                                        |   background-position: 0px 100px;
-                                        |   background-position: 10% 30%;
-                                        |}
-                            p(class='lead wrapper-float')
-                                span(class='float-end') background size
-                                span(class='float-start')
-                                    span(class='h2') 5 
-                                    span(class='') - هو حجم الصورة
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-start copy' style='height:210px')
-                                        |<div> Lorem ipsum dolor sit amet</div>
-                                        |   اوتو هى القيمة الافتراضية -
-                                        |   الكافار بتماداد الصورة لو صغيرة على اد المتو و لو كبيرة بتمددها بس بتقطع من حتا مش بتظار من الصورة -
-                                        |   الكونتان بتخالى كل الصورة باينة بس لو الصورة اصغر من العنصار مبتملاش العنصر -
-                                        |   ممكن تكتاب بى الباكسال و بالنسبة الماوية و ده فى حالة انو انت عاوز الصورة تملة العنصار كلو فى كل الاحوال لو العكس -
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy' style='height:210px')
-                                        |div {
-                                        |   background-size: auto;
-                                        |   background-size: cover;
-                                        |
-                                        |   background-size: contain;
-                                        |
-                                        |   background-size: 100% 100%;
-                                        |}
-                        //- padding 
-                        div(class='explain')
-                            h4(class='h3 text-center') padding اللى هى الهوامش الداخلية للعنصر 
-                            p(class='lead') padding مبيقبالش القيمه بى الثالب و ممكن تكتبو بى الباكسال او بى النثبة الماويه
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-start copy' style='height: 210px')
-                                        |<p style='color: red;' > Lorem ipsum dolor sit amet</p>
-                                        | ( Top Right Bottom Left ) هو الاربع اتجهات للعنصار  تبدا من -
-                                        |  القيمتين اللى هو كل اتجاه بيجيب من اللى فى وشو يعنى بتبدا من التوب يبا اللى فى وشو البوتام و الكمان الشمال و اليمن  
-                                        | التلات قيم بيكون الترتيب هو التاب و الريت و الباتام و بالنسبة لللفت بياخد من الرايت
-                                        |البادانج بى الاتجاه اللى تحددو - 
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy' style='height: 210px')
-                                        |p {
-                                        |   passing: 10px;
-                                        |   padding: 10px 20px;
-                                        |
-                                        |   padding: 10px 20px 15px;
-                                        |
-                                        |   padding-left: 10px;
-                                        |}
-                        //- margin 
-                        div(class='explain')
-                            h4(class='h3 text-center') margin اللى هى الهوامش الخارجية للعنصر 
-                            p(class='lead') margin بيقبال القيمه بى الثالب و ممكن تكتبو بى الباكسال او بى النثبة الماويه
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-start copy' style='height: 230px')
-                                        |<div> Lorem ipsum dolor sit amet</div>
-                                        | ( Top Right Bottom Left ) هو الاربع اتجهات للعنصار  تبدا من -
-                                        |  القيمتين اللى هو كل اتجاه بيجيب من اللى فى وشو يعنى بتبدا من التوب يبا اللى فى وشو البوتام و الكمان الشمال و اليمن  
-                                        | التلات قيم بيكون الترتيب هو التاب و الريت و الباتام و بالنسبة لللفت بياخد من الرايت
-                                        |المارجان بى الاتجاه اللى تحددو - 
-                                        | المارجان الاوتو بيظهار مع العرض العنصر يعنى فى توصيق العنصار 
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy' style='height: 230px')
-                                        |div {
-                                        |   margin: 10px;
-                                        |   margin: 10px 20px;
-                                        |
-                                        |   margin: 10px 20px 15px;
-                                        |
-                                        |   margin-left: 10px;
-                                        |   margin-left: auto;
-                                        |}
-                        //- border 
-                        div(class='explain')
-                            h4(class='h3 text-center') border هى الحواف بتاعت العنصار
-                            p(class='lead') border  و بيقبال اربع الاتجهات فى اللون و النوع و الحجم
-                            div(class='grid-sm-2 form-floating parent-code')
-                                div(class='code-html')
-                                    textarea(class='form-control text-start copy' style='height: 160px')
-                                        |<div> Lorem ipsum dolor sit amet</div>
-                                        | هى الشارت كود للباردار
-                                        | حجم البردار
-                                        | نوع البردار
-                                        | لون البردار
-                                div(class='code-css')
-                                    textarea(class='form-control text-end copy' style='height: 160px')
-                                        |div {
-                                        |   border: 10px solid #f00;
-                                        |   border-width: 10px;
-                                        |   border-style: solid;
-                                        |   border-color: #f00;
-                                        |}
-                        //- display 
-                        div(class='explain')
-                            h4(class='h3 text-center') display 
-                            div(class='grid-sm-3') 
-                                ul(class='ml-6')  
-                                    p(class='text-c font-bold text-center') block
-                                    li Take Full Width If No Width
-                                    li بياخد المساحة كلهاء
-                                    li Add Line Break
-                                    li بيضيف لاين بريك علشان العناصر متجيش جنبو
-                                    li Respect Padding, Margin, Width, Height
-                                    li بيحترام و بيعمال حساب للبادانج و المرجان و  العرض و الطول
-                                ul(class='ml-10')  
-                                    p(class='text-c font-bold text-center') Inline
-                                    li did't Take Full Width If No Width
-                                    li مبيخدش المساحة كلهاء
-                                    li did't Add Line Break
-                                    li مبيضفش لاين بريك علشان العناصر تيجى جنب بعض
-                                    li Do Not Respect Width, Height
-                                    li مبيحترامش العرض و الطول
-                                    li Respect Padding And Margin [ Just Wight + Left ]
-                                    li بيحترام البادانج و المارجان من الشمال و اليمين بس
-                                    li Allow Elements Before And After It in The Same Line
-                                    li بيسمح للعناصر انا تيجي جنبو فى نفس السطر
-                                ul(class='font-s-16')  
-                                    p(class='text-c font-bold text-center') Inline-Block
-                                    li did't Take Full Width If No Width
-                                    li مبيخدش المساحة كلهاء
-                                    li did't Add Line Break
-                                    li مبيضفش لاين بريك علشان العناصر تيجى جنب بعض
-                                    li Respect Padding, Margin, Width, Height
-                                    li بيحترام و بيعمال حساب للبادانج و المرجان و  العرض و الطول
-                                    li Allow Elements Before And After It in The Same Line
-                                    li بيسمح للعناصر انا تيجي جنبو فى نفس السطر
-                            div(class='grid-sm-2') 
-                                ul(class='font-size-16')  
-                                    p(class='text-c font-bold text-center') none
-                                    li display : none
-                                    li هي بتخفى العنصر من الصفحة 
-                                ul(class='font-size-16')  
-                                    p(class='text-c font-bold text-center') visibility
-                                    li visibility : visible
-                                    li هو انو العنصر يكون ظاهر وده الديفالت فاليو
-                                    li visibility : hidden
-                                    li هو بيخفى العنصار ولاكن بيحافظ على مكانو
-                        //- Dimensions – Width And Height 
-                        div(class='explain')
-                            h4(class='h3 text-center') Dimensions – Width And Height
-                            div(class='grid-sm-2')
-                                ul(class='ml-6')
-                                    li هو الحد الاصغر للعنصار
-                                    li هو الحد الاكبر للعنصار
-                                    li هو عرض العنصار فى جميع الاحوال 
-                                    li هو طول العنصار فى جميع الاحوال
-                                    li هو بيخالى العنصار بلاك زاى ما هوة بس بيخليه على اد المحتو اللى هو فية
-                                ul(class='ml-6 text-end')
-                                    li min-width: ; & min-height 
-                                    li max-width: ; & min-height 
-                                    li width 
-                                    li height 
-                                    li width : fit-content 
-                        //- overflow
-                        div(class='explain')
-                            h4(class='h3 text-center') overflow هو العنصار الزيادة عن المحتو 
-                            div(class='grid-sm-2')
-                                ul(class='ml-6')
-                                    li الفيزبال هى القيمة الافتراضية للعنصار يعنى الحجات الزيادة تظهار
-                                    li الهادان الحجات الزيادة تختفى
-                                    li الاسكرال بيعمال اسكرال يمين و تحت للعنصار
-                                    li الاوتو بيحط اسكرال فى حالة انو الحجات اللى جو العنصار زادات 
-                                    li  الاكس هى العناصر الزيادة من العرض 
-                                    li  الواى هى العناصر الزيادة من الطول
-                                ul(class='ml-6 text-end')
-                                    li overflow: visible
-                                    li overflow: hidden
-                                    li overflow: scroll
-                                    li overflow: auto
-                                    li overflow-x: auto
-                                    li overflow--y: auto
-                    div(class='grid-sm-1')
-                        div(class='explain')
-                            h4(class='h3 text-center') كل ما يخص Text
-                            div(class='grid-sm-2')
-                                //- Text shadow
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') text-shadow
-                                    div(class='grid-sm-2')
+    body 
+        //- start body
+        include header/header.pug
+        div(class='container-fluid')
+            div(class='row')
+                div(class='col-12')
+                    div(class='explain')
+                        h2(class='h1 text-center') Learn Css
+                div(class='grid-sm-2')
+                    //-  اختيار  العناصر
+                    div(class='explain')
+                        h4(class='h3 text-center') اختيار  العناصر
+                        p(class='lead') اختيار العناصر عن طريق نوعها على مستو الصفحة او داخل الاب اللى هو فية
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p> Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy')
+                                    |p {
+                                    |   color: red;
+                                    |}
+                        p(class='lead') اختيار جميع العناصر اللى تحتوى على كلاس او داخل الاب اللى هو فية
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p class='class-nam'> Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy')
+                                    |.class-nam {
+                                    |   color: red;
+                                    |}
+                        p(class='lead') اختيار جميع العناصر اللى تحتوى على اي دى او داخل الاب اللى هو فية 
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p id='id-nam'> Lorem ipsum dolor sit amen</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy')
+                                    |#id-nam {
+                                    |   color: red;
+                                    |}
+                    //-  الاماكن اللى ممكن تكتب فيها صفات العناصر 
+                    div(class='explain') 
+                        h4(class='h3 text-center') الاماكن اللى ممكن تكتب فيها صفات العناصر 
+                        p(class='lead') inline style
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p style='color: red;' > Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy')
+                                    |p {
+                                    |   color: red;
+                                    |}
+                        p(class='lead') Internal style
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p> Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy' style='height: 140px')
+                                    |<style> 
+                                    |p {
+                                    |   color: red;
+                                    |}
+                                    |</style> 
+                        p(class='lead') External style
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p> Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy' )
+                                    |link rel="stylesheet" href="css/style.css"
+                    //- اختيار الالوان 
+                    div(class='explain')
+                        h4(class='h3 text-center') اختيار الالوان 
+                        p(class='lead text-end') color name
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p> Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy')
+                                    |p {
+                                    |   color: red;
+                                    |}
+                        p(class='lead text-end') color rgb
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p> Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy')
+                                    |p {
+                                    |   color: rgb(255, 255, 255);
+                                    |}
+                        p(class='lead ') 
+                            span(class='text-end float-end') color rgba
+                            span(class='text-start') الشفافية
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p> Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy')
+                                    |p {
+                                    |   color: rgba(255, 255, 255, 0.5);
+                                    |}
+                        p(class='lead ')  Hex Code
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p> Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy')
+                                    |p {
+                                    |   color: #ff0000;
+                                    |}
+                    //- اختيار الصورة فى الباك جراوند 
+                    div(class='explain')
+                        h4(class='h3 text-center')  اختيار الصورة فى الباك جراوند
+                        p(class='lead wrapper-float') 
+                            span(class='float-end') background image
+                            span(class='float-start')
+                                span(class='h2') 1 
+                                span(class='') - مكان الصورة
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-end copy')
+                                    |<p> Lorem ipsum dolor sit amet</p>
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy')
+                                    |p {
+                                    |   background-image: url(../images/img.jpg);
+                                    |}
+                        p(class='lead wrapper-float')
+                            span(class='float-end') background repeat
+                            span(class='float-start')
+                                span(class='h2') 2 
+                                span(class='') - تقرار الصورة   
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-start copy' style='height:170px')
+                                    |<div> Lorem ipsum dolor sit amet</div>
+                                    |  تقرار الصورة و ده الديقوالت فاليو
+                                    |   ماترارش الصورة
+                                    |   تقرار الصورة بى العرض
+                                    |   تقرار الصورة بى الطول
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy' style='height:170px')
+                                    |div {
+                                    |   background-repeat: repeat;
+                                    |   background-repeat: no-repeat;
+                                    |   background-repeat: repeat-x;
+                                    |   background-repeat: repeat-y;
+                                    |}
+                        p(class='lead wrapper-float')
+                            span(class='float-end') background attachment
+                            span(class='float-start')
+                                span(class='h2') 3 
+                                span(class='') - هو شكل الباك جروند img
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-start copy' style='height:170px')
+                                    |<div> Lorem ipsum dolor sit amet</div>
+                                    |  ثبات الصورة فى مكانها و ده الديقوالت فاليو
+                                    |   نزول الصورة و طلوعها مع الاسكرال 
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy' style='height:170px')
+                                    |div {
+                                    |   background-attachment: scroll;
+                                    |   background-attachment: fixed;
+                                    |}
+                        p(class='lead wrapper-float')
+                            span(class='float-end') background position
+                            span(class='float-start')
+                                span(class='h2') 4 
+                                span(class='') - هو مكان الصورة
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-start copy' style='height:190px')
+                                    |<div> Lorem ipsum dolor sit amet</div>
+                                    |   هو المكان اللى هتبدا منو اصورة و لو كتبت قيمة وحدة بيدي للقيمة التانية center
+                                    |   ممكن تحارك بى اسم الاتجهات
+                                    |   ممكن تحارك بى الباكسال 
+                                    |   ممكن تحارك بى النثبة الماوية 
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy' style='height:190px')
+                                    |div {
+                                    |   background-position: center;
+                                    |
+                                    |   background-position: top left;
+                                    |   background-position: 0px 100px;
+                                    |   background-position: 10% 30%;
+                                    |}
+                        p(class='lead wrapper-float')
+                            span(class='float-end') background size
+                            span(class='float-start')
+                                span(class='h2') 5 
+                                span(class='') - هو حجم الصورة
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-start copy' style='height:210px')
+                                    |<div> Lorem ipsum dolor sit amet</div>
+                                    |   اوتو هى القيمة الافتراضية -
+                                    |   الكافار بتماداد الصورة لو صغيرة على اد المتو و لو كبيرة بتمددها بس بتقطع من حتا مش بتظار من الصورة -
+                                    |   الكونتان بتخالى كل الصورة باينة بس لو الصورة اصغر من العنصار مبتملاش العنصر -
+                                    |   ممكن تكتاب بى الباكسال و بالنسبة الماوية و ده فى حالة انو انت عاوز الصورة تملة العنصار كلو فى كل الاحوال لو العكس -
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy' style='height:210px')
+                                    |div {
+                                    |   background-size: auto;
+                                    |   background-size: cover;
+                                    |
+                                    |   background-size: contain;
+                                    |
+                                    |   background-size: 100% 100%;
+                                    |}
+                    //- padding 
+                    div(class='explain')
+                        h4(class='h3 text-center') padding اللى هى الهوامش الداخلية للعنصر 
+                        p(class='lead') padding مبيقبالش القيمه بى الثالب و ممكن تكتبو بى الباكسال او بى النثبة الماويه
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-start copy' style='height: 210px')
+                                    |<p style='color: red;' > Lorem ipsum dolor sit amet</p>
+                                    | ( Top Right Bottom Left ) هو الاربع اتجهات للعنصار  تبدا من -
+                                    |  القيمتين اللى هو كل اتجاه بيجيب من اللى فى وشو يعنى بتبدا من التوب يبا اللى فى وشو البوتام و الكمان الشمال و اليمن  
+                                    | التلات قيم بيكون الترتيب هو التاب و الريت و الباتام و بالنسبة لللفت بياخد من الرايت
+                                    |البادانج بى الاتجاه اللى تحددو - 
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy' style='height: 210px')
+                                    |p {
+                                    |   passing: 10px;
+                                    |   padding: 10px 20px;
+                                    |
+                                    |   padding: 10px 20px 15px;
+                                    |
+                                    |   padding-left: 10px;
+                                    |}
+                    //- margin 
+                    div(class='explain')
+                        h4(class='h3 text-center') margin اللى هى الهوامش الخارجية للعنصر 
+                        p(class='lead') margin بيقبال القيمه بى الثالب و ممكن تكتبو بى الباكسال او بى النثبة الماويه
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-start copy' style='height: 230px')
+                                    |<div> Lorem ipsum dolor sit amet</div>
+                                    | ( Top Right Bottom Left ) هو الاربع اتجهات للعنصار  تبدا من -
+                                    |  القيمتين اللى هو كل اتجاه بيجيب من اللى فى وشو يعنى بتبدا من التوب يبا اللى فى وشو البوتام و الكمان الشمال و اليمن  
+                                    | التلات قيم بيكون الترتيب هو التاب و الريت و الباتام و بالنسبة لللفت بياخد من الرايت
+                                    |المارجان بى الاتجاه اللى تحددو - 
+                                    | المارجان الاوتو بيظهار مع العرض العنصر يعنى فى توصيق العنصار 
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy' style='height: 230px')
+                                    |div {
+                                    |   margin: 10px;
+                                    |   margin: 10px 20px;
+                                    |
+                                    |   margin: 10px 20px 15px;
+                                    |
+                                    |   margin-left: 10px;
+                                    |   margin-left: auto;
+                                    |}
+                    //- border 
+                    div(class='explain')
+                        h4(class='h3 text-center') border هى الحواف بتاعت العنصار
+                        p(class='lead') border  و بيقبال اربع الاتجهات فى اللون و النوع و الحجم
+                        div(class='grid-sm-2 form-floating parent-code')
+                            div(class='code-html')
+                                textarea(class='form-control text-start copy' style='height: 160px')
+                                    |<div> Lorem ipsum dolor sit amet</div>
+                                    | هى الشارت كود للباردار
+                                    | حجم البردار
+                                    | نوع البردار
+                                    | لون البردار
+                            div(class='code-css')
+                                textarea(class='form-control text-end copy' style='height: 160px')
+                                    |div {
+                                    |   border: 10px solid #f00;
+                                    |   border-width: 10px;
+                                    |   border-style: solid;
+                                    |   border-color: #f00;
+                                    |}
+                    //- display 
+                    div(class='explain')
+                        h4(class='h3 text-center') display 
+                        div(class='grid-sm-3') 
+                            ul(class='ml-6')  
+                                p(class='text-c font-bold text-center') block
+                                li Take Full Width If No Width
+                                li بياخد المساحة كلهاء
+                                li Add Line Break
+                                li بيضيف لاين بريك علشان العناصر متجيش جنبو
+                                li Respect Padding, Margin, Width, Height
+                                li بيحترام و بيعمال حساب للبادانج و المرجان و  العرض و الطول
+                            ul(class='ml-10')  
+                                p(class='text-c font-bold text-center') Inline
+                                li did't Take Full Width If No Width
+                                li مبيخدش المساحة كلهاء
+                                li did't Add Line Break
+                                li مبيضفش لاين بريك علشان العناصر تيجى جنب بعض
+                                li Do Not Respect Width, Height
+                                li مبيحترامش العرض و الطول
+                                li Respect Padding And Margin [ Just Wight + Left ]
+                                li بيحترام البادانج و المارجان من الشمال و اليمين بس
+                                li Allow Elements Before And After It in The Same Line
+                                li بيسمح للعناصر انا تيجي جنبو فى نفس السطر
+                            ul(class='font-s-16')  
+                                p(class='text-c font-bold text-center') Inline-Block
+                                li did't Take Full Width If No Width
+                                li مبيخدش المساحة كلهاء
+                                li did't Add Line Break
+                                li مبيضفش لاين بريك علشان العناصر تيجى جنب بعض
+                                li Respect Padding, Margin, Width, Height
+                                li بيحترام و بيعمال حساب للبادانج و المرجان و  العرض و الطول
+                                li Allow Elements Before And After It in The Same Line
+                                li بيسمح للعناصر انا تيجي جنبو فى نفس السطر
+                        div(class='grid-sm-2') 
+                            ul(class='font-size-16')  
+                                p(class='text-c font-bold text-center') none
+                                li display : none
+                                li هي بتخفى العنصر من الصفحة 
+                            ul(class='font-size-16')  
+                                p(class='text-c font-bold text-center') visibility
+                                li visibility : visible
+                                li هو انو العنصر يكون ظاهر وده الديفالت فاليو
+                                li visibility : hidden
+                                li هو بيخفى العنصار ولاكن بيحافظ على مكانو
+                    //- Dimensions – Width And Height 
+                    div(class='explain')
+                        h4(class='h3 text-center') Dimensions – Width And Height
+                        div(class='grid-sm-2')
+                            ul(class='ml-6')
+                                li هو الحد الاصغر للعنصار
+                                li هو الحد الاكبر للعنصار
+                                li هو عرض العنصار فى جميع الاحوال 
+                                li هو طول العنصار فى جميع الاحوال
+                                li هو بيخالى العنصار بلاك زاى ما هوة بس بيخليه على اد المحتو اللى هو فية
+                            ul(class='ml-6 text-end')
+                                li min-width: ; & min-height 
+                                li max-width: ; & min-height 
+                                li width 
+                                li height 
+                                li width : fit-content 
+                    //- overflow
+                    div(class='explain')
+                        h4(class='h3 text-center') overflow هو العنصار الزيادة عن المحتو 
+                        div(class='grid-sm-2')
+                            ul(class='ml-6')
+                                li الفيزبال هى القيمة الافتراضية للعنصار يعنى الحجات الزيادة تظهار
+                                li الهادان الحجات الزيادة تختفى
+                                li الاسكرال بيعمال اسكرال يمين و تحت للعنصار
+                                li الاوتو بيحط اسكرال فى حالة انو الحجات اللى جو العنصار زادات 
+                                li  الاكس هى العناصر الزيادة من العرض 
+                                li  الواى هى العناصر الزيادة من الطول
+                            ul(class='ml-6 text-end')
+                                li overflow: visible
+                                li overflow: hidden
+                                li overflow: scroll
+                                li overflow: auto
+                                li overflow-x: auto
+                                li overflow--y: auto
+                div(class='grid-sm-1')
+                    div(class='explain')
+                        h4(class='h3 text-center') كل ما يخص Text
+                        div(class='grid-sm-2')
+                            //- Text shadow
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') text-shadow
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        p(class='lead font-bold')  طريقة الكتابة التاكسات شادو
+                                        ul(class='wrapper-float')
+                                            li(class='float-end') text-shadow: 0 0 0 red
+                                        li هو فى الافقى يعنى يمين بى الموجاب و شمال بة الثالب
+                                        li هو الراسى فوق بى الموجاب و تحت بى الثالب
+                                        li الانتشار 
+                                        li لون الشادو
+                                    ul(class='text-end')
+                                        p(class='lead font-bold') <= syntax
+                                        li text-shadow: H-shadow V-shadow Blur Color
+                                        li H-shadow
+                                        li V-shadow
+                                        li Blur
+                                        li Color
+                            //- Text Align
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') Text Align محازاه الكلام
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li محازاه الكلام على الشمال
+                                        li محازاه الكلام فى النص
+                                        li محازاه الكلام على اليمين
+                                    ul(class='text-left dir-ltr')
+                                        li text-align: left;
+                                        li text-align: center;
+                                        li text-align: right;
+                            //- direction
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') direction اتجاه العنصر 
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li اتجاه الكلام على الشمال فى الانجليزى
+                                        li اتجاه الكلام على اليمين فى العربي
+                                    ul(class='text-left dir-ltr')
+                                        li direction: ltr;
+                                        li direction: rtl;
+                            //- vertical align 
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') vertical align محازاه الصورة مع التكست
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li الواضع الافتراضى 
+                                        li  الباس لاين بيخالى الكلام فوق مع الصورة فى بديتها من فوق 
+                                        li البوتم بيخالى الكلام تحت مع الصورة فى نهيتها من تحت
+                                        li التوب بيخالى الكلام فوق مع الصورة فى بديتها من فوق
+                                        li الميديام بيخالى التكست فى واسط الصورة
+                                        li  الساب بيخالى الكلام تحت مع الصورة فى نهيتها من تحت
+                                        li  السابار بيخالى الكلام تحت مع الصورة فى نهيتها من تحت و فى بداية التاكست
+                                        li  التاكست بوتام بيخالى الكلام تحت مع الصورة فى نهيتها من تحت
+                                        li  التاكست تواب بيخالى الكلام فوق مع الصورة فى بديتها من فوق
+                                    ul(class='text-left dir-ltr')
+                                        li vertical-align: auto;
+                                        li vertical-align: baseline;
+                                        li vertical-align: bottom;
+                                        li vertical-align: top;
+                                        li vertical-align: middle;
+                                        li vertical-align: sub;
+                                        li vertical-align: super;
+                                        li .
+                                        li vertical-align: text-bottom;
+                                        li vertical-align: text-top;
+                                        li 
+                                            |Rovan Hossam
+                                            img(src="https://via.placeholder.com/50" alt="" srcset="")
+                                            |Rashad
+                            //- text decoration
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') text decoration هو الخط فى العنصار 
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li نيخليش للتكست خاط
+                                        li بيخلى خاط تحت الكلام
+                                        li بيخالى خاط فوق الكلام
+                                        li بيخالى خاط جوة الكلام
+                                    ul(class='text-end dir-ltr')
+                                        li text-decoration: none;
+                                        li text-decoration: underline;
+                                        li text-decoration: overline;
+                                        li text-decoration: line-through;
+                            //- text transform
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') text transform هو طريقة كتابة التاكست
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li بيخالى التاكست زاى ما هو مكتوب
+                                        li بيخالى اول حرف من كل كلمة كابتال
+                                        li بيخالى جميع الحروف اصمول
+                                        li بيخالى جميع الحروف كابتال
+                                    ul(class='text-end dir-ltr')
+                                        li text-transform: none;
+                                        li text-transform: capitalize;
+                                        li text-transform: lowercase;
+                                        li text-transform: uppercase;
+                            //- letter-spacing
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') letter-spacing المسافات بين الاحراف
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li المسافات بين الاحراف
+                                    ul(class='text-end dir-ltr')
+                                        li letter-spacing: 3px;
+                            //- text-indent
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') text-indent هو بداية الكلام فى العنصار من فين
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li هى المساحة الفاضية اللى بيسبه العنصار 
+                                    ul(class='text-end dir-ltr')
+                                        li text-indent: 30px;
+                            //- line height
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') line-height ارتفاع السطر للقراه
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li ارتفاع السطر للقاره و النسبة بتتحدد على حسب نوع الخط
+                                        li النسبه المفضلة هى 1.6 || 160%
+                                    ul(class='text-end dir-ltr')
+                                        li line-height: 1.6;
+                            //- word-spacing
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') word-spacing المسافات بين الكلام
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li المسافات بين الكلام
+                                    ul(class='text-end dir-ltr')
+                                        li letter-word: 3px;
+                            //- white-space
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') white-space التكاست عده مساحة العنصر ينزال تحت
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li الديفالت فاليو يعنى فى حلة انو 
+                                        li يعنى يكمال على نفس السطر اللى هو فية و مينزالش تحت  
+                                    ul(class='text-end dir-ltr')
+                                        li white-space: normal;
+                                        li .
+                                        li white-space: nowrap;
+                            //- word-break
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') word-break فى حالة انو الكلمة اكبر من العنصر بتنفاع من url
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li الديفالت فاليو يعنى فى حلة انو الكلمة عده مساحة العنصر تطلع برة العنصر 
+                                        li تنزال الكلمة على السطر اللى تحت
+                                    ul(class='text-end dir-ltr')
+                                        li word-break: normal;
+                                        li .
+                                        li word-break: break-all;
+                            //- text-overflow
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') text-overflow هو النص اللى بيطلع برة العنصار 
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li بتعمال نقاط علشان تبين انو الكلام لسه مخلصش 
+                                        li علشان تفهم اكتار بتخلى العنصار ليه مساحة 
+                                        li بتعملو اوفار فلو هادان 
+                                        li بتعملو وايت اسبيس نو راب 
+                                        li و تستخدام الخاصية هبحطلف فى اخر العنصار 3 نقط تبين انو التكاست لسه مخلصش
+                                    ul(class='text-end dir-ltr')
+                                        li text-overflow: ellipsis;
+                            //- inherit
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') inherit هو التوريث من الاب للعنصار اللى هو فية 
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li كدا بيجيب اللون من الاب اللى هو فية 
+                                        li العناصر بتورث حجات و حجات تانى لى 
+                                        li ممكن تخالى العنصار يورث جميع خواص الاب اللى هو فية 
+                                    ul(class='text-end dir-ltr')
+                                        li color: inherit;
+                            //- font-family
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') font-family
+                                h3(class='h6 dir-rtl ') ممكن تبحث على web safe fonts for html and css
+                                p(class='') بتستخدام اكتار من خاط ور بعض فى حالة انو المتصفح مش عارف الفانت الاول بيروح على نوع الفونت اللى بعدو 
+                                p(class='') فى حالة انو اسم الفانت متكون من اكتار من كلمة بتحطو بين دابل كوت
+                                li ممكن تنزال الفنت على جهازاك وترفعو مع الموقاع 
+                                li بتستدعية عن طريق فونت فيس و جوه اسم الفونت و بعدين مثار الفنت عندك على الجهاز
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li serif هو خاط بيكون فية كثرة فى الحروف
+                                        li sans-serif هى خطوط مفهاش كسرة فى الحروف
+                                    ul(class='text-end dir-ltr')
+                                        li font-family: 'Times New Roman', Times, serif;
+                                        li font-family: Arial, Helvetica, sans-serif;
+                            //- font-size
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') font-size حجم الخاط
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li px وحدة القياس بى الباكسال
+                                        li ممكن تكتاب كلمات معبره عن حجم الخط
+                                        li em هى مرة من الاب اللى هو فية فية فى حجم الخط
+                                        li rem هو الروت الللى هو الاتش تى ال ام 
+                                        li % هو ميه فى المية من الاب اللى هو فية
+                                        li vw الواحد فيو بارت هى واحد فى المية من عرض و طول الشاشة
+                                        li يعنى لو عرض الشاشة 900px يعنى الواحد فى المية بيساوى 9 و لو عاوز خمسة فيو بارت النتيجة هى 5 فى 9 بى 45 بيكسال 
+                                        li فى الشاشات لو مستخدام 5 vw 
+                                        li xs 767 = 5 * 7.67 = 38.35px
+                                        li sm 991 = 5 * 9.91 = 49.55px
+                                        li md 11.00 = 5 * 11 = 55px
+                                        li lg ... = 5 * 14 = 70px 
+                                    ul(class='text-end dir-ltr')
+                                        li font-size: 20px;
+                                        li font-size: small;
+                                        li font-size: 1em; => Default Page Font Size Is 16px From Body
+                                        li font-size: 1rem; => Default Page Font Size Is 32px From Html
+                                        li font-size: 100%;
+                                        li font-size: 5vw; View Port Width
+                            //- font-style
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') font-style شكل الكتابة فى الخاط
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li القيمة الافتراضية 
+                                        li بيخالى الكلام مايل
+                                    ul(class='text-end dir-ltr')
+                                        li font-style: normal;
+                                        li font-style: italic;
+                            //- font-variant
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') font-variant بيحوال الكروف كابتال 
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li بيحوال الحروف كابتال بس اصغار من الحجم الطبيعى بتعه
+                                    ul(class='text-end dir-ltr')
+                                        li font-variant: small-caps;
+                            //- font-weight
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') font-weight هى ثماكة الفانت
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li النورمال هى القيمة الافتراضية
+                                        li هى ثماكة الخاط و 700 هى بتساوى قيمة البالد
+                                    ul(class='text-end dir-ltr')
+                                        li   font-weight: normal;
+                                        li   font-weight: bold;
+                            //- cursor
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr ') cursor هو شكل المواثر بتاع الموث
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li بتحدد شكل المواشر على حثب الاكشان اللى هيعملو على العنصر
+                                    ul(class='text-end dir-ltr')
+                                        li cursor: pointer;
+                            //- float
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') float هو عومان العنصار فى الصفحة
+                                h3(class='h5') علشان تعالج الفلوت 
+                                h3(class='h6') الكلير بوث بعد اخر عنصار معملو فلوت 
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li العومان ناحية الشمال
+                                        li العومان ناحية اليمين
+                                        li عدم العومان
+                                        li الكلير بيعالج العناصر اللى ليه فلوتي
+                                    ul(class='text-end dir-ltr')
+                                        li float: left;
+                                        li float: right;
+                                        li float: none;
+                                        li clear: both;
+                            //- calc
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') calc هو توزيع العناصر فى الحسبات فى العرض
+                                p(class='') فى حاله انو انت عاوز مسافة قبل العناصر و بعده بيكون عدد المسفات اكبر من عدد العناصر بى واحد
+                                p(class='') فى حالة انو انت عاوز المسفات بين العنصر بيكون عدد المسفات اقل من عدد العناصر بى واحد س
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li عدد العناصر على المساحة الكلية
+                                        li المساحة الكلية ناقص المسافات اللى بين كل عنصر و التانى على عدد العناصر
+                                        li المساحة الكلية ناقص المسافات اللى بين كل عنصر و التانى على عدد العناصر
+                                        li المساحة الكلية ناقص المسافات اللى بين كل عنصر و التانى على عدد العناصر
+                                    ul(class='text-end dir-ltr')
+                                        li width: calc(100% / 4);
+                                        li width: calc((100% - 1%) / 4);
+                                        li width: calc((100% - 60px) / 4);
+                                        li width: calc((100% - 90px) / 4);
+                            //- opacity
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') opacity الشفافية للعنصار بالكامل
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li قيمة 1 يعنى العنصار ملهوش شفافية و هى القيمة الافتراضية
+                                        li كل ما تقلل النسبة كل ما العنصار يختفى
+                                        li 
+                                    ul(class='text-end dir-ltr')
+                                        li opacity: 1;
+                                        li opacity: 0.9;
+                            //- position
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') position هو مكان العنصار فى الصفحة
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li هو القيمة الافتراضية وكمان التواب و اللفت مش بيقصرو علية
+                                        li الرلتاف هو بيتحارك بنان على نفسو و مكانو محجوز
+                                        li الابساليوت بيطلع برة المحتو اللى هو فية الاخر العنصار 
+                                        li علشان تحرق العنصر الابسليوت داخل العنصار الاب لازم العنصار الاب يكون ريلتاف 
+                                        li الفاكساد بيكون معاكل فى كل الاماكن فى الصفحة حت لو الاب واخد بوزيشان ريلاتف 
+                                        li sticky هو بوزاشان فى حالة الوصول اليه بيفضال معاك فى الصفحة بس لازم تكون محددلو مكانو فى التاب او البوتام
+                                    ul(class='text-end dir-ltr')
+                                        li position: static;
+                                        li position: relative;
+                                        li position: absolute;
+                                        li .
+                                        li .
+                                        li position: fixed;
+                                        li .
+                                        li position: sticky;
+                            //- z-index
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') z-index توزيع الطبقات
+                                h3(class='h6') توزيعة الطبقات بتام بونان على اى وضع من اوضاع البوزيشان
+                                h3(class='h6') توزيعة الطبقات الطبيعية من غير تحديد هو على حسب ترتيب العناصر فى الصفحة 
+                                h5(class='h6') لو عاوز العنصار تخلية اخار العناصر ورة بتديلو قيمة بى الثالب
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li ترتيب الطبقات 
+                                        li الرقم الاكبار هو اللى بيكون فوق العنصر اللى رقمو اصغار
+                                        li فى حالة انو عنصرين وخدين نفس القيمة بيكون الاولوية على حسب ترتيب العناصر فى الصفحة
+                                    ul(class='text-end dir-ltr')
+                                        li z-index: 1;
+                                        li z-index: 2;
+                                        li z-index: 2;
+                            //- list-style
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') list-style
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li هى القيمة الافتراضية و هى شكل دواير 
+                                        li هو من غير لست اللى هى الناقط
+                                    ul(class='text-end dir-ltr')
+                                        li list-style-type: disc;
+                                        li list-style: none;
+                            //- table
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') table
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li  محتاج ارجعلو
+                                    ul(class='text-end dir-ltr')
+                                        li table
+                            //- pseudo classes
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') pseudo classes الكلاسات الموزيفة
+                                h3(class='h6') زاى الهافار
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li  الهافار 
+                                        li  اللى هو ساعت ما دوس على الحقل الادخال 
+                                        li  الاكتاف 
+                                        li  فى الفازبال اللى هى العناصر اللى ظرتها و بتشتغل مع اللنكات 
+                                        li  العنصار الفاضى 
+                                        li  فى حالة الاتشاكد و بتستخدام مع الانبوت اللى نوعة اتشامد 
+                                    ul(class='text-end dir-ltr')
+                                        li :hover 
+                                        li :focus 
+                                        li :active
+                                        li :visited
+                                        li :empty 
+                                        li :checked
+                            //- Pseudo Elements
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') pseudo Elements العناصر الموزيفة
+                                h3(class='h6') زاى الفارست لاين
+                                h3(class='h6') العناصر المزيفة بتبدا بى 2 نقط و لو حطيط واحدة هتشتغال بى عملوها كدا علشان التفريق بينها و بين الكلاسات الموزيفة
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li  اللى هو اول حرف من البرجراف 
+                                        li اللى هو اول سطر فى االبرجراف فى جميع الشاشات
+                                        li اللى هو اللتحديد لنسخ تكست 
+                                        li العنصار المزيف اللى فى البداية
+                                        li العنصر المزيف اللى فى اخر العنصر
+                                        li فى الاب بتكتاب اسم العداد 
+                                        li فى البيفور بتكتاب فى الكنتنت اسم العداد 
+                                    ul(class='text-end dir-ltr')
+                                        li ::first-letter 
+                                        li ::first-line 
+                                        li ::selection
+                                        li ::before
+                                        li ::after
+                                        li in parent => counter-increment: name-of-counter
+                                        li in child::before => content: counter(name-of-counter)
+                            //- vendors prefixes
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') vendors prefixes اللى هى اصحاب المتصفحات
+                                h3(class='h6') 
+                                h3(class='h6') العناصر المزيفة بتبدا بى 2 نقط و لو حطيط واحدة هتشتغال بى عملوها كدا علشان التفريق بينها و بين الكلاسات الموزيفة
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li متصفح جوجال كروم
+                                        li متصفح سفارى
+                                        li متصفح فاير فاكس
+                                        li متصفح انتارنت اكسبلورال
+                                        li متصفح اوبراء
+                                        hr
+                                        li فى ميزه ظهرات جديد
+                                        li تبدا المتصفحات فى التست للخاصيه الجديدة
+                                        li المتصفحات بتديك البريفكس علشان تضيف الخاصية
+                                        li .
+                                        li لو الميزة خلاص اتدعمت فى المتصفح مبتحتجش تكتب البريفكس
+                                        li .
+                                        hr
+                                        li  -webkit- خاصة بى متصفحات جوجل كروم و سفارى و المتصفحات الحديثة من اوبراء
+                                        li -moz- خاصة بى متصفح فاير فوكس
+                                        li  -ms- خاصة بى متصفح انتارنت اكسبلورال
+                                        li  -o- خاصة بى متصفح اوبراء الاصدارات القديمة 
+                                        hr 
+                                        li معظام المستخدمين يستخدمو المتصفحات حديثة 
+                                        li الفجوال استديو فية اضافة بتضيف البرفكسار
+                                        li هى زاى الباج بتجيب البريفكس 
+                                    ul(class='text-end dir-ltr')
+                                        li Chrome
+                                        li Safari
+                                        li Firefox
+                                        li IE, Edge
+                                        li Opera
+                                        hr
+                                        li [1] New CSS Feature Appeared
+                                        li [2] Browsers Tests The Feature In Version X
+                                        li [3] Browsers Add Prefix To Give Developers The Ability To Use It
+                                        li [4] The Feature Is Fully Supported In Version Y, No Need For Prefix
+                                        hr
+                                        li -webkit- => Chrome, Safari, New Opera Version
+                                        li .
+                                        li -moz- => Firefox
+                                        li -ms- => Ie, Edge
+                                        li -o- => Old Version of Opera
+                                        hr
+                                        li [1] Most of Users Is Using Modern Browsers
+                                        li [2] Vs Code Addon To Add The Prefix
+                                        li [3] Task Runner
+                            //- border radius
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') border radius بتعمال دوران للعنصار
+                                h3(class='h6') هى دوران العنصار و بتقبال الاربع اتجهات
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li الديفالت فاليو
+                                        li بيعمال شكب دايرة 
+                                        li ممكن تحدد المكان اللى انت عاوز تعمل فية دوران
+                                        li ممكن تكتب قيمتين فى الاتجاه الواحد
+                                    ul(class='text-end dir-ltr')
+                                        li border-radius: 0;
+                                        li border-radius: 50%;
+                                        li border-top-left-radius: 10px;
+                                        li border-top-left-radius: 10px 15px;
+                            //- box-shadow
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') box-shadow هو الظلال للعنصار بى الكامل 
+                                h3(class='h6') الخاصية بتحتاج البريفكس 
+                                h3(class='lead') ممكن تستخدام اكتار من شادو على نفس العنصر
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li السنتاكس
+                                        li القيمة الافتراضية
+                                        li طريقة الكتابة
+                                        li الاقى قيمة بى الموجب يعنى يمين و بى الثالب يعنى شمال 
+                                        li الراسى القيمة بى الموجب يعنى لفوق و بى الثالب يعنى لتحت 
+                                        li الضباب 
+                                        li الانتشار
+                                        li الون
+                                        li القيمة الفتراضية بيكون فى الخارج و ممكن تخلية فى الداخل
+                                        li ممكن تستخدام اكتر من شادو و بتفصل بينهم بى كومه
+                                    ul(class='text-end dir-ltr')
+                                        li syntax H-shadow V-shadow blur spread color inset
+                                        li box-shadow: none;
+                                        li box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+                                        li H-shadow 
+                                        li V-shadow 
+                                        li blur
+                                        li spread
+                                        li color
+                                        li inset
+                                        li box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080,-20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
+                            //- box model 
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') box model 
+                                h3(class='h6') بتحتاج البريفكس 
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li الديفالت فاليو
+                                        li مبيحسبش البادانج و المارجان
+                                        li الباكس مادال بيحساب المارجان من ضمن مساحة الاب اللى هو فية  
+                                        li  خاصية البردار بوكس مبيحسبش البادانج من ضمن مساحة العنصر
+                                        li  البردار مبيحسبوش من ضمن مساحة العنصر
+                                    ul(class='text-end dir-ltr')
+                                        li box-sizing: content-box;
+                                        li box-sizing: border-box;
+                                        li box model With Margin
+                                        li box model padding 
+                                        li box model border 
+                            //- transition
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') transition تاثير الانتقال 
+                                h3(class='h6') بتحتاج البريفكس 
+                                div(class='grid-sm-2')
+                                    ul(class='')
+                                        li مده الانتقال فى تنفيز الخاصية ممكن تكتبها بى الثونى او بى الملى ثاكند
+                                        li مده التاخير فى الانتقال
+                                        li الخاصية اللى هيطبق عليها الترنزيشان
+                                        li طريقة الانتقال فى تنفيز الترنزيشان
+                                        li الشورت كود للترانزيشان
+                                    ul(class='text-end dir-ltr')
+                                        li transition-duration: 1s; transition-duration: 1000ms;
+                                        li .
+                                        li transition-delay: 0.2s;
+                                        li transition-property: all;
+                                        li transition-timing-function: ease-in-out;
+                                        li(class='' ) transition: all 0.5s 0s linear;
+                            //- variables
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') variables
+                                h3(class='h6')  
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
                                         ul(class='')
-                                            p(class='lead font-bold')  طريقة الكتابة التاكسات شادو
-                                            ul(class='wrapper-float')
-                                                li(class='float-end') text-shadow: 0 0 0 red
-                                            li هو فى الافقى يعنى يمين بى الموجاب و شمال بة الثالب
-                                            li هو الراسى فوق بى الموجاب و تحت بى الثالب
-                                            li الانتشار 
-                                            li لون الشادو
-                                        ul(class='text-end')
-                                            p(class='lead font-bold') <= syntax
-                                            li text-shadow: H-shadow V-shadow Blur Color
-                                            li H-shadow
-                                            li V-shadow
-                                            li Blur
-                                            li Color
-                                //- Text Align
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') Text Align محازاه الكلام
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li محازاه الكلام على الشمال
-                                            li محازاه الكلام فى النص
-                                            li محازاه الكلام على اليمين
-                                        ul(class='text-left dir-ltr')
-                                            li text-align: left;
-                                            li text-align: center;
-                                            li text-align: right;
-                                //- direction
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') direction اتجاه العنصر 
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li اتجاه الكلام على الشمال فى الانجليزى
-                                            li اتجاه الكلام على اليمين فى العربي
-                                        ul(class='text-left dir-ltr')
-                                            li direction: ltr;
-                                            li direction: rtl;
-                                //- vertical align 
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') vertical align محازاه الصورة مع التكست
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li الواضع الافتراضى 
-                                            li  الباس لاين بيخالى الكلام فوق مع الصورة فى بديتها من فوق 
-                                            li البوتم بيخالى الكلام تحت مع الصورة فى نهيتها من تحت
-                                            li التوب بيخالى الكلام فوق مع الصورة فى بديتها من فوق
-                                            li الميديام بيخالى التكست فى واسط الصورة
-                                            li  الساب بيخالى الكلام تحت مع الصورة فى نهيتها من تحت
-                                            li  السابار بيخالى الكلام تحت مع الصورة فى نهيتها من تحت و فى بداية التاكست
-                                            li  التاكست بوتام بيخالى الكلام تحت مع الصورة فى نهيتها من تحت
-                                            li  التاكست تواب بيخالى الكلام فوق مع الصورة فى بديتها من فوق
-                                        ul(class='text-left dir-ltr')
-                                            li vertical-align: auto;
-                                            li vertical-align: baseline;
-                                            li vertical-align: bottom;
-                                            li vertical-align: top;
-                                            li vertical-align: middle;
-                                            li vertical-align: sub;
-                                            li vertical-align: super;
+                                            li المتغيرات بتكتبها داخل root
+                                            li(class='ml-20') بتبداء اسم الفاريبال بى 2 داش & بتكتب اسم الفاريبال بى حاجة شبيها للى هينفزها اللى هى القيمة 
                                             li .
-                                            li vertical-align: text-bottom;
-                                            li vertical-align: text-top;
+                                            li بتستعمال الكال باك فاريبال لانو فى حالة انوالفاريبال مش موجود بيرجع للقيمة اللى فى الكال باك
+                                            li .
+                                            li ممكن تستعمال العماليات الحسابية
+                                            li .
+                                            li ممكن تنشاى لوكال فاريبال داخل العنصر 
                                             li 
-                                                |Rovan Hossam
-                                                img(src="https://via.placeholder.com/50" alt="" srcset="")
-                                                |Rashad
-                                //- text decoration
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') text decoration هو الخط فى العنصار 
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li نيخليش للتكست خاط
-                                            li بيخلى خاط تحت الكلام
-                                            li بيخالى خاط فوق الكلام
-                                            li بيخالى خاط جوة الكلام
-                                        ul(class='text-end dir-ltr')
-                                            li text-decoration: none;
-                                            li text-decoration: underline;
-                                            li text-decoration: overline;
-                                            li text-decoration: line-through;
-                                //- text transform
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') text transform هو طريقة كتابة التاكست
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li بيخالى التاكست زاى ما هو مكتوب
-                                            li بيخالى اول حرف من كل كلمة كابتال
-                                            li بيخالى جميع الحروف اصمول
-                                            li بيخالى جميع الحروف كابتال
-                                        ul(class='text-end dir-ltr')
-                                            li text-transform: none;
-                                            li text-transform: capitalize;
-                                            li text-transform: lowercase;
-                                            li text-transform: uppercase;
-                                //- letter-spacing
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') letter-spacing المسافات بين الاحراف
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li المسافات بين الاحراف
-                                        ul(class='text-end dir-ltr')
-                                            li letter-spacing: 3px;
-                                //- text-indent
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') text-indent هو بداية الكلام فى العنصار من فين
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li هى المساحة الفاضية اللى بيسبه العنصار 
-                                        ul(class='text-end dir-ltr')
-                                            li text-indent: 30px;
-                                //- line height
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') line-height ارتفاع السطر للقراه
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li ارتفاع السطر للقاره و النسبة بتتحدد على حسب نوع الخط
-                                            li النسبه المفضلة هى 1.6 || 160%
-                                        ul(class='text-end dir-ltr')
-                                            li line-height: 1.6;
-                                //- word-spacing
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') word-spacing المسافات بين الكلام
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li المسافات بين الكلام
-                                        ul(class='text-end dir-ltr')
-                                            li letter-word: 3px;
-                                //- white-space
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') white-space التكاست عده مساحة العنصر ينزال تحت
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li الديفالت فاليو يعنى فى حلة انو 
-                                            li يعنى يكمال على نفس السطر اللى هو فية و مينزالش تحت  
-                                        ul(class='text-end dir-ltr')
-                                            li white-space: normal;
-                                            li .
-                                            li white-space: nowrap;
-                                //- word-break
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') word-break فى حالة انو الكلمة اكبر من العنصر بتنفاع من url
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li الديفالت فاليو يعنى فى حلة انو الكلمة عده مساحة العنصر تطلع برة العنصر 
-                                            li تنزال الكلمة على السطر اللى تحت
-                                        ul(class='text-end dir-ltr')
-                                            li word-break: normal;
-                                            li .
-                                            li word-break: break-all;
-                                //- text-overflow
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') text-overflow هو النص اللى بيطلع برة العنصار 
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li بتعمال نقاط علشان تبين انو الكلام لسه مخلصش 
-                                            li علشان تفهم اكتار بتخلى العنصار ليه مساحة 
-                                            li بتعملو اوفار فلو هادان 
-                                            li بتعملو وايت اسبيس نو راب 
-                                            li و تستخدام الخاصية هبحطلف فى اخر العنصار 3 نقط تبين انو التكاست لسه مخلصش
-                                        ul(class='text-end dir-ltr')
-                                            li text-overflow: ellipsis;
-                                //- inherit
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') inherit هو التوريث من الاب للعنصار اللى هو فية 
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li كدا بيجيب اللون من الاب اللى هو فية 
-                                            li العناصر بتورث حجات و حجات تانى لى 
-                                            li ممكن تخالى العنصار يورث جميع خواص الاب اللى هو فية 
-                                        ul(class='text-end dir-ltr')
-                                            li color: inherit;
-                                //- font-family
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') font-family
-                                    h3(class='h6 dir-rtl ') ممكن تبحث على web safe fonts for html and css
-                                    p(class='') بتستخدام اكتار من خاط ور بعض فى حالة انو المتصفح مش عارف الفانت الاول بيروح على نوع الفونت اللى بعدو 
-                                    p(class='') فى حالة انو اسم الفانت متكون من اكتار من كلمة بتحطو بين دابل كوت
-                                    li ممكن تنزال الفنت على جهازاك وترفعو مع الموقاع 
-                                    li بتستدعية عن طريق فونت فيس و جوه اسم الفونت و بعدين مثار الفنت عندك على الجهاز
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li serif هو خاط بيكون فية كثرة فى الحروف
-                                            li sans-serif هى خطوط مفهاش كسرة فى الحروف
-                                        ul(class='text-end dir-ltr')
-                                            li font-family: 'Times New Roman', Times, serif;
-                                            li font-family: Arial, Helvetica, sans-serif;
-                                //- font-size
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') font-size حجم الخاط
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li px وحدة القياس بى الباكسال
-                                            li ممكن تكتاب كلمات معبره عن حجم الخط
-                                            li em هى مرة من الاب اللى هو فية فية فى حجم الخط
-                                            li rem هو الروت الللى هو الاتش تى ال ام 
-                                            li % هو ميه فى المية من الاب اللى هو فية
-                                            li vw الواحد فيو بارت هى واحد فى المية من عرض و طول الشاشة
-                                            li يعنى لو عرض الشاشة 900px يعنى الواحد فى المية بيساوى 9 و لو عاوز خمسة فيو بارت النتيجة هى 5 فى 9 بى 45 بيكسال 
-                                            li فى الشاشات لو مستخدام 5 vw 
-                                            li xs 767 = 5 * 7.67 = 38.35px
-                                            li sm 991 = 5 * 9.91 = 49.55px
-                                            li md 11.00 = 5 * 11 = 55px
-                                            li lg ... = 5 * 14 = 70px 
-                                        ul(class='text-end dir-ltr')
-                                            li font-size: 20px;
-                                            li font-size: small;
-                                            li font-size: 1em; => Default Page Font Size Is 16px From Body
-                                            li font-size: 1rem; => Default Page Font Size Is 32px From Html
-                                            li font-size: 100%;
-                                            li font-size: 5vw; View Port Width
-                                //- font-style
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') font-style شكل الكتابة فى الخاط
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li القيمة الافتراضية 
-                                            li بيخالى الكلام مايل
-                                        ul(class='text-end dir-ltr')
-                                            li font-style: normal;
-                                            li font-style: italic;
-                                //- font-variant
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') font-variant بيحوال الكروف كابتال 
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li بيحوال الحروف كابتال بس اصغار من الحجم الطبيعى بتعه
-                                        ul(class='text-end dir-ltr')
-                                            li font-variant: small-caps;
-                                //- font-weight
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') font-weight هى ثماكة الفانت
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li النورمال هى القيمة الافتراضية
-                                            li هى ثماكة الخاط و 700 هى بتساوى قيمة البالد
-                                        ul(class='text-end dir-ltr')
-                                            li   font-weight: normal;
-                                            li   font-weight: bold;
-                                //- cursor
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr ') cursor هو شكل المواثر بتاع الموث
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li بتحدد شكل المواشر على حثب الاكشان اللى هيعملو على العنصر
-                                        ul(class='text-end dir-ltr')
-                                            li cursor: pointer;
-                                //- float
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') float هو عومان العنصار فى الصفحة
-                                    h3(class='h5') علشان تعالج الفلوت 
-                                    h3(class='h6') الكلير بوث بعد اخر عنصار معملو فلوت 
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li العومان ناحية الشمال
-                                            li العومان ناحية اليمين
-                                            li عدم العومان
-                                            li الكلير بيعالج العناصر اللى ليه فلوتي
-                                        ul(class='text-end dir-ltr')
-                                            li float: left;
-                                            li float: right;
-                                            li float: none;
-                                            li clear: both;
-                                //- calc
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') calc هو توزيع العناصر فى الحسبات فى العرض
-                                    p(class='') فى حاله انو انت عاوز مسافة قبل العناصر و بعده بيكون عدد المسفات اكبر من عدد العناصر بى واحد
-                                    p(class='') فى حالة انو انت عاوز المسفات بين العنصر بيكون عدد المسفات اقل من عدد العناصر بى واحد س
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li عدد العناصر على المساحة الكلية
-                                            li المساحة الكلية ناقص المسافات اللى بين كل عنصر و التانى على عدد العناصر
-                                            li المساحة الكلية ناقص المسافات اللى بين كل عنصر و التانى على عدد العناصر
-                                            li المساحة الكلية ناقص المسافات اللى بين كل عنصر و التانى على عدد العناصر
-                                        ul(class='text-end dir-ltr')
-                                            li width: calc(100% / 4);
-                                            li width: calc((100% - 1%) / 4);
-                                            li width: calc((100% - 60px) / 4);
-                                            li width: calc((100% - 90px) / 4);
-                                //- opacity
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') opacity الشفافية للعنصار بالكامل
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li قيمة 1 يعنى العنصار ملهوش شفافية و هى القيمة الافتراضية
-                                            li كل ما تقلل النسبة كل ما العنصار يختفى
                                             li 
+                                    div(class='code-css')
+                                        textarea(class="form-control text-end copy" style="height:340px")
+                                            |:root{
+                                            |   --var-name: 10px;
+                                            |}
+                                            |
+                                            |   background-color: var(--color-3498db, #f00);
+                                            |   
+                                            |   
+                                            |   padding: calc(20px + var(--mainPadding));
+                                            |
+                                            |.local {
+                                            |   --var-name: red;
+                                            |   background-color: var(--color-3498db, #f00);
+                                            |}
                                         ul(class='text-end dir-ltr')
-                                            li opacity: 1;
-                                            li opacity: 0.9;
-                                //- position
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') position هو مكان العنصار فى الصفحة
-                                    div(class='grid-sm-2')
+                                            li 
+                                            li 
+                            //- flex parent
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') flex Parent
+                                h3(class='h5')  خواص للاب
+                                p(class='h6') خواص الاب
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
                                         ul(class='')
-                                            li هو القيمة الافتراضية وكمان التواب و اللفت مش بيقصرو علية
-                                            li الرلتاف هو بيتحارك بنان على نفسو و مكانو محجوز
-                                            li الابساليوت بيطلع برة المحتو اللى هو فية الاخر العنصار 
-                                            li علشان تحرق العنصر الابسليوت داخل العنصار الاب لازم العنصار الاب يكون ريلتاف 
-                                            li الفاكساد بيكون معاكل فى كل الاماكن فى الصفحة حت لو الاب واخد بوزيشان ريلاتف 
-                                            li sticky هو بوزاشان فى حالة الوصول اليه بيفضال معاك فى الصفحة بس لازم تكون محددلو مكانو فى التاب او البوتام
-                                        ul(class='text-end dir-ltr')
-                                            li position: static;
-                                            li position: relative;
-                                            li position: absolute;
-                                            li .
-                                            li .
-                                            li position: fixed;
-                                            li .
-                                            li position: sticky;
-                                //- z-index
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') z-index توزيع الطبقات
-                                    h3(class='h6') توزيعة الطبقات بتام بونان على اى وضع من اوضاع البوزيشان
-                                    h3(class='h6') توزيعة الطبقات الطبيعية من غير تحديد هو على حسب ترتيب العناصر فى الصفحة 
-                                    h5(class='h6') لو عاوز العنصار تخلية اخار العناصر ورة بتديلو قيمة بى الثالب
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li ترتيب الطبقات 
-                                            li الرقم الاكبار هو اللى بيكون فوق العنصر اللى رقمو اصغار
-                                            li فى حالة انو عنصرين وخدين نفس القيمة بيكون الاولوية على حسب ترتيب العناصر فى الصفحة
-                                        ul(class='text-end dir-ltr')
-                                            li z-index: 1;
-                                            li z-index: 2;
-                                            li z-index: 2;
-                                //- list-style
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') list-style
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li هى القيمة الافتراضية و هى شكل دواير 
-                                            li هو من غير لست اللى هى الناقط
-                                        ul(class='text-end dir-ltr')
-                                            li list-style-type: disc;
-                                            li list-style: none;
-                                //- table
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') table
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li  محتاج ارجعلو
-                                        ul(class='text-end dir-ltr')
-                                            li table
-                                //- pseudo classes
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') pseudo classes الكلاسات الموزيفة
-                                    h3(class='h6') زاى الهافار
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li  الهافار 
-                                            li  اللى هو ساعت ما دوس على الحقل الادخال 
-                                            li  الاكتاف 
-                                            li  فى الفازبال اللى هى العناصر اللى ظرتها و بتشتغل مع اللنكات 
-                                            li  العنصار الفاضى 
-                                            li  فى حالة الاتشاكد و بتستخدام مع الانبوت اللى نوعة اتشامد 
-                                        ul(class='text-end dir-ltr')
-                                            li :hover 
-                                            li :focus 
-                                            li :active
-                                            li :visited
-                                            li :empty 
-                                            li :checked
-                                //- Pseudo Elements
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') pseudo Elements العناصر الموزيفة
-                                    h3(class='h6') زاى الفارست لاين
-                                    h3(class='h6') العناصر المزيفة بتبدا بى 2 نقط و لو حطيط واحدة هتشتغال بى عملوها كدا علشان التفريق بينها و بين الكلاسات الموزيفة
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li  اللى هو اول حرف من البرجراف 
-                                            li اللى هو اول سطر فى االبرجراف فى جميع الشاشات
-                                            li اللى هو اللتحديد لنسخ تكست 
-                                            li العنصار المزيف اللى فى البداية
-                                            li العنصر المزيف اللى فى اخر العنصر
-                                            li فى الاب بتكتاب اسم العداد 
-                                            li فى البيفور بتكتاب فى الكنتنت اسم العداد 
-                                        ul(class='text-end dir-ltr')
-                                            li ::first-letter 
-                                            li ::first-line 
-                                            li ::selection
-                                            li ::before
-                                            li ::after
-                                            li in parent => counter-increment: name-of-counter
-                                            li in child::before => content: counter(name-of-counter)
-                                //- vendors prefixes
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') vendors prefixes اللى هى اصحاب المتصفحات
-                                    h3(class='h6') 
-                                    h3(class='h6') العناصر المزيفة بتبدا بى 2 نقط و لو حطيط واحدة هتشتغال بى عملوها كدا علشان التفريق بينها و بين الكلاسات الموزيفة
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li متصفح جوجال كروم
-                                            li متصفح سفارى
-                                            li متصفح فاير فاكس
-                                            li متصفح انتارنت اكسبلورال
-                                            li متصفح اوبراء
+                                            li تعريف انو العنصر دة نوعه صندوق مارن
+                                            li . 
+                                            li(class='font-bold') اتجاه الفلاكس 
+                                            li  الديفالت فاليو وهو بيكون صف جنب بعض
+                                            li اتجاه الفلاكس معكوس 
+                                            li كولم هو اعمدة تحت بعض 
+                                            li اعمدة تحت بعض بس معكوسة
                                             hr
-                                            li فى ميزه ظهرات جديد
-                                            li تبدا المتصفحات فى التست للخاصيه الجديدة
-                                            li المتصفحات بتديك البريفكس علشان تضيف الخاصية
-                                            li .
-                                            li لو الميزة خلاص اتدعمت فى المتصفح مبتحتجش تكتب البريفكس
-                                            li .
+                                            li هو العنصار الزيادة يجى جنبهم وده الديفالت فاليو
+                                            li العنصار الزيادة يجى تحتهم 
+                                            li العنصار الزياده يجى فوة وباقى العناصر تحتو
                                             hr
-                                            li  -webkit- خاصة بى متصفحات جوجل كروم و سفارى و المتصفحات الحديثة من اوبراء
-                                            li -moz- خاصة بى متصفح فاير فوكس
-                                            li  -ms- خاصة بى متصفح انتارنت اكسبلورال
-                                            li  -o- خاصة بى متصفح اوبراء الاصدارات القديمة 
-                                            hr 
-                                            li معظام المستخدمين يستخدمو المتصفحات حديثة 
-                                            li الفجوال استديو فية اضافة بتضيف البرفكسار
-                                            li هى زاى الباج بتجيب البريفكس 
-                                        ul(class='text-end dir-ltr')
-                                            li Chrome
-                                            li Safari
-                                            li Firefox
-                                            li IE, Edge
-                                            li Opera
+                                            li هى اختصار للفلاكس ديركشان و الفلكس راب
                                             hr
-                                            li [1] New CSS Feature Appeared
-                                            li [2] Browsers Tests The Feature In Version X
-                                            li [3] Browsers Add Prefix To Give Developers The Ability To Use It
-                                            li [4] The Feature Is Fully Supported In Version Y, No Need For Prefix
+                                            li(class='font-bold') توزيعة المحتو بى العرض
+                                            li الديفالت فاليو بيكون فى البدايه
+                                            li توزيع العناصر فى نهاية العنصر الاب
+                                            li توزيع المحتو افقى يعنى بالعرض بيكون فى النص
+                                            li المسافات بين العناصر 
+                                            li المسافات حولين العنصار قبلو و بعدو 
+                                            li المسافات قبل و بعد و بين العناصر هى بتجمع الاسبيس بتوين و الاسبيس ارواند
                                             hr
-                                            li -webkit- => Chrome, Safari, New Opera Version
-                                            li .
-                                            li -moz- => Firefox
-                                            li -ms- => Ie, Edge
-                                            li -o- => Old Version of Opera
+                                            li(class='font-bold') توزيع العناصر بى الطول
+                                            li الاسترتش هى الديفالت فاليو بتخالى العنصار يتمدد علشان يملة المحتو بى الطول
+                                            li بداية العناصر من فوق
+                                            li بدايه العناصر من تحت
+                                            li العناصر فى نص طول الاب اللى هما فية
                                             hr
-                                            li [1] Most of Users Is Using Modern Browsers
-                                            li [2] Vs Code Addon To Add The Prefix
-                                            li [3] Task Runner
-                                //- border radius
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') border radius بتعمال دوران للعنصار
-                                    h3(class='h6') هى دوران العنصار و بتقبال الاربع اتجهات
-                                    div(class='grid-sm-2')
-                                        ul(class='')
+                                            li(class='font-bold') توزيع المحتو بى الطول كلو 
                                             li الديفالت فاليو
-                                            li بيعمال شكب دايرة 
-                                            li ممكن تحدد المكان اللى انت عاوز تعمل فية دوران
-                                            li ممكن تكتب قيمتين فى الاتجاه الواحد
-                                        ul(class='text-end dir-ltr')
-                                            li border-radius: 0;
-                                            li border-radius: 50%;
-                                            li border-top-left-radius: 10px;
-                                            li border-top-left-radius: 10px 15px;
-                                //- box-shadow
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') box-shadow هو الظلال للعنصار بى الكامل 
-                                    h3(class='h6') الخاصية بتحتاج البريفكس 
-                                    h3(class='lead') ممكن تستخدام اكتار من شادو على نفس العنصر
-                                    div(class='grid-sm-2')
+                                            li المحو كلو فى البداية
+                                            li المحو كلو فى الاخر
+                                            li المحو كلو فى النص
+                                            li بيعمال مسافة ابلهم و بعدهم
+                                            li بيعمال مسافه بينهم
+                                    div(class='code-css')
+                                        ul(class='dir-ltr text-end')
+                                            li display: flex;
+                                            li .
+                                            li(class='font-bold') flex-direction
+                                            li flex-direction: row;
+                                            li flex-direction: row-reverse;
+                                            li flex-direction: column;
+                                            li flex-direction: column-reverse;
+                                            hr
+                                            li flex-wrap: nowrap;
+                                            li flex-wrap: wrap;
+                                            li flex-wrap: wrap-reverse;
+                                            hr
+                                            li flex-flow: row wrap;
+                                            hr
+                                            li(class='font-bold') justify-content
+                                            li justify-content: flex-start;
+                                            li justify-content: flex-end;
+                                            li justify-content: center;
+                                            li justify-content: space-between;
+                                            li justify-content: space-around;
+                                            li justify-content: space-evenly;
+                                            li .
+                                            hr
+                                            li(class='font-bold') Align Items
+                                            li align-items: stretch;
+                                            li .
+                                            li align-items: flex-start;
+                                            li align-items: flex-end;
+                                            li align-items: center;
+                                            hr
+                                            li(class='font-bold') Align content
+                                            li align-content: stretch;
+                                            li align-content: flex-start;
+                                            li align-content: flex-end;
+                                            li align-content: center;
+                                            li align-content: space-around;
+                                            li align-content: space-between;
+                            //- flex Child
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') flex Child
+                                h3(class='h5')  خواص للاطفال
+                                p(class='h6 mb-20') خواص للاطفال
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
                                         ul(class='')
-                                            li السنتاكس
+                                            li(class='font-bold') نمو الطفل هو زيادة مساحتو فى الفلكس
                                             li القيمة الافتراضية
-                                            li طريقة الكتابة
-                                            li الاقى قيمة بى الموجب يعنى يمين و بى الثالب يعنى شمال 
-                                            li الراسى القيمة بى الموجب يعنى لفوق و بى الثالب يعنى لتحت 
-                                            li الضباب 
-                                            li الانتشار
-                                            li الون
-                                            li القيمة الفتراضية بيكون فى الخارج و ممكن تخلية فى الداخل
-                                            li ممكن تستخدام اكتر من شادو و بتفصل بينهم بى كومه
-                                        ul(class='text-end dir-ltr')
-                                            li syntax H-shadow V-shadow blur spread color inset
-                                            li box-shadow: none;
-                                            li box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-                                            li H-shadow 
-                                            li V-shadow 
-                                            li blur
-                                            li spread
-                                            li color
-                                            li inset
-                                            li box-shadow: 20px 0px 10px 0 #f10000, 0 0 10px 0 #000, -1px -20px 10px 0 #080,-20px 0px 10px 0 #00f, 0px 20px 10px 0 yellow;
-                                //- box model 
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') box model 
-                                    h3(class='h6') بتحتاج البريفكس 
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li الديفالت فاليو
-                                            li مبيحسبش البادانج و المارجان
-                                            li الباكس مادال بيحساب المارجان من ضمن مساحة الاب اللى هو فية  
-                                            li  خاصية البردار بوكس مبيحسبش البادانج من ضمن مساحة العنصر
-                                            li  البردار مبيحسبوش من ضمن مساحة العنصر
-                                        ul(class='text-end dir-ltr')
-                                            li box-sizing: content-box;
-                                            li box-sizing: border-box;
-                                            li box model With Margin
-                                            li box model padding 
-                                            li box model border 
-                                //- transition
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') transition تاثير الانتقال 
-                                    h3(class='h6') بتحتاج البريفكس 
-                                    div(class='grid-sm-2')
-                                        ul(class='')
-                                            li مده الانتقال فى تنفيز الخاصية ممكن تكتبها بى الثونى او بى الملى ثاكند
-                                            li مده التاخير فى الانتقال
-                                            li الخاصية اللى هيطبق عليها الترنزيشان
-                                            li طريقة الانتقال فى تنفيز الترنزيشان
-                                            li الشورت كود للترانزيشان
-                                        ul(class='text-end dir-ltr')
-                                            li transition-duration: 1s; transition-duration: 1000ms;
+                                            li يعنى لو فى مساحة ينمو فيها عن العناصر التانية ينمو 
+                                            hr
+                                            li(class='font-bold') الانكماش يعنى هو يكون لية الاولوية فى المساحة لو قالت ينكمش
                                             li .
-                                            li transition-delay: 0.2s;
-                                            li transition-property: all;
-                                            li transition-timing-function: ease-in-out;
-                                            li(class='' ) transition: all 0.5s 0s linear;
-                                //- variables
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') variables
-                                    h3(class='h6')  
-                                    div(class='grid-sm-2 form-floating parent-code')
-                                        div(class='code-html')
-                                            ul(class='')
-                                                li المتغيرات بتكتبها داخل root
-                                                li(class='ml-20') بتبداء اسم الفاريبال بى 2 داش & بتكتب اسم الفاريبال بى حاجة شبيها للى هينفزها اللى هى القيمة 
-                                                li .
-                                                li بتستعمال الكال باك فاريبال لانو فى حالة انوالفاريبال مش موجود بيرجع للقيمة اللى فى الكال باك
-                                                li .
-                                                li ممكن تستعمال العماليات الحسابية
-                                                li .
-                                                li ممكن تنشاى لوكال فاريبال داخل العنصر 
-                                                li 
-                                                li 
-                                        div(class='code-css')
-                                            textarea(class="form-control text-end copy" style="height:340px")
-                                                |:root{
-                                                |   --var-name: 10px;
-                                                |}
-                                                |
-                                                |   background-color: var(--color-3498db, #f00);
-                                                |   
-                                                |   
-                                                |   padding: calc(20px + var(--mainPadding));
-                                                |
-                                                |.local {
-                                                |   --var-name: red;
-                                                |   background-color: var(--color-3498db, #f00);
-                                                |}
-                                            ul(class='text-end dir-ltr')
-                                                li 
-                                                li 
-                                //- flex parent
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') flex Parent
-                                    h3(class='h5')  خواص للاب
-                                    p(class='h6') خواص الاب
-                                    div(class='grid-sm-2 form-floating parent-code')
-                                        div(class='code-html')
-                                            ul(class='')
-                                                li تعريف انو العنصر دة نوعه صندوق مارن
-                                                li . 
-                                                li(class='font-bold') اتجاه الفلاكس 
-                                                li  الديفالت فاليو وهو بيكون صف جنب بعض
-                                                li اتجاه الفلاكس معكوس 
-                                                li كولم هو اعمدة تحت بعض 
-                                                li اعمدة تحت بعض بس معكوسة
-                                                hr
-                                                li هو العنصار الزيادة يجى جنبهم وده الديفالت فاليو
-                                                li العنصار الزيادة يجى تحتهم 
-                                                li العنصار الزياده يجى فوة وباقى العناصر تحتو
-                                                hr
-                                                li هى اختصار للفلاكس ديركشان و الفلكس راب
-                                                hr
-                                                li(class='font-bold') توزيعة المحتو بى العرض
-                                                li الديفالت فاليو بيكون فى البدايه
-                                                li توزيع العناصر فى نهاية العنصر الاب
-                                                li توزيع المحتو افقى يعنى بالعرض بيكون فى النص
-                                                li المسافات بين العناصر 
-                                                li المسافات حولين العنصار قبلو و بعدو 
-                                                li المسافات قبل و بعد و بين العناصر هى بتجمع الاسبيس بتوين و الاسبيس ارواند
-                                                hr
-                                                li(class='font-bold') توزيع العناصر بى الطول
-                                                li الاسترتش هى الديفالت فاليو بتخالى العنصار يتمدد علشان يملة المحتو بى الطول
-                                                li بداية العناصر من فوق
-                                                li بدايه العناصر من تحت
-                                                li العناصر فى نص طول الاب اللى هما فية
-                                                hr
-                                                li(class='font-bold') توزيع المحتو بى الطول كلو 
-                                                li الديفالت فاليو
-                                                li المحو كلو فى البداية
-                                                li المحو كلو فى الاخر
-                                                li المحو كلو فى النص
-                                                li بيعمال مسافة ابلهم و بعدهم
-                                                li بيعمال مسافه بينهم
-                                        div(class='code-css')
-                                            ul(class='dir-ltr text-end')
-                                                li display: flex;
-                                                li .
-                                                li(class='font-bold') flex-direction
-                                                li flex-direction: row;
-                                                li flex-direction: row-reverse;
-                                                li flex-direction: column;
-                                                li flex-direction: column-reverse;
-                                                hr
-                                                li flex-wrap: nowrap;
-                                                li flex-wrap: wrap;
-                                                li flex-wrap: wrap-reverse;
-                                                hr
-                                                li flex-flow: row wrap;
-                                                hr
-                                                li(class='font-bold') justify-content
-                                                li justify-content: flex-start;
-                                                li justify-content: flex-end;
-                                                li justify-content: center;
-                                                li justify-content: space-between;
-                                                li justify-content: space-around;
-                                                li justify-content: space-evenly;
-                                                li .
-                                                hr
-                                                li(class='font-bold') Align Items
-                                                li align-items: stretch;
-                                                li .
-                                                li align-items: flex-start;
-                                                li align-items: flex-end;
-                                                li align-items: center;
-                                                hr
-                                                li(class='font-bold') Align content
-                                                li align-content: stretch;
-                                                li align-content: flex-start;
-                                                li align-content: flex-end;
-                                                li align-content: center;
-                                                li align-content: space-around;
-                                                li align-content: space-between;
-                                //- flex Child
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') flex Child
-                                    h3(class='h5')  خواص للاطفال
-                                    p(class='h6 mb-20') خواص للاطفال
-                                    div(class='grid-sm-2 form-floating parent-code')
-                                        div(class='code-html')
-                                            ul(class='')
-                                                li(class='font-bold') نمو الطفل هو زيادة مساحتو فى الفلكس
-                                                li القيمة الافتراضية
-                                                li يعنى لو فى مساحة ينمو فيها عن العناصر التانية ينمو 
-                                                hr
-                                                li(class='font-bold') الانكماش يعنى هو يكون لية الاولوية فى المساحة لو قالت ينكمش
-                                                li .
-                                                li الديفالت فاليو
-                                                li اى رقم ممكن تديهولو علشان ياخد الاولويه فى الانكماش
-                                                hr
-                                                li(class='font-bold') الاردار هو توزيع العناصر اللى هو ترتيبهم
-                                                li .
-                                                li الديفالت فاليو
-                                                li الترتيب اللى انت عاوزة
-                                                hr 
-                                                li(class='font-bold') بيتعامل مع العرض و الطول
-                                                li .
-                                                li الديفالت فاليو
-                                                li يمله المحتو 
-                                                li ممكن تكتب القيمة بى الباكسال
-                                                li ممكن تكتب القيمة بى النثبه الماويه
-                                                li فى حالة انو الفلكس ديركشان كولام الفلكس بيزاس ببيتعامل مع الطول
-                                                li الفلاكس بيزاس بيحترم الماكس وادس و الماكس هايت
-                                                li 
-                                                hr
-                                                li(class='font-bold') الفلاكس هى الشرط كود
-                                                li .
-                                                li .
-                                                hr
-                                                li(class='font-bold') هى محازاة للعنصر نفسة
-                                                li .
-                                                li القيمة الافتراضى 
-                                                li يكون فى النص 
-                                                li يكون فى الاول
-                                                li يكون فى الاخر
-                                                li يتماداد
-                                        div(class='code-css')
-                                            ul(class='dir-ltr text-end')
-                                                li(class='font-bold') flex-grow
-                                                li flex-grow: 0 
-                                                li flex-grow: 1
-                                                hr 
-                                                li(class='font-bold') flex-shrink
-                                                li .
-                                                li flex-shrink: 1 
-                                                li flex-shrink: 2
-                                                hr 
-                                                li(class='font-bold') order
-                                                li .
-                                                li order: 0 
-                                                li order: 1
-                                                hr 
-                                                li(class='font-bold') flex basis
-                                                li .
-                                                li flex-basis: auto;
-                                                li flex-basis: content;
-                                                li flex-basis: 300px;
-                                                li flex-basis: 60%;
-                                                li flex-direction: column;
-                                                li .
-                                                li max-width: 400px;
-                                                hr
-                                                li(class='font-bold') flex 
-                                                li .
-                                                li flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
-                                                hr
-                                                li(class='font-bold') align-self 
-                                                li .
-                                                li align-self: auto;
-                                                li align-self: center;
-                                                li align-self: flex-start;
-                                                li align-self: flex-end;
-                                                li align-self: stretch;
-                                //- filters
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') filters
-                                    h3(class='h5') التاثيرات الفالاتر
-                                    div(class='grid-sm-2 form-floating parent-code')
-                                        div(class='code-html')
-                                            ul(class='')
-                                                li ابيض و اسود
-                                                li ضبابى
-                                                li  الالوان معكوسة
-                                                li الشفافية
-                                        div(class='code-html')
-                                            ul(class='')
-                                                li filter: grayscale(50%);
-                                                li filter: blur(4px);
-                                                li filter: invert(100%);
-                                                li filter: opacity(25%);
-                                //- Gradients
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') Gradients تدرجات الالوان
-                                    h3(class='h5') تدرجات الالوان
-                                    div(class='grid-sm-2 form-floating parent-code')
-                                        div(class='code-html')
-                                            ul(class='') 
-                                                li طريقة الكتابة
-                                                li .
-                                                li الاتجاه التدارج ممكن تكتبو بى الاتجاه او بى الدجرى
-                                                li لونين داخلين فى بعض
-                                                li اكتار من لو ممكن تستخدمهم و كمان تحدد البداية و النهاية
-                                        div(class='code-html')
-                                            ul(class='dir-ltr ')
-                                                li background-image: linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
-                                                li Direction => to right || 90deg
-                                                li background-image: linear-gradient(to right, #74b9ff, #0984e3);
-                                                li   background-image: linear-gradient(to right, #74b9ff 20%, #0984e3 20%, #0984e3 100%);
-                                //- pointer events & caret color
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') pointer events & caret color
-                                    h3(class='h5') pointer events توقف عمل الموث
-                                    h3(class='h5') caret color لون الفلاش اللى فى حقل الادخال
-                                    div(class='grid-sm-2 form-floating parent-code')
-                                        div(class='code-html')
-                                            ul(class='') 
-                                                li لون الفلاش اللى فى حقل الادخال 
-                                                li القيمة الافتراضية 
-                                                li بتلغى اى افنت حدث على العنصار 
-                                        div(class='code-html')
-                                            ul(class='dir-ltr ')
-                                                li caret-color: #f00;
-                                                li pointer-events: auto;
-                                                li pointer-events: none;
-                                //- grid parent
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') grid parent
-                                    div(class='grid-sm-2 form-floating parent-code')
-                                        div(class='code-html')
-                                            ul(class='') 
-                                                li بداية الخاصية 
-                                                li(class='font-bold') عدد الاعمدة بى العرض 
-                                                li عدد الاعمدة بتتكون من الرقم اللى بتكتبو على عدد الاعمدة
-                                                li ممكن تكتب عرض العمود بى النسبة الماوية
-                                                li اوتو يعنى تلقاى وبياخد المساحة الفاضلة 
-                                                li ممكن تستخدام الربيت و بتكتب عدد الاعمدة 
-                                                li الربيت بتحدد عدد الاعمدة و مساحته
-                                                li ممكن تستخدام مكس فى المقاسات على حسب ما انت عاوز
-                                                li .
-                                                li(class='font-bold') عدد الصفوف بى الطول 
-                                                li عدد الصفوف بتتكون من الرقم اللى بتكتبو على عدد الصفوف
-                                                li ممكن تكتب طول الصفوف بى النسبة الماوية
-                                                li اوتو يعنى تلقاى وبياخد المساحة الفاضلة 
-                                                li ممكن تستخدام الربيت و بتكتب عدد الصفوف 
-                                                li الربيت بتحدد عدد الصفوف و مساحته
-                                                li ممكن تستخدام مكس فى المقاسات على حسب ما انت عاوز
-                                                li .
-                                                li(class='font-bold') المساحات بين العناصر
-                                                li المساحات فى الطول 
-                                                li المساحات فى العرض
-                                                li الشرط كود للرو جاب و الكولام جاب
-                                                li .
-                                                li(class='font-bold') تقسيمة مناطق العناصر فى الجراد
-                                                li تقسيمة مناطق العناصر فى الجراد
-                                        div(class='code-html')
-                                            ul(class='dir-ltr ')
-                                                li display: grid;
-                                                li grid-template-columns
-                                                li grid-template-columns: 100px 200px;
-                                                li grid-template-columns: 30% 70%;
-                                                li grid-template-columns: auto auto;
-                                                li grid-template-columns: repeat(2, auto);
-                                                li grid-template-columns: repeat(2, 300px);
-                                                li grid-template-columns: 100px 20% auto repeat(2, 300px);
-                                                li .
-                                                li(class='font-bold') grid-template-rows
-                                                li grid-template-rows: 100px 200px;
-                                                li grid-template-rows: 30% 70%;
-                                                li grid-template-rows: auto auto;
-                                                li grid-template-rows: repeat(2, auto);
-                                                li grid-template-rows: repeat(2, 300px);
-                                                li grid-template-rows: 100px 20% auto repeat(2, 300px);
-                                                li .
-                                                li(class='font-bold') gap
-                                                li row-gap: 10px;
-                                                li column-gap: 10px;
-                                                li gap: 10px 10px;
-                                                li .
-                                                li(class='font-bold') grid-template-areas
-                                                li grid-template-areas: 'header header' 'main main'
-                                //- grid Child
-                                div(class='explain')
-                                    h3(class='h4 text-center dir-ltr') grid Child
-                                    div(class='grid-sm-2 form-floating parent-code')
-                                        div(class='code-html')
-                                            ul(class='') 
-                                                li بداية الخاصية 
-                                        div(class='code-html')
-                                            ul(class='dir-ltr ')
-                                                li display: grid;
+                                            li الديفالت فاليو
+                                            li اى رقم ممكن تديهولو علشان ياخد الاولويه فى الانكماش
+                                            hr
+                                            li(class='font-bold') الاردار هو توزيع العناصر اللى هو ترتيبهم
+                                            li .
+                                            li الديفالت فاليو
+                                            li الترتيب اللى انت عاوزة
+                                            hr 
+                                            li(class='font-bold') بيتعامل مع العرض و الطول
+                                            li .
+                                            li الديفالت فاليو
+                                            li يمله المحتو 
+                                            li ممكن تكتب القيمة بى الباكسال
+                                            li ممكن تكتب القيمة بى النثبه الماويه
+                                            li فى حالة انو الفلكس ديركشان كولام الفلكس بيزاس ببيتعامل مع الطول
+                                            li الفلاكس بيزاس بيحترم الماكس وادس و الماكس هايت
+                                            li 
+                                            hr
+                                            li(class='font-bold') الفلاكس هى الشرط كود
+                                            li .
+                                            li .
+                                            hr
+                                            li(class='font-bold') هى محازاة للعنصر نفسة
+                                            li .
+                                            li القيمة الافتراضى 
+                                            li يكون فى النص 
+                                            li يكون فى الاول
+                                            li يكون فى الاخر
+                                            li يتماداد
+                                    div(class='code-css')
+                                        ul(class='dir-ltr text-end')
+                                            li(class='font-bold') flex-grow
+                                            li flex-grow: 0 
+                                            li flex-grow: 1
+                                            hr 
+                                            li(class='font-bold') flex-shrink
+                                            li .
+                                            li flex-shrink: 1 
+                                            li flex-shrink: 2
+                                            hr 
+                                            li(class='font-bold') order
+                                            li .
+                                            li order: 0 
+                                            li order: 1
+                                            hr 
+                                            li(class='font-bold') flex basis
+                                            li .
+                                            li flex-basis: auto;
+                                            li flex-basis: content;
+                                            li flex-basis: 300px;
+                                            li flex-basis: 60%;
+                                            li flex-direction: column;
+                                            li .
+                                            li max-width: 400px;
+                                            hr
+                                            li(class='font-bold') flex 
+                                            li .
+                                            li flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+                                            hr
+                                            li(class='font-bold') align-self 
+                                            li .
+                                            li align-self: auto;
+                                            li align-self: center;
+                                            li align-self: flex-start;
+                                            li align-self: flex-end;
+                                            li align-self: stretch;
+                            //- filters
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') filters
+                                h3(class='h5') التاثيرات الفالاتر
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='')
+                                            li ابيض و اسود
+                                            li ضبابى
+                                            li  الالوان معكوسة
+                                            li الشفافية
+                                    div(class='code-html')
+                                        ul(class='')
+                                            li filter: grayscale(50%);
+                                            li filter: blur(4px);
+                                            li filter: invert(100%);
+                                            li filter: opacity(25%);
+                            //- Gradients
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') Gradients تدرجات الالوان
+                                h3(class='h5') تدرجات الالوان
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li طريقة الكتابة
+                                            li .
+                                            li الاتجاه التدارج ممكن تكتبو بى الاتجاه او بى الدجرى
+                                            li لونين داخلين فى بعض
+                                            li اكتار من لو ممكن تستخدمهم و كمان تحدد البداية و النهاية
+                                    div(class='code-html')
+                                        ul(class='dir-ltr ')
+                                            li background-image: linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
+                                            li Direction => to right || 90deg
+                                            li background-image: linear-gradient(to right, #74b9ff, #0984e3);
+                                            li   background-image: linear-gradient(to right, #74b9ff 20%, #0984e3 20%, #0984e3 100%);
+                            //- pointer events & caret color
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') pointer events & caret color
+                                h3(class='h5') pointer events توقف عمل الموث
+                                h3(class='h5') caret color لون الفلاش اللى فى حقل الادخال
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li لون الفلاش اللى فى حقل الادخال 
+                                            li القيمة الافتراضية 
+                                            li بتلغى اى افنت حدث على العنصار 
+                                    div(class='code-html')
+                                        ul(class='dir-ltr ')
+                                            li caret-color: #f00;
+                                            li pointer-events: auto;
+                                            li pointer-events: none;
+                            //- grid parent
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') grid parent
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li بداية الخاصية 
+                                            li(class='font-bold') عدد الاعمدة بى العرض 
+                                            li عدد الاعمدة بتتكون من الرقم اللى بتكتبو على عدد الاعمدة
+                                            li ممكن تكتب عرض العمود بى النسبة الماوية
+                                            li اوتو يعنى تلقاى وبياخد المساحة الفاضلة 
+                                            li ممكن تستخدام الربيت و بتكتب عدد الاعمدة 
+                                            li الربيت بتحدد عدد الاعمدة و مساحته
+                                            li ممكن تستخدام مكس فى المقاسات على حسب ما انت عاوز
+                                            li .
+                                            li(class='font-bold') عدد الصفوف بى الطول 
+                                            li عدد الصفوف بتتكون من الرقم اللى بتكتبو على عدد الصفوف
+                                            li ممكن تكتب طول الصفوف بى النسبة الماوية
+                                            li اوتو يعنى تلقاى وبياخد المساحة الفاضلة 
+                                            li ممكن تستخدام الربيت و بتكتب عدد الصفوف 
+                                            li الربيت بتحدد عدد الصفوف و مساحته
+                                            li ممكن تستخدام مكس فى المقاسات على حسب ما انت عاوز
+                                            li .
+                                            li(class='font-bold') المساحات بين العناصر
+                                            li المساحات فى الطول 
+                                            li المساحات فى العرض
+                                            li الشرط كود للرو جاب و الكولام جاب
+                                            li .
+                                            li(class='font-bold') تقسيمة مناطق العناصر فى الجراد
+                                            li تقسيمة مناطق العناصر فى الجراد
+                                    div(class='code-html')
+                                        ul(class='dir-ltr ')
+                                            li display: grid;
+                                            li grid-template-columns
+                                            li grid-template-columns: 100px 200px;
+                                            li grid-template-columns: 30% 70%;
+                                            li grid-template-columns: auto auto;
+                                            li grid-template-columns: repeat(2, auto);
+                                            li grid-template-columns: repeat(2, 300px);
+                                            li grid-template-columns: 100px 20% auto repeat(2, 300px);
+                                            li .
+                                            li(class='font-bold') grid-template-rows
+                                            li grid-template-rows: 100px 200px;
+                                            li grid-template-rows: 30% 70%;
+                                            li grid-template-rows: auto auto;
+                                            li grid-template-rows: repeat(2, auto);
+                                            li grid-template-rows: repeat(2, 300px);
+                                            li grid-template-rows: 100px 20% auto repeat(2, 300px);
+                                            li .
+                                            li(class='font-bold') gap
+                                            li row-gap: 10px;
+                                            li column-gap: 10px;
+                                            li gap: 10px 10px;
+                                            li .
+                                            li(class='font-bold') grid-template-areas
+                                            li grid-template-areas: 'header header' 'main main'
+                            //- grid Child
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') grid Child
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li(class='font-bold') مساحة العنصر الابن فى الجرد فى العرض
+                                            li .
+                                            li  البداية و النهاية
+                                            li  البداية و النهاية
+                                            li  لو عاوز العنصار يبدا من مكان معين
+                                            li البداية
+                                            li النهاية
+                                            li .
+                                            li(class='font-bold') مساحة العنصر الابن فى الجرد فى الطول
+                                            li .
+                                            li  البداية و النهاية
+                                            li  البداية و النهاية
+                                            li  لو عاوز العنصار يبدا من مكان معين
+                                            li البداية
+                                            li النهاية
+                                    div(class='code-html')
+                                        ul(class='dir-ltr text-end')
+                                            li(class='font-bold') grid-column
+                                            li .
+                                            li grid-column: 1 / 7;
+                                            li grid-column: span 6;
+                                            li grid-column: 2 / span 6;
+                                            li grid-column-start: 1;
+                                            li grid-column-end: 1;
+                                            li .
+                                            li(class='font-bold') grid-row
+                                            li .
+                                            li grid-row: 1 / 7;
+                                            li grid-row: span 6;
+                                            li grid-row: 2 / span 6;
+                                            li grid-row-start: 1;
+                                            li grid-row-end: 1;
+                            //- Transform Scale
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') Transform Scale
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li بيمدد العنصار من العرض و الطول مرة و نص
+                                            li بيمدد العنصر بى العرض
+                                            li بيمدد العنصر بى الطول
+                                    div(class='code-css')
+                                        ul(class='dir-ltr') 
+                                            li transform: scale(1.5);
+                                            li transform: scaleX(1.5);
+                                            li transform: scaleY(1.5);
+                            //- Transform Rotate
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') Transform Rotate
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li بيخالى العنصار يلف حولين نفسة
+                                            li العنصر بيلف ناحية اليمين
+                                            li العنصر بيلف ناحية الشمال
+                                    div(class='code-css')
+                                        ul(class='dir-ltr') 
+                                            li transform: rotate(1.5);
+                                            li transform: rotateX(1.5);
+                                            li transform: rotateY(1.5);
+                            //- Transform translate
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') Transform translate
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li بتحارك العنصار 
+                                            li بتحرك العنصر يمين موجب و شمال سالب
+                                            li بتحرك العنصر لتحت موجب و فوق بالثالب
+                                    div(class='code-css')
+                                        ul(class='dir-ltr ') 
+                                            li transform: translate(15px, 15px);
+                                            li transform: translateX(15px);
+                                            li transform: translateY(15px);
+                            //- Transform skew
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') Transform skew
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li بتعمال انحراف العنصار 
+                                            li بتعمال انحراف ناحية اليمين بالموجب و الشمال بالثالب
+                                            li بتعمال انحراف ناحية تحت بالموجب و فوق بالثالب
+                                    div(class='code-css')
+                                        ul(class='dir-ltr ') 
+                                            li transform: skew(15deg, 15deg);
+                                            li transform: skewX(15deg);
+                                            li transform: skewY(15deg);
+                            //- Transform origin
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') Transform origin
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li هو منشاء الترنسفورم
+                                            li طريقة الكتابة
+                                            li القيمة الافتراضية
+                                            li 2D
+                                            li 3D
+                                            li القيمة فى العرض
+                                            li ممكن تكتاب وحدات [px, em, rem]
+                                            li %
+                                            li كلمات معبرة
+                                            li قيمة الشمال 
+                                            li قيمة الوسط
+                                            li قيمة اليمين
+                                            li القيمة فى الطول
+                                            li ممكن تكتاب وحدات [px, em, rem]
+                                            li %
+                                            li كلمات معبرة
+                                            li قيمة فوق 
+                                            li قيمة الوسط
+                                            li قيمة تحت
+                                    div(class='code-css')
+                                        ul(class='dir-ltr ') 
+                                            li transform-origin
+                                            li Syntax
+                                            li Default Values => 50% 50% 0
+                                            li 2D Transform => transform-origin(X, Y)
+                                            li 3D Transform => transform-origin(X, Y, Z)
+                                            li X-Axis
+                                            li - CSS Unit [px, em, rem]
+                                            li - %
+                                            li - Keyword
+                                            li -- Left = 0%
+                                            li -- Center = 50%
+                                            li -- Right = 100%
+                                            li Y-Axis
+                                            li - CSS Unit [px, em, rem]
+                                            li - %
+                                            li - Keyword
+                                            li -- Top = 0%
+                                            li -- Center = 50%
+                                            li -- Bottom = 100%
+                            //- Transform 3d
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') Transform 3d
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li الترنسفارم 3d هو الاكس و الواى و علشان تشوف الفرق جارب الترنسفارم اريجان
+                                    div(class='code-css')
+                                        ul(class='dir-ltr ') 
+                                            li transform 3D
+                            //- animation
+                            div(class='explain')
+                                h3(class='h4 text-center dir-ltr') animation
+                                div(class='grid-sm-2 form-floating parent-code')
+                                    div(class='code-html')
+                                        ul(class='') 
+                                            li  اسم الانميشان بتسمية زاى ما انت عاوز
+                                            li  مدة تنفيز الانميشان و دة اللى بيشغال الانميشان
+                                            li  شكل طريقى ثير الانميشان
+                                            li  عدد مرات التقرار للانميشان مرة
+                                            li  عدد مرات التقرار للانميشان على طول
+                                            li  اتجاه الانميشان 
+                                            li  اتجاه الانميشان معكوس
+                                            li  اتجاه الانميشان لادام و بعدين لورة
+                                            li  اتجاه الانميشان معكوس لورة و بعدين لادام
+                                            li  مدة تاخير الانميشان 
+                                            li  القيمة بى الثالب يعنى الانميشان عدة من بدايتو المدة اللى بى الثالب
+                                            li  القيمة بى الموجاب يعنى اخار الانميشان المدة دى
+                                            li  القيمة الافتراضية ودى علشان الانميشان ياخد اخر افكت من اخر حاجة فى الانميشان و علشان تشوف خالى الانميشان مرة
+                                            li  بياخد اخر اكشان من اخر حاجة فى الانميشان
+                                            li  بياخد اخر اكشان من اخر كى فريم فى الانميشان
+                                            li  هى حالة الانميشان شغال و دى القيمة الافتراضية
+                                            li  لو عاوز توقف الانميشان
+                                            li الشورط كود للانميشان لازم تكتب جميع الخواص اللى مطلوبة فى الشرط كود و لو عاوز خصيتين بتكتبهم من غير ما تكتب الشرط كود
+                                    div(class='code-css')
+                                        ul(class='dir-ltr ') 
+                                            li animation-name: change-color;
+                                            li animation-duration: 3s;
+                                            li animation-timing-function: linear; 
+                                            li animation-iteration-count: 1;
+                                            li animation-iteration-count: infinite;
+                                            li animation-duration: normal;
+                                            li animation-duration: reverse;
+                                            li animation-duration: alternate;
+                                            li animation-duration: alternate-reverse;
+                                            li animation-delay: 0s;
+                                            li animation-delay: -2s;
+                                            li animation-delay: 2s;
+                                            li animation-fill-mode: none;
+                                            li .
+                                            li animation-fill-mode: forwards;
+                                            li animation-fill-mode: backwards;
+                                            li animation-play-state: running;
+                                            li animation-play-state: paused;
+                                            li animation: name duration timing-function delay iteration-count direction fill-mode;
 
 
 
 
 
-                    //- End Grids
-                    //- div(class='test-explain')
-                    //- End Body
 
 
 
 
 
 
-    //- +btnTow('read')
-    include footer/footer.pug
 
 
 
 
-    //- Start Global
-    include global/global.pug
-    //- End Global
 
-    //- Start Explain Jquery 
-    //- progress Bar
-    include progressBar/progressBar.pug
+
+
+
+            //- End Grids
+            //- div(class='test-explain')
+            //- End Body
+
+
+
+
+
+
+        //- +btnTow('read')
+        include footer/footer.pug
+
+
+
+
+        //- Start Global
+        include global/global.pug
+        //- End Global
+
+        //- Start Explain Jquery 
+        //- progress Bar
+        include progressBar/progressBar.pug
 
 
 

@@ -1,0 +1,68 @@
+include variables/variables.pug
+include mixin/mixin.pug
+doctype 
+html(lang="ar" dir="rtl" data-theme="light") 
+    //- html(lang="en" data-theme="light")
+    //- html(lang='ar' dir="rtl") 
+
+    head 
+        //- start head  
+        include head/head.pug
+
+        block pageTitle
+            title Javascript
+
+        block Bootstrap
+            //- Bootstrap 5.0.1 en 
+            // Bootstrap 5.0.1 en
+            //- link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/bootstrap/bootstrap.min.css")
+            link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.min.css")
+
+        //- global framework
+        block Framework
+            link(rel="stylesheet" href="css/style.css")
+            link(rel="stylesheet" href="css/javascript.css")
+
+        //- Babel
+        //- script(src="https://unpkg.com/babel-standalone@6/babel.min.js")
+        //- script(src="https://babeljs.io/docs/setup/#babel_in_browser") 
+        //- script(src="js/libs/babel/browser.js") 
+        //- end head
+
+    body 
+        //- start body
+        include header/header.pug
+
+        div(class='container')
+            div(class='row')
+                div(class='grid-2')
+                    div(class='') 
+
+
+
+
+
+
+
+
+
+
+
+
+        include fixedMenu/fixedMenu.pug
+
+        include script/script.pug
+
+        //- Javascript
+        script(src="js/js/js.js")
+        //- Jquery Tools
+        script(src="js/jquery/jquery.js")
+
+        //- sweetalert
+        script(src="js/libs/sweetalert/sweetalert.min.js") 
+
+        //- Live Reload
+        script(src="http://localhost:35729/livereload.js")
+
+
+        //- end body

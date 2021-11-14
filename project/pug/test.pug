@@ -2,7 +2,7 @@ include variables/variables.pug
 include mixin/mixin.pug
 doctype 
 html(lang="ar" dir="rtl" data-theme="light") 
-    html(lang="en" data-theme="light")
+    //- html(lang="en" data-theme="light")
     //- html(lang='ar' dir="rtl") 
 
     head 
@@ -29,9 +29,28 @@ html(lang="ar" dir="rtl" data-theme="light")
         //- script(src="js/libs/babel/browser.js") 
         //- end head
 
-        body 
-            //- start body
-            include header/header.pug
+    body 
+        //- start body
+        include header/header.pug
+
+        div(class='container')
+            div(class='row')
+
+
+
+        //- +btnTow('read')
+        //- include footer/footer.pug
+
+
+
+
+        //- Start Global
+        //- include global/global.pug
+        //- End Global
+
+        //- Start Explain Jquery 
+        //- progress Bar
+        //- include progressBar/progressBar.pug
 
 
 
@@ -39,46 +58,26 @@ html(lang="ar" dir="rtl" data-theme="light")
 
 
 
-    //- +btnTow('read')
-    include footer/footer.pug
+
+        include fixedMenu/fixedMenu.pug
+        include script/script.pug
+
+        //- Javascript
+        script(src="js/js/js.js")
+        //- Jquery Tools
+        script(src="js/jquery/jquery.js")
+        //- Es6
+        script(src="js/bootstrap-tool/bootstrap-tool.js")
+        //- script(src="js/es6/main.js" type="module")
+        //- script(src="js/es6/app.js" type="module")
+        //- script(src="js/React/React-Tool.js" type="text/babel")
+        //- Vue App
+        script(src="js/vue/vue-app.js" type="text/babel")
+        script(src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js")
 
 
+        //- Live Reload
+        script(src="http://localhost:35729/livereload.js")
 
 
-    //- Start Global
-    include global/global.pug
-    //- End Global
-
-    //- Start Explain Jquery 
-    //- progress Bar
-    include progressBar/progressBar.pug
-
-
-
-
-
-
-
-
-    include fixedMenu/fixedMenu.pug
-    include script/script.pug
-
-    //- Javascript
-    script(src="js/js/js.js")
-    //- Jquery Tools
-    script(src="js/jquery/jquery.js")
-    //- Es6
-    script(src="js/es6/es6.js" type="text/babel")
-    //- script(src="js/es6/main.js" type="module")
-    //- script(src="js/es6/app.js" type="module")
-    //- script(src="js/React/React-Tool.js" type="text/babel")
-    //- Vue App
-    script(src="js/vue/vue-app.js" type="text/babel")
-    script(src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js")
-    script 
-
-    //- Live Reload
-    script(src="http://localhost:35729/livereload.js")
-
-
-    //- end body
+        //- end body

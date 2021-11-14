@@ -1,3 +1,5 @@
+@import "../mixin/mixin";
+
 .opacity0 {
   @include opacity(0);
 }
@@ -133,4 +135,18 @@
 
 .border-third {
   border: 1px solid var(--third-color);
+}
+
+// direction
+.dir-ltr {
+  direction: ltr !important;
+}
+
+.dir-rtl {
+  direction: rtl !important;
+}
+
+// clear float
+.clear-float {
+  @include clearfix;
 }

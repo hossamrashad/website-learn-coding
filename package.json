@@ -45,6 +45,7 @@
         "imagemin-webp": "^6.0.0",
         "postcss-scss": "^4.0.0",
         "static-server": "^2.2.1",
+        "sweetalert": "^2.1.2",
         "vinyl-ftp": "^0.6.1"
     },
     "babel": {
