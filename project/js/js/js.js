@@ -213,8 +213,7 @@ if (Condition 1) {
 // onmouseover
 // onmouseout
 // onchange
-// =============
-// Star Javascript Bootcamp
+
 // Add Default Local Storage Class On Body
 document.body.classList.add(localStorage.getItem("pageColor") || "gray");
 let elColorSwitcher = document.querySelectorAll(".color-switcher li");
@@ -269,4 +268,30 @@ window.onload = function () {
   setInterval(showTime, 500);
 };
 
-//
+// Fore Copy Code
+$(document).ready(function () {
+  // copy name of color
+  $("body").on("click", ".parent-code .copy", function () {
+    // Code
+    $(this).select();
+    document.execCommand("copy");
+  });
+});
+
+// =============
+// Star Javascript Bootcamp
+
+// First Example
+
+let elementTitle = "Element Header",
+  elementDesc = "Element Description",
+  elementDate = "15 / 11";
+
+let element = `
+<div class='wrapper'>
+  <h3 class='title'>${elementTitle}</h3>
+  <p class='disc'>${elementDesc}</p>
+  <span class='date'>${elementDate}</span>
+  </div>`;
+document.write(element.repeat(4));
+// tests.innerHTML = element.repeat(4);

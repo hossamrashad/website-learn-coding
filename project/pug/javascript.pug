@@ -33,14 +33,89 @@ html(lang="ar" dir="rtl" data-theme="light")
         //- start body
         include header/header.pug
 
-        div(class='container')
+        div(class='container-fluid')
             div(class='row')
-                div(class='grid-2')
-                    div(class='') 
+                div(class='grid-sm-2')
+                    div(class='explain') 
+                        img(src="images/javascript/what-javascript-can-do.png" alt="")
+                    div(class='explain') 
+                        p(class='lead') الإخراج كود الجافا اسكربت الى الصفحة إلى الشاشة
+                        ul(class='dir-ltr') 
+                            li 1 - document.appendChild(ElementName);
+                            li 2 - window.alert("Your Massage");
+                            li 3 - document.write(< h1> Hello </ h1>);
+                            li 4 - console.log("Your Massage");
+
+                    div(class='explain') 
+                        div(class='form-floating parent-code')
+                            p(class='lead') خواص console
+                            ul  
+                                li(class='mb-4')  اخراج الرسالة او العنصار : console log
+                            textarea(class="form-control text-start copy")
+                                |console.log('Log');
+                            ul(class='mt-3 mb-3')  
+                                li اخراج الاخطاء : console error
+                            textarea(class="form-control text-start copy")
+                                |console.error('error');
+                            ul(class='mt-3 mb-3')  
+                                li اخراج الاراي فى جدوال و برقم الانداكس : console table
+                            textarea(class="form-control text-start copy")
+                                |console.table(ArrayName);
+                            ul(class='mt-3 mb-3')  
+                                li اخراج الرسالة بى استايل Directive %c
+                            textarea(class="form-control text-start copy")
+                                |console.log('Hello From %cJS %cFile', 'color: #0984e3; font-size: 20px', 'color: #00b894; font-size: 20px');
+
+                    div(class='explain') 
+                        div(class='form-floating parent-code')
+                            ul(class='clear-float') 
+                                li(class='float-end h3') أنواع البيانات 
+                                li(class='float-start') Data Types Intro
+                            p(class='lead mt-4 float-end') علشان تعراف نوع البينات اللى انت مستخدمها
+                            p(class='lead mt-4 float-start') typeof
+                            p(class='clear-float')
+                            ul(class='clear-float') 
+                                li(class='float-end dir-ltr') String
+                                li(class='float-start dir-ltr') console.log(typeof "Hossam Rashad");
+                                br
+                                li(class='float-end dir-ltr') Number
+                                li(class='float-start dir-ltr') console.log(typeof 5000);
+                                br
+                                li(class='float-end dir-ltr') Array => Object
+                                li(class='float-start dir-ltr') console.log(typeof [10, 15, 17]);
+                                br
+                                li(class='float-end dir-ltr') Object
+                                li(class='float-start dir-ltr') console.log(typeof { name: "Osama", age: 17, country: "Eg" });
+                                br
+                                li(class='float-end dir-ltr') Boolean
+                                li(class='float-start dir-ltr') console.log(typeof true);
+                                br
+                                li(class='float-end dir-ltr') undefined
+                                li(class='float-start dir-ltr') console.log(typeof undefined);
+                                br
+                                li(class='float-end dir-ltr') Object
+                                li(class='float-start dir-ltr') console.log(typeof null);
+
+
+                    div(class='explain') 
+                        h3(class='h3 text-center') المتغيرات Variables 
+                        div(class='form-floating parent-code')
+                            p(class='text-start dir-ltr float-start') What Is Variable ?
+                            p(class='float-end ') ما هو المتغير؟
+                            p(class='clear-float')
+                            p(class='lead') تُستخدم المتغيرات لتخزين المعلومات المراد الرجوع إليها ومعالجتها في برنامج كمبيوتر. كما أنها توفر طريقة لتسمية البيانات باسم وصفي ، بحيث يمكن فهم برامجنا بشكل أوضح من قبل القارئ وأنفسنا. من المفيد التفكير في المتغيرات على أنها حاويات تحتوي على معلومات. الغرض الوحيد منها هو تسمية البيانات وتخزينها في الذاكرة. يمكن بعد ذلك استخدام هذه البيانات في جميع أنحاء برنامجك.
+                            p(class='lead dir-ltr') Id And Global Variable
+                            p(class='lead') اي عنصار ليه اي دى هو عبارة عن متغير تقدار تستخدمو فى اي مكان فى النظام
+                            ul(class='clear-float') 
+                                li(class='float-start') < div id='inName'> Hello </ div> 
+                                li(class='dir-ltr') console.log(inName);
 
 
 
 
+                    div(class='explain') 
+                        div(class='form-floating parent-code')
+                            div(class='' id='tests')
 
 
 
@@ -54,7 +129,7 @@ html(lang="ar" dir="rtl" data-theme="light")
         include script/script.pug
 
         //- Javascript
-        script(src="js/js/js.js")
+        script(src="js/js/js.js" async)
         //- Jquery Tools
         script(src="js/jquery/jquery.js")
 

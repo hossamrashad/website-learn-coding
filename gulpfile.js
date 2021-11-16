@@ -331,6 +331,35 @@ gulp.task("github-css", function () {
     .pipe(notify("github Task Is Done"));
 });
 
+// =========================== Task For Learn github ============================ //
+// --------------------------- Task For Learn github ---------------------------- //
+gulp.task("javascript-js", function () {
+  return (
+    gulp
+      .src("project/js/javascript/**/*.js")
+      .pipe(sourcemaps.init())
+      // .pipe(babel({ presets: ["@babel/env"] }))
+      .pipe(concat("javascript.js"))
+      .pipe(uglify())
+      .pipe(sourcemaps.write("."))
+      .pipe(gulp.dest("dist/js/javascript"))
+      .pipe(notify("Js javascript Task Is Done"))
+      .pipe(livereload())
+  );
+});
+gulp.task("javascript-css", function () {
+  return gulp
+    .src("project/scss/javascript.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(autoprefixer("last 20 versions"))
+    .pipe(concat("javascript.css"))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("dist/css"))
+    .pipe(livereload())
+    .pipe(notify("javascript Task Is Done"));
+});
+
 // =========================== Task For Learn css ============================ //
 // --------------------------- Task For Learn css ---------------------------- //
 gulp.task("css-js", function () {
@@ -360,7 +389,7 @@ gulp.task("css-css", function () {
     .pipe(notify("Css Task Is Done"));
 });
 
-// --------------------------- Task For Learn css ---------------------------- //
+// --------------------------- Task For Bootstrap Tool css ---------------------------- //
 gulp.task("bootstrap-tool", function () {
   return (
     gulp
@@ -474,6 +503,9 @@ gulp.task("watch", function () {
   // = learn github
   gulp.watch("project/scss/github.scss", gulp.series("github-css"));
   gulp.watch("project/js/github/**/*.js", gulp.series("github-js"));
+  // = learn javascript
+  gulp.watch("project/scss/javascript.scss", gulp.series("javascript-css"));
+  gulp.watch("project/js/javascript/**/*.js", gulp.series("javascript-js"));
   // = learn github
   gulp.watch("project/js/bootstrap-tool", gulp.series("bootstrap-tool"));
   //= Test

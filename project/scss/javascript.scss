@@ -1,0 +1,22 @@
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  width: 24%;
+  border: 3px solid #333;
+  border-radius: 15px;
+
+  .title {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  .disc {
+    padding: 20px;
+    font-weight: bold;
+  }
+  .date {
+    padding: 20px;
+    font-weight: bold;
+  }
+}
