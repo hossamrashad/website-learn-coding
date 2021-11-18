@@ -38,14 +38,16 @@ html(lang="ar" dir="rtl" data-theme="light")
                 div(class='grid-sm-2')
                     div(class='explain') 
                         img(src="images/javascript/what-javascript-can-do.png" alt="")
+                    //-  الإخراج كود الجافا اسكربت الى الصفحة = الشاشة
                     div(class='explain') 
-                        p(class='lead') الإخراج كود الجافا اسكربت الى الصفحة إلى الشاشة
+                        p(class='lead') الإخراج كود الجافا اسكربت الى الصفحة = الشاشة
                         ul(class='dir-ltr') 
                             li 1 - document.appendChild(ElementName);
-                            li 2 - window.alert("Your Massage");
-                            li 3 - document.write(< h1> Hello </ h1>);
-                            li 4 - console.log("Your Massage");
-
+                            li 2 - document.createElement('div');
+                            li 3 - window.alert("Your Massage");
+                            li 4 - document.write(< h1> Hello </ h1>);
+                            li 5 - console.log("Your Massage");
+                    //-  خواص console
                     div(class='explain') 
                         div(class='form-floating parent-code')
                             p(class='lead') خواص console
@@ -65,7 +67,7 @@ html(lang="ar" dir="rtl" data-theme="light")
                                 li اخراج الرسالة بى استايل Directive %c
                             textarea(class="form-control text-start copy")
                                 |console.log('Hello From %cJS %cFile', 'color: #0984e3; font-size: 20px', 'color: #00b894; font-size: 20px');
-
+                    //-  أنواع البيانات 
                     div(class='explain') 
                         div(class='form-floating parent-code')
                             ul(class='clear-float') 
@@ -95,8 +97,7 @@ html(lang="ar" dir="rtl" data-theme="light")
                                 br
                                 li(class='float-end dir-ltr') Object
                                 li(class='float-start dir-ltr') console.log(typeof null);
-
-
+                    //-  المتغيرات Variables 
                     div(class='explain') 
                         h3(class='h3 text-center') المتغيرات Variables 
                         div(class='form-floating parent-code')
@@ -109,13 +110,234 @@ html(lang="ar" dir="rtl" data-theme="light")
                             ul(class='clear-float') 
                                 li(class='float-start') < div id='inName'> Hello </ div> 
                                 li(class='dir-ltr') console.log(inName);
-
-
-
-
+                    //-  طريقة كتابة الاسترانج و تجاهل العلامات و عمال سطر جديد
                     div(class='explain') 
                         div(class='form-floating parent-code')
-                            div(class='' id='tests')
+                            div(class='h3') طريقة كتابة الاسترانج و تجاهل العلامات و عمال سطر جديد
+                            div(class='clear-float')
+                                p(class='lead float-end') ممكن تكتاب سنجال كوت جوه ضابل كود و العكس 
+                                p(class='float-start lead') " ' ' " => ' " " ' 
+                            p(class='lead') *  علشان تتجاهل علامة او سطر و يخراج زاى ما انت كاتبو بتستعمل علامة الباك اسلاش الل هى \
+                            p(class='lead') *  علشان تعمل سطر جديد اللى هو زاى ما بدوس انتار علشان تكتب فى سطر جديد بتستخدام \n بيعمال New Line
+                    //- طريقة تحويل الارقم اللى مكتبو بصيغة الاسترانج الى رقام
+                    div(class='explain') 
+                        div(class='form-floating parent-code')
+                            div(class='h3')  طريقة تحويل الارقم اللى مكتبو بصيغة الاسترانج الى رقام
+                            div(class='dir-ltr')
+                                p(class='lead')  +"100"; = 100
+                                p(class='lead')  +"-100"; = -100
+                                p(class='lead')  +null; = 0
+                                p(class='lead')  +false; = 0
+                                p(class='lead')  +true; = 1
+                                p(class='lead') Number("100")
+                    //-  طريقة اضافة قيمة على القيمة اللى موجودة
+                    div(class='explain') 
+                        div(class='form-floating parent-code')
+                            div(class='h3') طريقة اضافة قيمة على القيمة اللى موجودة
+                            textarea(class='form-control text-start copy mb-4' style='height: 120px') 
+                                |let b = "Hossam";
+                                |b += " Rashad";
+                                |console.log(`B = ${b}`);
+                            p(class='lead') += معناه قيمة العنصر + القيمة الجديدة اللى بعد علامة =
+                            p(class='lead') النتيجة هى Hossam Rashad
+                    //- طريقة التعامل م الارقام
+                    div(class='explain') 
+                        h2(class='h1 text-center') Numbers
+                        div(class='form-floating parent-code')
+                            div(class='h3')  طريقة التعامل م الارقام
+                            div(class='clear-float')
+                                p(class='lead float-end') سهولة القراه لرقام زاى المليون
+                                p(class='lead float-start dir-ltr') console.log(1_000_000);
+                                br
+                            p(class='lead  mt-3 mb-3 text-center') output = 1000000
+                            div(class='clear-float')
+                                p(class='lead float-end') e يعنى كام رقم صفر عاوزة بعد الرقم اللى بكتبو
+                                p(class='lead float-start dir-ltr') console.log(1e6);
+                                br
+                            p(class='lead  mt-3 mb-3 text-center') output = 1000000
+                            div(class='clear-float')
+                                p(class='lead float-end') اعلا رقم امن فى الجافا اسكربت
+                                p(class='lead float-start dir-ltr') console.log(Number.MAX_SAFE_INTEGER);
+                                br
+                            p(class='lead  mt-3 mb-3 text-center') output = 9007199254740991
+                            div(class='clear-float')
+                                p(class='lead float-end') اعلا قيمة فى الجافا اسكربت
+                                p(class='lead float-start dir-ltr') console.log(Number.MAX_MAX_VALUE);
+                                br
+                            p(class='lead  mt-3 mb-3 text-center') output = 1.7976931348623157e+308
+                    //-  خواص التعامل مع الارقام
+                    div(class='explain') 
+                        h2(class='h1 text-center') Numbers
+                        div(class='form-floating parent-code')
+                            div(class='h3') خواص التعامل مع الارقام
+                            p(class='lead')  تحويل الرقم الى استرانج
+                                span(class='font-bold pr-20') toString
+                            textarea(class='form-control text-start copy mb-3') 
+                                |(100).toString()
+                            textarea(class='form-control text-start copy') 
+                                |100..toString()
+                            p(class='lead') تتحكم فيى الكسور عاوز كام رقم يرجعو فى الكسور ولو الرقم اللى بعد عدد الارقام اللى انت عاوز تخرجها 5 الى فوق بيجيب الرقم اللى بعدو و لو هو اصغر من خمسة بيرجع الرقم زاى ما هو وبيرجاع الراقم كا استرانج
+                                span(class='font-bold pr-20') toFixed
+                            textarea(class='form-control text-start copy')
+                                |(100.554555).toFixed(2)
+                            p(class='lead') بترجع من الاسترنج الرقم يعنى لو رقام و بعدو استرانج بتشيل الاسترانج و بتخرج منو الرقم و بترجع ععد صحيح من غير كسور 
+                                span(class='font-bold pr-20') parseInt
+                            textarea(class='form-control text-start copy')
+                                |parseInt("100 Hossam")
+                            p(class='lead') بيرجع من الاسترانج الرقم و بيخراج نوع البينات ارقام و بيخراج كمان الكسور 
+                                span(class='font-bold pr-20') parseFloat
+                            textarea(class='form-control text-start copy')
+                                |parseFloat("100.5000 Hossam")
+                            p(class='lead') التاكد من الرقم هل هو عدد صحيح 
+                                span(class='font-bold pr-20') isInteger
+                            textarea(class='form-control text-start copy')
+                                |Number.isInteger("100") = false
+                            textarea(class='form-control text-start copy')
+                                |Number.isInteger(100.54321) = false
+                            textarea(class='form-control text-start copy')
+                                |Number.isInteger(100) = true
+                            p(class='lead') التاكد من البينات اللى رجعة ارقام
+                            textarea(class='form-control text-start copy')
+                                |Number.isNaN("Osama" / 20)
+                    //- التعامل مع الارقام في الاوبجاكت
+                    div(class='explain') 
+                        h2(class='h1 text-center') Numbers
+                        div(class='form-floating parent-code')
+                            div(class='h3')  التعامل مع الارقام في الاوبجاكت
+                            p(class='lead text-center') علشان تكتاب خاصية من خواص الماث لازم تبدا بى ماس وو بعدين الخاصية
+                            p(class='lead') الراوند بيقارب الرقم لرقم صحيح من غير كسور و ليه شروط تحت ال 5 بيقربو لتحت و 5 الى فوق بيقربو لفوق 
+                                span(class='font-bold') round
+                            textarea(class='form-control text-start copy mb-3') 
+                                |Math.round(99.2) = 99
+                            textarea(class='form-control text-start copy mb-3') 
+                                |Math.round(99.5) = 100
+                            p(class='') الثيل بيقارب الرقم العشرى الى اعلى قيمة علشان يكون رقم صحيح 
+                                span(class='font-bold') ceil
+                            textarea(class='form-control text-start copy mb-3') 
+                                |Math.ceil(99.2) = 100
+                            p(class='') الفلور بيقارب الرقم العشرى الى اقل قيمة فية علشان يرجع عدد صحيح  
+                                span(class='font-bold') floor
+                            textarea(class='form-control text-start copy mb-3')
+                                |Math.floor(99.9) = 99 
+                            p(class='lead') بيجيب اقل رقم فى مجموعة ارقام 
+                                span(class='font-bold') min
+                            textarea(class='form-control text-start copy mb-3') 
+                                |Math.min(10, 20, 100, -100, 90) = -100
+                            p(class='lead') بيجيب اعلا رقم فى مجموعة ارقام 
+                                span(class='font-bold') max
+                            textarea(class='form-control text-start copy mb-3') 
+                                |Math.max(10, 20, 100, -100, 90) = 100
+                            p(class='lead') اللى هو الرقم اللى بيتضرب فى نفسة كام مرة 
+                                span(class='font-bold') pow
+                            textarea(class='form-control text-start copy mb-3' style='height:100px')
+                                |Math.pow(2, 4) = 16
+                                |Math.pow(2, 5) = 32
+                            p(class='lead') بيخارج رقم عشوائى
+                                span(class='font-bold') random
+                            textarea(class='form-control text-start copy mb-3')
+                                |Math.random()
+                            p(class='lead') بيشيل الكثور و بيرجع عدد صحيح
+                                span(class='font-bold') trunc
+                            textarea(class='form-control text-start copy mb-3')
+                                |Math.trunc()
+                    //- String
+                    div(class='explain') 
+                        h2(class='h1 text-center') String
+                        div(class='form-floating parent-code')
+                            div(class='h3') التعامل مع الاسترانج 
+                            p(class='lead dir-ltr') let theName = "  Hossam  ";
+                            p(class='lead') علشان تعراف الحرف رقم كام فى الاسترانج 
+                            p(class='lead dir-ltr') theName[2] = H
+                            p(class='lead') بتديلو رقم بيرجاعلك الحرف اللى فى المكان ده
+                            p(class='lead dir-ltr') theName.charAt(2) = H
+                            p(class='lead')  بيعد العناصر اللى فى المتغير
+                            p(class='lead dir-ltr') theName.length
+                            p(class='lead') بيشيل المسافات اللى بره الاسترانج
+                            p(class='lead dir-ltr') theName.trim()
+                            p(class='lead') بيحول التكست الى حروف كبيرة
+                            p(class='lead dir-ltr') theName.toUpperCase()
+                            p(class='lead') بيحول الاسترانج الى حروف صغيرة
+                            p(class='lead dir-ltr') theName.toLowerCase()
+                            p(class='lead font-bold dir-ltr') let a = "Rovan Web School";
+                            p(class='lead')  بتديلو استرانج يدور علية و برجعلاك مكان الاكتست فى الاسترانج و لو ملقهاش بيرجاع ثالب واحد
+                                span(class='font-bold') indexOf
+                            p(class='lead dir-ltr') a.indexOf("Web") = 6
+                            p(class='lead dir-ltr') a.indexOf("Web", 8) = -1
+                            p(class='lead ') بيدوار فى الاسترانج من الاخر الى الاول و لو خليتو يبدا من مكان معين بيبدا منو للاخر
+                                span(class='font-bold') lastIndexOf
+                            p(class='lead dir-ltr') a.lastIndexOf("Web") = 6
+                            p(class='lead') بيخارج من الاسترانج جزاء انت محتاجو وبيقبال يمة بى الثالب
+                                span(class='font-bold') slice
+                            p(class='lead dir-ltr') a.slice(2, 6)
+                            p(class='lead') هو تقرار العنصر
+                                span(class='font-bold') repeat
+                            p(class='lead dir-ltr') a.repeat('', 6)
+                            p(class='lead') بيرجاع الاسترانج كا اراى
+                                span(class='font-bold') split
+                            p(class='lead dir-ltr') a.split('', 6)
+                    //- String
+                    div(class='explain') 
+                        h2(class='h1 text-center') String
+                        div(class='form-floating parent-code')
+                            div(class='h3') التعامل مع الاسترانج 
+                            p(class='lead ') بيخارج من الاسترانج جزاء انت محتاجو وبيقبال يمة بى الثالب
+                                span(class='font-bold') substring
+                            p(class='lead dir-ltr') a.substring(2, 6)
+                            p(class='lead ')  بيخارج من الاسترانج جزاء انت محتاجو وبيقبال يمة بى الثالب
+                                span(class='font-bold') substr
+                            p(class='lead dir-ltr') a.substr(0, 6)
+                            p(class='lead ') هلى الاسترانج يحتوى على كلمة و بيرجع ترو و فلص
+                                span(class='font-bold') includes
+                            p(class='lead dir-ltr') a.includes("Web")
+                            p(class='lead ')  هلى الاسترانج بيبدا كلمة  و بيرجع ترو و فلص
+                                span(class='font-bold') startsWith
+                            p(class='lead dir-ltr') a.startsWith("E")
+                            p(class='lead ')  هلى الاسترانج ينتهى كلمة  و بيرجع ترو و فلص
+                                span(class='font-bold') endsWith
+                            p(class='lead dir-ltr') a.endsWith("E")
+                    //-  Comparison Operators المقارنات
+                    div(class='explain') 
+                        h2(class='h1 text-center') Comparison Operators المقارنات
+                        div(class='form-floating parent-code')
+                            div(class='h3') 
+                            p(class='lead') = يساوى  
+                            p(class='lead') == يساوى القيمة 
+                            p(class='lead') === يساوى القيمة و نوع البينات
+                            p(class='lead') > اكبار من
+                            p(class='lead') < اصغر من 
+                            p(class='lead') >= اكبر من او يساوى
+                            p(class='lead') <= اصغر من او يساوى
+                            p(class='lead') ! لا تساوى
+                            p(class='lead') != لا تساوى القيمة
+                            p(class='lead') !== لا تساوى القيمة ولا نوع البيانات
+                            p(class='lead') && و and 
+                            p(class='lead') || او or 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
