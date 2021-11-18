@@ -281,17 +281,26 @@ $(document).ready(function () {
 // =============
 // Star Javascript Bootcamp
 
-// First Example
+(function funcName() {
+  "use strict";
+  // = Code
+  console.log(
+    `%cElement: %c=> %c varName`,
+    "color: #55efc4; font-weight: bold; font-size: 18px",
+    "color: #ff7675; font-weight: bold; font-size: 18px",
+    "color: #3498db; font-weight: bold; font-size: 18px"
+  );
+})();
 
-let elementTitle = "Element Header",
-  elementDesc = "Element Description",
-  elementDate = "15 / 11";
-
-let element = `
-<div class='wrapper'>
-  <h3 class='title'>${elementTitle}</h3>
-  <p class='disc'>${elementDesc}</p>
-  <span class='date'>${elementDate}</span>
-  </div>`;
-document.write(element.repeat(4));
-// tests.innerHTML = element.repeat(4);
+// Selector Button
+var ElementEvent = document.getElementById("click");
+ElementEvent.onclick = function () {
+  ("use strict");
+  // = Code
+  console.log(
+    `%cElement: %c=> %c varName`,
+    "color: #55efc4; font-weight: bold; font-size: 18px",
+    "color: #ff7675; font-weight: bold; font-size: 18px",
+    "color: #3498db; font-weight: bold; font-size: 18px"
+  );
+};
