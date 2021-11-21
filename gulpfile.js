@@ -92,7 +92,6 @@ var sourcemaps = require("gulp-sourcemaps");
 var uglify = require("gulp-uglify");
 var notify = require("gulp-notify");
 var zip = require("gulp-zip");
-// var zip = require("gulp-zip");
 
 // var ftp = require("vinyl-ftp");
 

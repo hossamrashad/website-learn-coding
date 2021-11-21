@@ -312,12 +312,114 @@ html(lang="ar" dir="rtl" data-theme="light")
                             p(class='lead') !== لا تساوى القيمة ولا نوع البيانات
                             p(class='lead') && و and 
                             p(class='lead') || او or 
-
-
-
-
-
-
+                    //-  If Conditions شروط
+                    div(class='explain') 
+                        h2(class='h1 text-center') شروط If Conditions 
+                        div(class='form-floating parent-code')
+                            p(class='lead') الاف كندشان اللى هو الشروط ( فى حالى كود معين يحصال امر معين )
+                            p(class='lead') بيان if ينفذ بيانًا إذا كان الشرط المحدد صحيحًا. إذا كان الشرط خاطئًا ، يمكن تنفيذ عبارة أخرى.
+                            p(class='lead') يمكن عمل اف كندشان جوها اف كندشان اخرى اللى هو بيسما النستاند اللى هو اف كندشان جوة اف كندشان تانى 
+                            textarea(class='form-control text-start copy mb-3' style='height:400px')
+                                |let price = 100;
+                                |let discount = true;
+                                |let discountAmount = 30;
+                                |let country = "KSA";
+                                |if (discount === true) {
+                                |  price -= discountAmount; // price = price - discountAmount
+                                |} else if (country === "Egypt") {
+                                |  price -= 40;
+                                |} else if (country === "Syria") {
+                                |  price -= 50;
+                                |} else {
+                                |  price -= 10;
+                                |}
+                                |
+                                |console.log(price);
+                    //-  If Conditions شروط المختصرة
+                    div(class='explain') 
+                        h2(class='h1 text-center')  شروط المختصرة If Conditions 
+                        div(class='form-floating parent-code')
+                            p(class='lead') الاف كندشان المختصرة 
+                            p(class='lead') العامل الشرطي (الثلاثي) هو عامل JavaScript الوحيد الذي يأخذ ثلاثة معاملات: شرط متبوع بعلامة استفهام (؟) ، ثم تعبير لتنفيذه إذا كان الشرط صحيحًا متبوعًا بنقطتين (:) ، وأخيراً التعبير إلى نفذ إذا كان الشرط خاطئًا. يتم استخدام هذا العامل بشكل متكرر كاختصار لعبارة if.
+                            p(class='lead dir-ltr') // Condition ? If True : If False
+                            p(class='lead dir-ltr') let theGender = "Male" 
+                            textarea(class='form-control text-start copy mb-3')
+                                |theGender === "Male"  ?  "Mr" : "Mrs"
+                    //-   القيمة الفتراضية للمتغير
+                    div(class='explain') 
+                        h2(class='h1 text-center')  القيمة الفتراضية للمتغير
+                        div(class='form-floating parent-code')
+                            p(class='lead') هو فى حالة انو القيمة فاضية بتاعت المتغير او القيمة صفر او انو القيمة null او undefined او false او استرنج فاضى يرجع قيمة انت عملها تكون بديلة للقيمة اللى بترجع القيم دى اللى هى فوق زاى الاسترنج الفاضى او القيمة سالب او النال او المتغير الفاضى
+                            p(class='lead dir-ltr') let price = 0;
+                            textarea(class='form-control text-start copy mb-3')
+                                |console.log(`The Price Is ${price || 200}`);
+                            textarea(class='form-control text-start copy mb-3') || هى القيم Null + Undefined + Any Falsy Value
+                            p(class='lead mt-5 mb-5') 
+                                span(class='dir-ltr text-start font-bold') Boolean()
+                                | الابجاكت ده بيخارجلك القيمة اللى انت بتدهالو بيخرج منها القيمة هلى هى ترو ولا فالس 
+                            p(class='lead mt-5 mb-5') يتم تحويل القيمة التي تم تمريرها كمعامل أول إلى قيمة منطقية ، إذا لزم الأمر. إذا تم حذف القيمة أو كانت 0 أو -0 أو فارغة أو خطأ أو NaN أو غير معرف أو سلسلة فارغة ("") ، فسيكون للكائن قيمة أولية للخطأ. جميع القيم الأخرى ، بما في ذلك أي كائن ، أو مصفوفة فارغة ([]) ، أو السلسلة النصية "false" ، تنشئ كائنًا بقيمة أولية هي true.
+                            p(class='lead mt-5 mb-5') 
+                                span(class='font-bold') Nullish Coalescing Operator ??
+                                | هو بيتعامل مع القيمة الان دفيناد و القيمة النال و بيرجع القيمة اللى  زاى الصفر لو هو اللى خارج
+                    //- switch case
+                    div(class='explain') 
+                        h2(class='h1 text-center')  switch case  حالة التبديل 
+                        div(class='form-floating parent-code')
+                            p(class='lead') هو المقارنات هى شبيها بى الاف و الالس و هى تستخدام فى الحالات اللى بيكون الشروط فيها كتير يعنى زاى الشهر لكل يوم حالة معين يبقال الافضال من انو انت تستخدام اللاف و الالس تستخدام السواتش 
+                            p(class='lead') لكل كيس بريك علشان ينفز الكود فى حالة انو الشرط تم التاكيد انو هو اللى بيساوي القيمة 
+                            p(class='lead') الديفالت اللى هى فى حالة انو القيمة اللى بتقارن بيها الحالة بيرجع الديفالت
+                            p(class='lead') فى حالة انو انت عنداك 2 كيس بيادو نفس الوظيفة ممكن تعملهم فى جروب 
+                            textarea(class='form-control text-start copy mb-3' style='height: 640px')
+                                |switch (new Date().getDay()) {
+                                |   case 0:
+                                |       day = "Sunday";
+                                |       break;
+                                |   case 1:
+                                |       day = "Monday";
+                                |       break;
+                                |   case 2:
+                                |       day = "Tuesday";
+                                |       break;
+                                |   case 3:
+                                |       day = "Wednesday";
+                                |       break;
+                                |   case 4:
+                                |       day = "Thursday";
+                                |       break;
+                                |   case 5:
+                                |       day = "Friday";
+                                |       break;
+                                |   case 6:
+                                |       day = "Sunday";
+                                |       break;
+                                |   default :
+                                |       day = "Unknown Day";
+                                |       break;
+                    //- Array مجموعة مصفوفة
+                    div(class='explain') 
+                        h2(class='h1 text-center')  Array مجموعة مصفوفة
+                        div(class='form-floating parent-code')
+                            p(class='lead') * مجموعة هو كائن يستخدم لتخزين مجموعة. يمكن أن تكون هذه المجموعة أي شيء: أرقام ، كائنات ، المزيد من المصفوفات ، إلخ. في JavaScript ، تُستخدم المصفوفات لتخزين قيم متعددة في متغير واحد يمكن الوصول إليه من خلال فهرس (يبدأ من الصفر). تسمى القيم المخزنة في المصفوفة بالعناصر ويشار عادةً إلى عدد العناصر المخزنة في المصفوفة بطول المصفوفة .
+                            p(class='lead') *  فى حالة انو انت ضافت فى الاراى عنصار و انت ضفتو اكبار من عدد عناصر الاراى هيحطلك عناصر فاضية اد عدد الاماكن الفاضية اللى انت سبتها اللى هو لو انت عنداك اربع عناصر فى الاراى و انت حطيط فى الاندكس رقم ستة هيحطلك عنصرين اراى فضين
+                            p(class='lead font-bold')  طريقة طباعة جميع عناصر الاراى
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |let arrayName = ["facebook", "youtube", "google"];
+                                |console.log(`Item 1 : ${array}`);
+                            p(class='lead font-bold') طريقة طباعة عنصر من عناصر الاراى
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |let arrayName = ["facebook", "youtube", "google"];
+                                |console.log(`Item 1 : ${array[0]}`);
+                            p(class='lead font-bold') طريقة تغير عنصر من عناصر الاراى
+                            textarea(class='form-control text-start copy mb-3' style='height: 120px')
+                                |let arrayName = ["facebook", "youtube", "google"];
+                                |array[0] = "linkedin.com";
+                                |console.log(`Item 1 : ${array}`);
+                            p(class='lead font-bold') طريقة اضافة عنصار فى اخر الاراى
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |arrayName[arrayName.length] = `Last Item In Array`;
+                            p(class='lead font-bold') طريقة تحديث اخر قيمة فى الاراى دينمك
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |arrayName[arrayName.length - 1] = `Last Item In Array`;
 
 
 
