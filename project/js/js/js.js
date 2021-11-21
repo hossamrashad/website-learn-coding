@@ -279,28 +279,84 @@ $(document).ready(function () {
 });
 
 // =============
+
 // Star Javascript Bootcamp
 
-(function funcName() {
-  "use strict";
-  // = Code
-  console.log(
-    `%cElement: %c=> %c varName`,
-    "color: #55efc4; font-weight: bold; font-size: 18px",
-    "color: #ff7675; font-weight: bold; font-size: 18px",
-    "color: #3498db; font-weight: bold; font-size: 18px"
-  );
-})();
+// .shift();               => ازالة العنصار الاوال من الاراى
+// .unshift(\"Rashad\");   => اضافة عنصر فى الاول الاراى على طول
+// .shift();               => حزف اخر عنصر فى الاراى على طول
+// .pop();                 => ازالة العنصار  الاخير من الاراى
+// .toString()             => تحويل العنصار الى استرانج
+// .toFixed(3)             => تتحكم فى عدد الارقام الكسور
+// parseFloat('100.55')    => بيرجع من الاسترانج الرقم و الكسور
+// isNaN('Hossam' / 20)    => التاكد من البينات اللى رجعة ارقام
+// parseInt('100')         => بيرجع من الاسترانج الرقم و رقم صحيح
+// isInteger('100.55')     =>  التاكد من الرقم هل هو عدد صحيح
 
-// Selector Button
-var ElementEvent = document.getElementById("click");
-ElementEvent.onclick = function () {
-  ("use strict");
-  // = Code
-  console.log(
-    `%cElement: %c=> %c varName`,
-    "color: #55efc4; font-weight: bold; font-size: 18px",
-    "color: #ff7675; font-weight: bold; font-size: 18px",
-    "color: #3498db; font-weight: bold; font-size: 18px"
-  );
-};
+// //////////////// Math ////////////////////////
+
+// Math.round()            => بيقارب الرقم لرقم صحيح من غير كسور
+// Math.ceil()             => بيقارب الرقم العشرى الى اعلا قيمة
+// Math.floor()            => بيقارب الرقم العشرى الى اقل قيمة
+// Math.min()              => بيجيب اقل رقم فى مجموعة ارقام
+// Math.max()              => بيجيب اعلا رقم فى مجموعة ارقام
+// Math.pow(2 * 4)         => الرقم بيتضرب فى نفسة كام مرة
+// Math.random()           => بيخارج رقم عشوائى
+// Math.trunc()            => بيشيل الكثور و بيرجع عدد صحيح
+
+// ////////////// Global /////////////
+
+// .charAt()               => بيرجاعلك الحرف اللى فى المكان ده
+// .length                 => بيعد العناصر اللى فى المتغير
+// .trim()                 => بيشيل المسافات اللى بره الاسترانج
+// .toUpperCase()          => بيحول التكست الى حروف كبيرة
+// .toLowerCase()          => بيحول الاسترانج الى حروف صغيرة
+// .indexOf()              => بيدور فى الاسترانج على كلمة او فى الاراى
+// .lastIndexOf()          => بيدور فى الاسترانج على كلمة من الاخر او فى الاراى
+// .slice(start end)       => بيقطاع شريحة من الاسترانج
+// .repeat()               => تقرار العنصار
+// .split()                => بيرجع العنصار كا اراى
+// .substring(start End)   => بيخراج جزاء من العنصار
+// .substr(start End)      => بيخراج جزاء من العنصار بتحددو
+// .includes(\"Word\")     => بتدور فى الاسترتج على كلمة و النتيجة يا ترو يا فلص
+// .startsWith(\"Word\")   => هلى الاسترانج بيبدا كلمة و بيرجع ترو و فلص
+// .endsWith(\"Word\")     => هلى الاسترانج ينتهى كلمة و بيرجع ترو و فلص
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+let array = ["facebook.com", "youtube.com", "google.com", "Salwa"];
+
+console.log(array.indexOf("Salwa"));
+
+// indexOf("Value To Search", Starting Index)
+// lastIndexOf("Value To Search", Starting Index)
+// Example
+var friends = [
+  "Hassan", // 0 Index
+  "Ahmed", // 1 Index
+  "Mohamed", // 2 Index
+  "Sayed", // 3 Index
+  "Hind", // 4 Index
+  "Salwa", // 5 Index
+  "Sameh", // 6 Index
+  "Ali", // 7 Index
+];
+var specialFriends = friends.indexOf("Salwa");
+console.log(`رقم العنصر فى الاراى : ` + specialFriends);
+console.log(friends[specialFriends]);
+
+console.log(array.includes("Salwa"));
+
+if (array.indexOf("Hossam") === -1) {
+  console.log("Not Found");
+}
