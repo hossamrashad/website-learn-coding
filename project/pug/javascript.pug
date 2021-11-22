@@ -420,11 +420,73 @@ html(lang="ar" dir="rtl" data-theme="light")
                             p(class='lead font-bold') طريقة تحديث اخر قيمة فى الاراى دينمك
                             textarea(class='form-control text-start copy mb-3' style='height: 100px')
                                 |arrayName[arrayName.length - 1] = `Last Item In Array`;
-
-
-
-
-
+                            p(class='lead font-bold') طريقة البحث فى الاراى
+                            p(class='lead font-bold') الاندكس و الاست اندكس بترجع رقم العنصر فى الاراى
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |arrayName.indexOf("Ahmed");
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |arrayName.lastIndexOf("Ahmed");
+                            p(class='lead font-bold') الانكلود بترجع يا ترو يا فالس
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |arrayName.includes("Ahmed");
+                            p(class='lead font-bold') ترتيب الاراى ابجدى 
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |arrayName.sort();
+                            p(class='lead font-bold') ترتيب الاراى ابجدى معكوس
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |arrayName.reverse();
+                            p(class='lead font-bold') اخراج شريحة من الاراى
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |arrayName.slice(0, 5);
+                            p(class='lead font-bold') اخراج شريحة من الاراى
+                            p(class='lead') الاسبليس هى تستخدام فى حزف عناصر من الاراى و اضافة عناصر للاراى فى الاول
+                            p(class='lead ') طريقة الاستخدام الرقم اللى فى الاو هو بداية الاراى و الرقم اللى فى النص هو عدد العناصر اللى انت محتاج تحزفها من الاراى و الاسترانج هو العناصر اللى انت بتضيفها فى الاراى
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |array.splice(start, deleteCount, addElement);
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |arrayName.splice(0, 5,);
+                            p(class='lead font-bold') دامج الاراى
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |array.concat(arrayNew);
+                            p(class='lead font-bold') الفصلة اللى بين عناصر الاراى
+                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                                |array.join(" ");
+                    //-  Concept Of Loop مفهوم التقرار
+                    div(class='explain') 
+                        h2(class='h1 text-center') Concept Of Loop مفهوم التقرار
+                        div(class='form-floating parent-code')
+                            p(class='lead font-bold') تكرر الحلقات نفس كتلة الكود حتى يتم استيفاء شرط معين. إنها مفيدة للعديد من مهام البرمجة المتكررة.
+                            p(class='lead') على سبيل المثال ، قد يكون لديك قائمتان من الأسماء - الأسماء الأولى والألقاب - التي تريد دمجها في قائمة الأسماء الكاملة. يمكنك كتابة سطر من التعليمات البرمجية لكل اسم ، ولكن قد يتطلب ذلك مئات الأسطر من التعليمات البرمجية إذا كانت القائمة طويلة. بالإضافة إلى ذلك ، ماذا لو لم تكن متأكدًا من طول القائمة؟ هنا يمكنك استخدام حلقة تكرر كتلة مشابهة من التعليمات البرمجية تدمج كل عنصر من عناصر القائمة.
+                            textarea(class='form-control text-start copy mb-3' style='height: 120px')
+                                |for (let i = 0; i < array.length; i++) {
+                                |   console.log(i);
+                                |}
+                            p(class='lead font-bold') ميثال اراى فيها استرانج و ارقام و انا عاوز اخراج الاسترنج بس
+                            p(class='') بتعمال اراى فاضية علشان تخزن فيها الاسترانج اللى راجع من الاف كندشان
+                            p(class='lead') let array = [1, 2, "Osama", "Ahmed", 3, 4, "Sayed", 6, "Ali"];
+                            p(class='lead') let onlyNames = [];
+                            textarea(class='form-control text-start copy mb-3' style='height: 170px')
+                                |for (let i = 0; i < myFriends.length; i++) {
+                                |   if (typeof myFriends[i] === "string") {
+                                |       onlyNames.push(myFriends[i]);
+                                |   }
+                                |}
+                            p(class='lead font-bold') اللوب اللى جوه تقرار اللوب الفرعي بعد كل عنصر من عناصر اللوب الاثاثى 
+                            p(class='lead') let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+                            p(class='lead') let colors = ["Red", "Green", "Black"];
+                            p(class='lead') let models = [2020, 2021];
+                            textarea(class='form-control text-start copy mb-3' style='height: 305px')
+                                |for (let i = 0; i < products.length; i++) {
+                                |   console.log(`# ${products[i]}`);
+                                |   console.log("Colors: ");
+                                |   for (let j = 0; j < colors.length; j++) {
+                                |       console.log(`- ${colors[j]}`);
+                                |   }
+                                |   console.log("Models: ");
+                                |   for (let k = 0; k < models.length; k++) {
+                                |       console.log(`- ${models[k]}`);
+                                |   }
+                                |}
 
 
 

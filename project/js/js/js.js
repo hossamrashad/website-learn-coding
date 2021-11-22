@@ -96,9 +96,8 @@
 // number toExponential                                       => بيخرجلك الراقم زاى اللى مكتوب فى علم الحاسوب
 // number toFixed                                             => بيشيل الكسور اللى فى الرقام و يقربو الى الاقراب من فوق او تحت
 // number parseInt                                            => بيخرج الرقم و بيشيل الاسترانج اللى بعدو
-// = Global
+
 //  .toString()                                               => تحويل الداتلى تيب اى نوع الى استرانج
-//  .join(' ')                                                => العلمات اللى بين كل عنصر من عناصر الاراى
 // syntax
 // push
 // unshift
@@ -175,33 +174,6 @@ Undefined
 Null
 NAN = Not A Number
 Symbol
-*/
-// ===============================
-// Operators
-// > اكبار من
-// >= اكبار من او يساوى
-// < اصغر من
-// <= اصغار من او تساوى
-// == يساوى القيمة
-// === يساوى القيمة و نوع الداتا تيب
-// != لا تساوء
-// !== لا تساوى القيمة و لا تساوى الدات تيب
-// &&      =  And
-// ||      =  Or
-// + زائد
-// - ناقص
-// % المديوناشان هى قسمة الرقام و معانة الواحد
-// ++ يزاود واحد
-// -- يناقص واحد
-/*
-============
-== Syntax ==
-============
-if (Condition 1) {
-} else if (Condition 2) {
-} else {
-  Other Than Condition 1 Or 2
-}
 */
 
 // = Event
@@ -281,6 +253,23 @@ $(document).ready(function () {
 // =============
 
 // Star Javascript Bootcamp
+// ===============================
+// Operators
+// >                       => اكبار من
+// >=                      => اكبار من او يساوى
+// <                       => اصغر من
+// <=                      => اصغار من او تساوى
+// ==                      => يساوى القيمة
+// ===                     => يساوى القيمة و نوع الداتا تيب
+// !=                      => لا تساوء
+// !==                     => لا تساوى القيمة و لا تساوى الدات تيب
+// &&                      => And
+// ||                      => Or
+// +                       => زائد
+// -                       => ناقص
+// %                       => المديوناشان هى قسمة الرقام و معانة الواحد
+// ++                      => يزاود واحد
+// --                      => يناقص واحد
 
 // .shift();               => ازالة العنصار الاوال من الاراى
 // .unshift(\"Rashad\");   => اضافة عنصر فى الاول الاراى على طول
@@ -321,12 +310,38 @@ $(document).ready(function () {
 // .includes(\"Word\")     => بتدور فى الاسترتج على كلمة و النتيجة يا ترو يا فلص
 // .startsWith(\"Word\")   => هلى الاسترانج بيبدا كلمة و بيرجع ترو و فلص
 // .endsWith(\"Word\")     => هلى الاسترانج ينتهى كلمة و بيرجع ترو و فلص
-//
-//
-//
-//
-//
-//
+// .sort();                =>  ترتيب الاراى ابجدى
+// .reverse();             => ترتيب الاراى ابجدى معكوس
+// .slice(3 5);            => اخراج شريحة من الاراى
+// .splice(0, 0, "");      => اضافة عنصر فى الاول
+// .concat(arrayNew);      => دامج الاراى
+// .join(" ");             =>  الفصلة اللى بين عناصر الاراى
+
+/*
+  ============
+  == Syntax If Condition ==
+  ============
+  if (Condition 1) {
+  } else if (Condition 2) {
+  } else {
+    Other Than Condition 1 Or 2
+}
+*/
+
+/*
+  Loop
+  - For
+  ============
+  == Syntax If Condition ==
+  ============
+  for ([1] [2] [3]) {
+    // Block Of Code
+  }
+  for (let i = 0; i < 10; ++i) {
+  console.log(i);
+  }
+*/
+
 //
 //
 //
@@ -334,29 +349,23 @@ $(document).ready(function () {
 //
 //
 
-let array = ["facebook.com", "youtube.com", "google.com", "Salwa"];
+/*
+  Loop Control
+  - Break
+  - Continue
+  - Label
+*/
 
-console.log(array.indexOf("Salwa"));
+let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
 
-// indexOf("Value To Search", Starting Index)
-// lastIndexOf("Value To Search", Starting Index)
-// Example
-var friends = [
-  "Hassan", // 0 Index
-  "Ahmed", // 1 Index
-  "Mohamed", // 2 Index
-  "Sayed", // 3 Index
-  "Hind", // 4 Index
-  "Salwa", // 5 Index
-  "Sameh", // 6 Index
-  "Ali", // 7 Index
-];
-var specialFriends = friends.indexOf("Salwa");
-console.log(`رقم العنصر فى الاراى : ` + specialFriends);
-console.log(friends[specialFriends]);
+let colors = ["Red", "Green", "Black"];
 
-console.log(array.includes("Salwa"));
-
-if (array.indexOf("Hossam") === -1) {
-  console.log("Not Found");
+mainLoop: for (let i = 0; i < products.length; i++) {
+  console.log(products[i]);
+  nestedLoop: for (let j = 0; j < colors.length; j++) {
+    console.log(`- ${colors[j]}`);
+    if (colors[j] === "Green") {
+      break mainLoop;
+    }
+  }
 }
