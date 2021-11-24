@@ -2,491 +2,563 @@ include variables/variables.pug
 include mixin/mixin.pug
 doctype 
 html(lang="ar" dir="rtl" data-theme="light") 
-    //- html(lang="en" data-theme="light")
-    //- html(lang='ar' dir="rtl") 
+  //- html(lang="en" data-theme="light")
+  //- html(lang='ar' dir="rtl") 
 
-    head 
-        //- start head  
-        include head/head.pug
+  head 
+    //- start head  
+    include head/head.pug
 
-        block pageTitle
-            title Javascript
+    block pageTitle
+      title Javascript
 
-        block Bootstrap
-            //- Bootstrap 5.0.1 en 
-            // Bootstrap 5.0.1 en
-            //- link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/bootstrap/bootstrap.min.css")
-            link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.min.css")
+    block Bootstrap
+      //- Bootstrap 5.0.1 en 
+      // Bootstrap 5.0.1 en
+      //- link(rel="stylesheet" href="https://hossamrashad.github.io/libraries/css/bootstrap/bootstrap.min.css")
+      link(rel="stylesheet" href="css/libs/bootstrap/bootstrap.min.css")
 
-        //- global framework
-        block Framework
-            link(rel="stylesheet" href="css/style.css")
-            link(rel="stylesheet" href="css/javascript.css")
+    //- global framework
+    block Framework
+      link(rel="stylesheet" href="css/style.css")
+      link(rel="stylesheet" href="css/javascript.css")
 
-        //- Babel
-        //- script(src="https://unpkg.com/babel-standalone@6/babel.min.js")
-        //- script(src="https://babeljs.io/docs/setup/#babel_in_browser") 
-        //- script(src="js/libs/babel/browser.js") 
-        //- end head
+    //- Babel
+    //- script(src="https://unpkg.com/babel-standalone@6/babel.min.js")
+    //- script(src="https://babeljs.io/docs/setup/#babel_in_browser") 
+    //- script(src="js/libs/babel/browser.js") 
+    //- end head
 
-    body 
-        //- start body
-        include header/header.pug
+  body 
+    //- start body
+    include header/header.pug
 
-        div(class='container-fluid')
-            div(class='row')
-                div(class='grid-sm-2')
-                    div(class='explain') 
-                        img(src="images/javascript/what-javascript-can-do.png" alt="")
-                    //-  الإخراج كود الجافا اسكربت الى الصفحة = الشاشة
-                    div(class='explain') 
-                        p(class='lead') الإخراج كود الجافا اسكربت الى الصفحة = الشاشة
-                        ul(class='dir-ltr') 
-                            li 1 - document.appendChild(ElementName);
-                            li 2 - document.createElement('div');
-                            li 3 - window.alert("Your Massage");
-                            li 4 - document.write(< h1> Hello </ h1>);
-                            li 5 - console.log("Your Massage");
-                    //-  خواص console
-                    div(class='explain') 
-                        div(class='form-floating parent-code')
-                            p(class='lead') خواص console
-                            ul  
-                                li(class='mb-4')  اخراج الرسالة او العنصار : console log
-                            textarea(class="form-control text-start copy")
-                                |console.log('Log');
-                            ul(class='mt-3 mb-3')  
-                                li اخراج الاخطاء : console error
-                            textarea(class="form-control text-start copy")
-                                |console.error('error');
-                            ul(class='mt-3 mb-3')  
-                                li اخراج الاراي فى جدوال و برقم الانداكس : console table
-                            textarea(class="form-control text-start copy")
-                                |console.table(ArrayName);
-                            ul(class='mt-3 mb-3')  
-                                li اخراج الرسالة بى استايل Directive %c
-                            textarea(class="form-control text-start copy")
-                                |console.log('Hello From %cJS %cFile', 'color: #0984e3; font-size: 20px', 'color: #00b894; font-size: 20px');
-                    //-  أنواع البيانات 
-                    div(class='explain') 
-                        div(class='form-floating parent-code')
-                            ul(class='clear-float') 
-                                li(class='float-end h3') أنواع البيانات 
-                                li(class='float-start') Data Types Intro
-                            p(class='lead mt-4 float-end') علشان تعراف نوع البينات اللى انت مستخدمها
-                            p(class='lead mt-4 float-start') typeof
-                            p(class='clear-float')
-                            ul(class='clear-float') 
-                                li(class='float-end dir-ltr') String
-                                li(class='float-start dir-ltr') console.log(typeof "Hossam Rashad");
-                                br
-                                li(class='float-end dir-ltr') Number
-                                li(class='float-start dir-ltr') console.log(typeof 5000);
-                                br
-                                li(class='float-end dir-ltr') Array => Object
-                                li(class='float-start dir-ltr') console.log(typeof [10, 15, 17]);
-                                br
-                                li(class='float-end dir-ltr') Object
-                                li(class='float-start dir-ltr') console.log(typeof { name: "Osama", age: 17, country: "Eg" });
-                                br
-                                li(class='float-end dir-ltr') Boolean
-                                li(class='float-start dir-ltr') console.log(typeof true);
-                                br
-                                li(class='float-end dir-ltr') undefined
-                                li(class='float-start dir-ltr') console.log(typeof undefined);
-                                br
-                                li(class='float-end dir-ltr') Object
-                                li(class='float-start dir-ltr') console.log(typeof null);
-                    //-  المتغيرات Variables 
-                    div(class='explain') 
-                        h3(class='h3 text-center') المتغيرات Variables 
-                        div(class='form-floating parent-code')
-                            p(class='text-start dir-ltr float-start') What Is Variable ?
-                            p(class='float-end ') ما هو المتغير؟
-                            p(class='clear-float')
-                            p(class='lead') تُستخدم المتغيرات لتخزين المعلومات المراد الرجوع إليها ومعالجتها في برنامج كمبيوتر. كما أنها توفر طريقة لتسمية البيانات باسم وصفي ، بحيث يمكن فهم برامجنا بشكل أوضح من قبل القارئ وأنفسنا. من المفيد التفكير في المتغيرات على أنها حاويات تحتوي على معلومات. الغرض الوحيد منها هو تسمية البيانات وتخزينها في الذاكرة. يمكن بعد ذلك استخدام هذه البيانات في جميع أنحاء برنامجك.
-                            p(class='lead dir-ltr') Id And Global Variable
-                            p(class='lead') اي عنصار ليه اي دى هو عبارة عن متغير تقدار تستخدمو فى اي مكان فى النظام
-                            ul(class='clear-float') 
-                                li(class='float-start') < div id='inName'> Hello </ div> 
-                                li(class='dir-ltr') console.log(inName);
-                    //-  طريقة كتابة الاسترانج و تجاهل العلامات و عمال سطر جديد
-                    div(class='explain') 
-                        div(class='form-floating parent-code')
-                            div(class='h3') طريقة كتابة الاسترانج و تجاهل العلامات و عمال سطر جديد
-                            div(class='clear-float')
-                                p(class='lead float-end') ممكن تكتاب سنجال كوت جوه ضابل كود و العكس 
-                                p(class='float-start lead') " ' ' " => ' " " ' 
-                            p(class='lead') *  علشان تتجاهل علامة او سطر و يخراج زاى ما انت كاتبو بتستعمل علامة الباك اسلاش الل هى \
-                            p(class='lead') *  علشان تعمل سطر جديد اللى هو زاى ما بدوس انتار علشان تكتب فى سطر جديد بتستخدام \n بيعمال New Line
-                    //- طريقة تحويل الارقم اللى مكتبو بصيغة الاسترانج الى رقام
-                    div(class='explain') 
-                        div(class='form-floating parent-code')
-                            div(class='h3')  طريقة تحويل الارقم اللى مكتبو بصيغة الاسترانج الى رقام
-                            div(class='dir-ltr')
-                                p(class='lead')  +"100"; = 100
-                                p(class='lead')  +"-100"; = -100
-                                p(class='lead')  +null; = 0
-                                p(class='lead')  +false; = 0
-                                p(class='lead')  +true; = 1
-                                p(class='lead') Number("100")
-                    //-  طريقة اضافة قيمة على القيمة اللى موجودة
-                    div(class='explain') 
-                        div(class='form-floating parent-code')
-                            div(class='h3') طريقة اضافة قيمة على القيمة اللى موجودة
-                            textarea(class='form-control text-start copy mb-4' style='height: 120px') 
-                                |let b = "Hossam";
-                                |b += " Rashad";
-                                |console.log(`B = ${b}`);
-                            p(class='lead') += معناه قيمة العنصر + القيمة الجديدة اللى بعد علامة =
-                            p(class='lead') النتيجة هى Hossam Rashad
-                    //- طريقة التعامل م الارقام
-                    div(class='explain') 
-                        h2(class='h1 text-center') Numbers
-                        div(class='form-floating parent-code')
-                            div(class='h3')  طريقة التعامل م الارقام
-                            div(class='clear-float')
-                                p(class='lead float-end') سهولة القراه لرقام زاى المليون
-                                p(class='lead float-start dir-ltr') console.log(1_000_000);
-                                br
-                            p(class='lead  mt-3 mb-3 text-center') output = 1000000
-                            div(class='clear-float')
-                                p(class='lead float-end') e يعنى كام رقم صفر عاوزة بعد الرقم اللى بكتبو
-                                p(class='lead float-start dir-ltr') console.log(1e6);
-                                br
-                            p(class='lead  mt-3 mb-3 text-center') output = 1000000
-                            div(class='clear-float')
-                                p(class='lead float-end') اعلا رقم امن فى الجافا اسكربت
-                                p(class='lead float-start dir-ltr') console.log(Number.MAX_SAFE_INTEGER);
-                                br
-                            p(class='lead  mt-3 mb-3 text-center') output = 9007199254740991
-                            div(class='clear-float')
-                                p(class='lead float-end') اعلا قيمة فى الجافا اسكربت
-                                p(class='lead float-start dir-ltr') console.log(Number.MAX_MAX_VALUE);
-                                br
-                            p(class='lead  mt-3 mb-3 text-center') output = 1.7976931348623157e+308
-                    //-  خواص التعامل مع الارقام
-                    div(class='explain') 
-                        h2(class='h1 text-center') Numbers
-                        div(class='form-floating parent-code')
-                            div(class='h3') خواص التعامل مع الارقام
-                            p(class='lead')  تحويل الرقم الى استرانج
-                                span(class='font-bold pr-20') toString
-                            textarea(class='form-control text-start copy mb-3') 
-                                |(100).toString()
-                            textarea(class='form-control text-start copy') 
-                                |100..toString()
-                            p(class='lead') تتحكم فيى الكسور عاوز كام رقم يرجعو فى الكسور ولو الرقم اللى بعد عدد الارقام اللى انت عاوز تخرجها 5 الى فوق بيجيب الرقم اللى بعدو و لو هو اصغر من خمسة بيرجع الرقم زاى ما هو وبيرجاع الراقم كا استرانج
-                                span(class='font-bold pr-20') toFixed
-                            textarea(class='form-control text-start copy')
-                                |(100.554555).toFixed(2)
-                            p(class='lead') بترجع من الاسترنج الرقم يعنى لو رقام و بعدو استرانج بتشيل الاسترانج و بتخرج منو الرقم و بترجع ععد صحيح من غير كسور 
-                                span(class='font-bold pr-20') parseInt
-                            textarea(class='form-control text-start copy')
-                                |parseInt("100 Hossam")
-                            p(class='lead') بيرجع من الاسترانج الرقم و بيخراج نوع البينات ارقام و بيخراج كمان الكسور 
-                                span(class='font-bold pr-20') parseFloat
-                            textarea(class='form-control text-start copy')
-                                |parseFloat("100.5000 Hossam")
-                            p(class='lead') التاكد من الرقم هل هو عدد صحيح 
-                                span(class='font-bold pr-20') isInteger
-                            textarea(class='form-control text-start copy')
-                                |Number.isInteger("100") = false
-                            textarea(class='form-control text-start copy')
-                                |Number.isInteger(100.54321) = false
-                            textarea(class='form-control text-start copy')
-                                |Number.isInteger(100) = true
-                            p(class='lead') التاكد من البينات اللى رجعة ارقام
-                            textarea(class='form-control text-start copy')
-                                |Number.isNaN("Osama" / 20)
-                    //- التعامل مع الارقام في الاوبجاكت
-                    div(class='explain') 
-                        h2(class='h1 text-center') Numbers
-                        div(class='form-floating parent-code')
-                            div(class='h3')  التعامل مع الارقام في الاوبجاكت
-                            p(class='lead text-center') علشان تكتاب خاصية من خواص الماث لازم تبدا بى ماس وو بعدين الخاصية
-                            p(class='lead') الراوند بيقارب الرقم لرقم صحيح من غير كسور و ليه شروط تحت ال 5 بيقربو لتحت و 5 الى فوق بيقربو لفوق 
-                                span(class='font-bold') round
-                            textarea(class='form-control text-start copy mb-3') 
-                                |Math.round(99.2) = 99
-                            textarea(class='form-control text-start copy mb-3') 
-                                |Math.round(99.5) = 100
-                            p(class='') الثيل بيقارب الرقم العشرى الى اعلى قيمة علشان يكون رقم صحيح 
-                                span(class='font-bold') ceil
-                            textarea(class='form-control text-start copy mb-3') 
-                                |Math.ceil(99.2) = 100
-                            p(class='') الفلور بيقارب الرقم العشرى الى اقل قيمة فية علشان يرجع عدد صحيح  
-                                span(class='font-bold') floor
-                            textarea(class='form-control text-start copy mb-3')
-                                |Math.floor(99.9) = 99 
-                            p(class='lead') بيجيب اقل رقم فى مجموعة ارقام 
-                                span(class='font-bold') min
-                            textarea(class='form-control text-start copy mb-3') 
-                                |Math.min(10, 20, 100, -100, 90) = -100
-                            p(class='lead') بيجيب اعلا رقم فى مجموعة ارقام 
-                                span(class='font-bold') max
-                            textarea(class='form-control text-start copy mb-3') 
-                                |Math.max(10, 20, 100, -100, 90) = 100
-                            p(class='lead') اللى هو الرقم اللى بيتضرب فى نفسة كام مرة 
-                                span(class='font-bold') pow
-                            textarea(class='form-control text-start copy mb-3' style='height:100px')
-                                |Math.pow(2, 4) = 16
-                                |Math.pow(2, 5) = 32
-                            p(class='lead') بيخارج رقم عشوائى
-                                span(class='font-bold') random
-                            textarea(class='form-control text-start copy mb-3')
-                                |Math.random()
-                            p(class='lead') بيشيل الكثور و بيرجع عدد صحيح
-                                span(class='font-bold') trunc
-                            textarea(class='form-control text-start copy mb-3')
-                                |Math.trunc()
-                    //- String
-                    div(class='explain') 
-                        h2(class='h1 text-center') String
-                        div(class='form-floating parent-code')
-                            div(class='h3') التعامل مع الاسترانج 
-                            p(class='lead dir-ltr') let theName = "  Hossam  ";
-                            p(class='lead') علشان تعراف الحرف رقم كام فى الاسترانج 
-                            p(class='lead dir-ltr') theName[2] = H
-                            p(class='lead') بتديلو رقم بيرجاعلك الحرف اللى فى المكان ده
-                            p(class='lead dir-ltr') theName.charAt(2) = H
-                            p(class='lead')  بيعد العناصر اللى فى المتغير
-                            p(class='lead dir-ltr') theName.length
-                            p(class='lead') بيشيل المسافات اللى بره الاسترانج
-                            p(class='lead dir-ltr') theName.trim()
-                            p(class='lead') بيحول التكست الى حروف كبيرة
-                            p(class='lead dir-ltr') theName.toUpperCase()
-                            p(class='lead') بيحول الاسترانج الى حروف صغيرة
-                            p(class='lead dir-ltr') theName.toLowerCase()
-                            p(class='lead font-bold dir-ltr') let a = "Rovan Web School";
-                            p(class='lead')  بتديلو استرانج يدور علية و برجعلاك مكان الاكتست فى الاسترانج و لو ملقهاش بيرجاع ثالب واحد
-                                span(class='font-bold') indexOf
-                            p(class='lead dir-ltr') a.indexOf("Web") = 6
-                            p(class='lead dir-ltr') a.indexOf("Web", 8) = -1
-                            p(class='lead ') بيدوار فى الاسترانج من الاخر الى الاول و لو خليتو يبدا من مكان معين بيبدا منو للاخر
-                                span(class='font-bold') lastIndexOf
-                            p(class='lead dir-ltr') a.lastIndexOf("Web") = 6
-                            p(class='lead') بيخارج من الاسترانج جزاء انت محتاجو وبيقبال يمة بى الثالب
-                                span(class='font-bold') slice
-                            p(class='lead dir-ltr') a.slice(2, 6)
-                            p(class='lead') هو تقرار العنصر
-                                span(class='font-bold') repeat
-                            p(class='lead dir-ltr') a.repeat('', 6)
-                            p(class='lead') بيرجاع الاسترانج كا اراى
-                                span(class='font-bold') split
-                            p(class='lead dir-ltr') a.split('', 6)
-                    //- String
-                    div(class='explain') 
-                        h2(class='h1 text-center') String
-                        div(class='form-floating parent-code')
-                            div(class='h3') التعامل مع الاسترانج 
-                            p(class='lead ') بيخارج من الاسترانج جزاء انت محتاجو وبيقبال يمة بى الثالب
-                                span(class='font-bold') substring
-                            p(class='lead dir-ltr') a.substring(2, 6)
-                            p(class='lead ')  بيخارج من الاسترانج جزاء انت محتاجو وبيقبال يمة بى الثالب
-                                span(class='font-bold') substr
-                            p(class='lead dir-ltr') a.substr(0, 6)
-                            p(class='lead ') هلى الاسترانج يحتوى على كلمة و بيرجع ترو و فلص
-                                span(class='font-bold') includes
-                            p(class='lead dir-ltr') a.includes("Web")
-                            p(class='lead ')  هلى الاسترانج بيبدا كلمة  و بيرجع ترو و فلص
-                                span(class='font-bold') startsWith
-                            p(class='lead dir-ltr') a.startsWith("E")
-                            p(class='lead ')  هلى الاسترانج ينتهى كلمة  و بيرجع ترو و فلص
-                                span(class='font-bold') endsWith
-                            p(class='lead dir-ltr') a.endsWith("E")
-                    //-  Comparison Operators المقارنات
-                    div(class='explain') 
-                        h2(class='h1 text-center') Comparison Operators المقارنات
-                        div(class='form-floating parent-code')
-                            div(class='h3') 
-                            p(class='lead') = يساوى  
-                            p(class='lead') == يساوى القيمة 
-                            p(class='lead') === يساوى القيمة و نوع البينات
-                            p(class='lead') > اكبار من
-                            p(class='lead') < اصغر من 
-                            p(class='lead') >= اكبر من او يساوى
-                            p(class='lead') <= اصغر من او يساوى
-                            p(class='lead') ! لا تساوى
-                            p(class='lead') != لا تساوى القيمة
-                            p(class='lead') !== لا تساوى القيمة ولا نوع البيانات
-                            p(class='lead') && و and 
-                            p(class='lead') || او or 
-                    //-  If Conditions شروط
-                    div(class='explain') 
-                        h2(class='h1 text-center') شروط If Conditions 
-                        div(class='form-floating parent-code')
-                            p(class='lead') الاف كندشان اللى هو الشروط ( فى حالى كود معين يحصال امر معين )
-                            p(class='lead') بيان if ينفذ بيانًا إذا كان الشرط المحدد صحيحًا. إذا كان الشرط خاطئًا ، يمكن تنفيذ عبارة أخرى.
-                            p(class='lead') يمكن عمل اف كندشان جوها اف كندشان اخرى اللى هو بيسما النستاند اللى هو اف كندشان جوة اف كندشان تانى 
-                            textarea(class='form-control text-start copy mb-3' style='height:400px')
-                                |let price = 100;
-                                |let discount = true;
-                                |let discountAmount = 30;
-                                |let country = "KSA";
-                                |if (discount === true) {
-                                |  price -= discountAmount; // price = price - discountAmount
-                                |} else if (country === "Egypt") {
-                                |  price -= 40;
-                                |} else if (country === "Syria") {
-                                |  price -= 50;
-                                |} else {
-                                |  price -= 10;
-                                |}
-                                |
-                                |console.log(price);
-                    //-  If Conditions شروط المختصرة
-                    div(class='explain') 
-                        h2(class='h1 text-center')  شروط المختصرة If Conditions 
-                        div(class='form-floating parent-code')
-                            p(class='lead') الاف كندشان المختصرة 
-                            p(class='lead') العامل الشرطي (الثلاثي) هو عامل JavaScript الوحيد الذي يأخذ ثلاثة معاملات: شرط متبوع بعلامة استفهام (؟) ، ثم تعبير لتنفيذه إذا كان الشرط صحيحًا متبوعًا بنقطتين (:) ، وأخيراً التعبير إلى نفذ إذا كان الشرط خاطئًا. يتم استخدام هذا العامل بشكل متكرر كاختصار لعبارة if.
-                            p(class='lead dir-ltr') // Condition ? If True : If False
-                            p(class='lead dir-ltr') let theGender = "Male" 
-                            textarea(class='form-control text-start copy mb-3')
-                                |theGender === "Male"  ?  "Mr" : "Mrs"
-                    //-   القيمة الفتراضية للمتغير
-                    div(class='explain') 
-                        h2(class='h1 text-center')  القيمة الفتراضية للمتغير
-                        div(class='form-floating parent-code')
-                            p(class='lead') هو فى حالة انو القيمة فاضية بتاعت المتغير او القيمة صفر او انو القيمة null او undefined او false او استرنج فاضى يرجع قيمة انت عملها تكون بديلة للقيمة اللى بترجع القيم دى اللى هى فوق زاى الاسترنج الفاضى او القيمة سالب او النال او المتغير الفاضى
-                            p(class='lead dir-ltr') let price = 0;
-                            textarea(class='form-control text-start copy mb-3')
-                                |console.log(`The Price Is ${price || 200}`);
-                            textarea(class='form-control text-start copy mb-3') || هى القيم Null + Undefined + Any Falsy Value
-                            p(class='lead mt-5 mb-5') 
-                                span(class='dir-ltr text-start font-bold') Boolean()
-                                | الابجاكت ده بيخارجلك القيمة اللى انت بتدهالو بيخرج منها القيمة هلى هى ترو ولا فالس 
-                            p(class='lead mt-5 mb-5') يتم تحويل القيمة التي تم تمريرها كمعامل أول إلى قيمة منطقية ، إذا لزم الأمر. إذا تم حذف القيمة أو كانت 0 أو -0 أو فارغة أو خطأ أو NaN أو غير معرف أو سلسلة فارغة ("") ، فسيكون للكائن قيمة أولية للخطأ. جميع القيم الأخرى ، بما في ذلك أي كائن ، أو مصفوفة فارغة ([]) ، أو السلسلة النصية "false" ، تنشئ كائنًا بقيمة أولية هي true.
-                            p(class='lead mt-5 mb-5') 
-                                span(class='font-bold') Nullish Coalescing Operator ??
-                                | هو بيتعامل مع القيمة الان دفيناد و القيمة النال و بيرجع القيمة اللى  زاى الصفر لو هو اللى خارج
-                    //- switch case
-                    div(class='explain') 
-                        h2(class='h1 text-center')  switch case  حالة التبديل 
-                        div(class='form-floating parent-code')
-                            p(class='lead') هو المقارنات هى شبيها بى الاف و الالس و هى تستخدام فى الحالات اللى بيكون الشروط فيها كتير يعنى زاى الشهر لكل يوم حالة معين يبقال الافضال من انو انت تستخدام اللاف و الالس تستخدام السواتش 
-                            p(class='lead') لكل كيس بريك علشان ينفز الكود فى حالة انو الشرط تم التاكيد انو هو اللى بيساوي القيمة 
-                            p(class='lead') الديفالت اللى هى فى حالة انو القيمة اللى بتقارن بيها الحالة بيرجع الديفالت
-                            p(class='lead') فى حالة انو انت عنداك 2 كيس بيادو نفس الوظيفة ممكن تعملهم فى جروب 
-                            textarea(class='form-control text-start copy mb-3' style='height: 640px')
-                                |switch (new Date().getDay()) {
-                                |   case 0:
-                                |       day = "Sunday";
-                                |       break;
-                                |   case 1:
-                                |       day = "Monday";
-                                |       break;
-                                |   case 2:
-                                |       day = "Tuesday";
-                                |       break;
-                                |   case 3:
-                                |       day = "Wednesday";
-                                |       break;
-                                |   case 4:
-                                |       day = "Thursday";
-                                |       break;
-                                |   case 5:
-                                |       day = "Friday";
-                                |       break;
-                                |   case 6:
-                                |       day = "Sunday";
-                                |       break;
-                                |   default :
-                                |       day = "Unknown Day";
-                                |       break;
-                    //- Array مجموعة مصفوفة
-                    div(class='explain') 
-                        h2(class='h1 text-center')  Array مجموعة مصفوفة
-                        div(class='form-floating parent-code')
-                            p(class='lead') * مجموعة هو كائن يستخدم لتخزين مجموعة. يمكن أن تكون هذه المجموعة أي شيء: أرقام ، كائنات ، المزيد من المصفوفات ، إلخ. في JavaScript ، تُستخدم المصفوفات لتخزين قيم متعددة في متغير واحد يمكن الوصول إليه من خلال فهرس (يبدأ من الصفر). تسمى القيم المخزنة في المصفوفة بالعناصر ويشار عادةً إلى عدد العناصر المخزنة في المصفوفة بطول المصفوفة .
-                            p(class='lead') *  فى حالة انو انت ضافت فى الاراى عنصار و انت ضفتو اكبار من عدد عناصر الاراى هيحطلك عناصر فاضية اد عدد الاماكن الفاضية اللى انت سبتها اللى هو لو انت عنداك اربع عناصر فى الاراى و انت حطيط فى الاندكس رقم ستة هيحطلك عنصرين اراى فضين
-                            p(class='lead font-bold')  طريقة طباعة جميع عناصر الاراى
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |let arrayName = ["facebook", "youtube", "google"];
-                                |console.log(`Item 1 : ${array}`);
-                            p(class='lead font-bold') طريقة طباعة عنصر من عناصر الاراى
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |let arrayName = ["facebook", "youtube", "google"];
-                                |console.log(`Item 1 : ${array[0]}`);
-                            p(class='lead font-bold') طريقة تغير عنصر من عناصر الاراى
-                            textarea(class='form-control text-start copy mb-3' style='height: 120px')
-                                |let arrayName = ["facebook", "youtube", "google"];
-                                |array[0] = "linkedin.com";
-                                |console.log(`Item 1 : ${array}`);
-                            p(class='lead font-bold') طريقة اضافة عنصار فى اخر الاراى
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |arrayName[arrayName.length] = `Last Item In Array`;
-                            p(class='lead font-bold') طريقة تحديث اخر قيمة فى الاراى دينمك
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |arrayName[arrayName.length - 1] = `Last Item In Array`;
-                            p(class='lead font-bold') طريقة البحث فى الاراى
-                            p(class='lead font-bold') الاندكس و الاست اندكس بترجع رقم العنصر فى الاراى
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |arrayName.indexOf("Ahmed");
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |arrayName.lastIndexOf("Ahmed");
-                            p(class='lead font-bold') الانكلود بترجع يا ترو يا فالس
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |arrayName.includes("Ahmed");
-                            p(class='lead font-bold') ترتيب الاراى ابجدى 
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |arrayName.sort();
-                            p(class='lead font-bold') ترتيب الاراى ابجدى معكوس
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |arrayName.reverse();
-                            p(class='lead font-bold') اخراج شريحة من الاراى
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |arrayName.slice(0, 5);
-                            p(class='lead font-bold') اخراج شريحة من الاراى
-                            p(class='lead') الاسبليس هى تستخدام فى حزف عناصر من الاراى و اضافة عناصر للاراى فى الاول
-                            p(class='lead ') طريقة الاستخدام الرقم اللى فى الاو هو بداية الاراى و الرقم اللى فى النص هو عدد العناصر اللى انت محتاج تحزفها من الاراى و الاسترانج هو العناصر اللى انت بتضيفها فى الاراى
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |array.splice(start, deleteCount, addElement);
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |arrayName.splice(0, 5,);
-                            p(class='lead font-bold') دامج الاراى
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |array.concat(arrayNew);
-                            p(class='lead font-bold') الفصلة اللى بين عناصر الاراى
-                            textarea(class='form-control text-start copy mb-3' style='height: 100px')
-                                |array.join(" ");
-                    //-  Concept Of Loop مفهوم التقرار
-                    div(class='explain') 
-                        h2(class='h1 text-center') Concept Of Loop مفهوم التقرار
-                        div(class='form-floating parent-code')
-                            p(class='lead font-bold') تكرر الحلقات نفس كتلة الكود حتى يتم استيفاء شرط معين. إنها مفيدة للعديد من مهام البرمجة المتكررة.
-                            p(class='lead') على سبيل المثال ، قد يكون لديك قائمتان من الأسماء - الأسماء الأولى والألقاب - التي تريد دمجها في قائمة الأسماء الكاملة. يمكنك كتابة سطر من التعليمات البرمجية لكل اسم ، ولكن قد يتطلب ذلك مئات الأسطر من التعليمات البرمجية إذا كانت القائمة طويلة. بالإضافة إلى ذلك ، ماذا لو لم تكن متأكدًا من طول القائمة؟ هنا يمكنك استخدام حلقة تكرر كتلة مشابهة من التعليمات البرمجية تدمج كل عنصر من عناصر القائمة.
-                            textarea(class='form-control text-start copy mb-3' style='height: 120px')
-                                |for (let i = 0; i < array.length; i++) {
-                                |   console.log(i);
-                                |}
-                            p(class='lead font-bold') ميثال اراى فيها استرانج و ارقام و انا عاوز اخراج الاسترنج بس
-                            p(class='') بتعمال اراى فاضية علشان تخزن فيها الاسترانج اللى راجع من الاف كندشان
-                            p(class='lead') let array = [1, 2, "Osama", "Ahmed", 3, 4, "Sayed", 6, "Ali"];
-                            p(class='lead') let onlyNames = [];
-                            textarea(class='form-control text-start copy mb-3' style='height: 170px')
-                                |for (let i = 0; i < myFriends.length; i++) {
-                                |   if (typeof myFriends[i] === "string") {
-                                |       onlyNames.push(myFriends[i]);
-                                |   }
-                                |}
-                            p(class='lead font-bold') اللوب اللى جوه تقرار اللوب الفرعي بعد كل عنصر من عناصر اللوب الاثاثى 
-                            p(class='lead') let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
-                            p(class='lead') let colors = ["Red", "Green", "Black"];
-                            p(class='lead') let models = [2020, 2021];
-                            textarea(class='form-control text-start copy mb-3' style='height: 305px')
-                                |for (let i = 0; i < products.length; i++) {
-                                |   console.log(`# ${products[i]}`);
-                                |   console.log("Colors: ");
-                                |   for (let j = 0; j < colors.length; j++) {
-                                |       console.log(`- ${colors[j]}`);
-                                |   }
-                                |   console.log("Models: ");
-                                |   for (let k = 0; k < models.length; k++) {
-                                |       console.log(`- ${models[k]}`);
-                                |   }
-                                |}
+    div(class='container-fluid')
+      div(class='row')
+        div(class='grid-sm-2')
+          div(class='explain') 
+            img(src="images/javascript/what-javascript-can-do.png" alt="")
+          //-  الإخراج كود الجافا اسكربت الى الصفحة = الشاشة
+          div(class='explain') 
+            p(class='lead') الإخراج كود الجافا اسكربت الى الصفحة = الشاشة
+            ul(class='dir-ltr') 
+              li 1 - document.appendChild(ElementName);
+              li 2 - document.createElement('div');
+              li 3 - window.alert("Your Massage");
+              li 4 - document.write(< h1> Hello </ h1>);
+              li 5 - console.log("Your Massage");
+          //-  خواص console
+          div(class='explain') 
+            div(class='form-floating parent-code')
+              p(class='lead') خواص console
+              ul  
+                li(class='mb-4')  اخراج الرسالة او العنصار : console log
+              textarea(class="form-control text-start copy")
+                |console.log('Log');
+              ul(class='mt-3 mb-3')  
+                li اخراج الاخطاء : console error
+              textarea(class="form-control text-start copy")
+                |console.error('error');
+              ul(class='mt-3 mb-3')  
+                li اخراج الاراي فى جدوال و برقم الانداكس : console table
+              textarea(class="form-control text-start copy")
+                |console.table(ArrayName);
+              ul(class='mt-3 mb-3')  
+                li اخراج الرسالة بى استايل Directive %c
+              textarea(class="form-control text-start copy")
+                |console.log('Hello From %cJS %cFile', 'color: #0984e3; font-size: 20px', 'color: #00b894; font-size: 20px');
+          //-  أنواع البيانات 
+          div(class='explain') 
+            div(class='form-floating parent-code')
+              ul(class='clear-float') 
+                li(class='float-end h3') أنواع البيانات 
+                li(class='float-start') Data Types Intro
+              p(class='lead mt-4 float-end') علشان تعراف نوع البينات اللى انت مستخدمها
+              p(class='lead mt-4 float-start') typeof
+              p(class='clear-float')
+              ul(class='clear-float') 
+                li(class='float-end dir-ltr') String
+                li(class='float-start dir-ltr') console.log(typeof "Hossam Rashad");
+                br
+                li(class='float-end dir-ltr') Number
+                li(class='float-start dir-ltr') console.log(typeof 5000);
+                br
+                li(class='float-end dir-ltr') Array => Object
+                li(class='float-start dir-ltr') console.log(typeof [10, 15, 17]);
+                br
+                li(class='float-end dir-ltr') Object
+                li(class='float-start dir-ltr') console.log(typeof { name: "Osama", age: 17, country: "Eg" });
+                br
+                li(class='float-end dir-ltr') Boolean
+                li(class='float-start dir-ltr') console.log(typeof true);
+                br
+                li(class='float-end dir-ltr') undefined
+                li(class='float-start dir-ltr') console.log(typeof undefined);
+                br
+                li(class='float-end dir-ltr') Object
+                li(class='float-start dir-ltr') console.log(typeof null);
+          //-  المتغيرات Variables 
+          div(class='explain') 
+            h3(class='h3 text-center') المتغيرات Variables 
+            div(class='form-floating parent-code')
+              p(class='text-start dir-ltr float-start') What Is Variable ?
+              p(class='float-end ') ما هو المتغير؟
+              p(class='clear-float')
+              p(class='lead') تُستخدم المتغيرات لتخزين المعلومات المراد الرجوع إليها ومعالجتها في برنامج كمبيوتر. كما أنها توفر طريقة لتسمية البيانات باسم وصفي ، بحيث يمكن فهم برامجنا بشكل أوضح من قبل القارئ وأنفسنا. من المفيد التفكير في المتغيرات على أنها حاويات تحتوي على معلومات. الغرض الوحيد منها هو تسمية البيانات وتخزينها في الذاكرة. يمكن بعد ذلك استخدام هذه البيانات في جميع أنحاء برنامجك.
+              p(class='lead dir-ltr') Id And Global Variable
+              p(class='lead') اي عنصار ليه اي دى هو عبارة عن متغير تقدار تستخدمو فى اي مكان فى النظام
+              ul(class='clear-float') 
+                li(class='float-start') < div id='inName'> Hello </ div> 
+                li(class='dir-ltr') console.log(inName);
+          //-  طريقة كتابة الاسترانج و تجاهل العلامات و عمال سطر جديد
+          div(class='explain') 
+            div(class='form-floating parent-code')
+              div(class='h3') طريقة كتابة الاسترانج و تجاهل العلامات و عمال سطر جديد
+              div(class='clear-float')
+                p(class='lead float-end') ممكن تكتاب سنجال كوت جوه ضابل كود و العكس 
+                p(class='float-start lead') " ' ' " => ' " " ' 
+              p(class='lead') *  علشان تتجاهل علامة او سطر و يخراج زاى ما انت كاتبو بتستعمل علامة الباك اسلاش الل هى \
+              p(class='lead') *  علشان تعمل سطر جديد اللى هو زاى ما بدوس انتار علشان تكتب فى سطر جديد بتستخدام \n بيعمال New Line
+          //- طريقة تحويل الارقم اللى مكتبو بصيغة الاسترانج الى رقام
+          div(class='explain') 
+            div(class='form-floating parent-code')
+              div(class='h3')  طريقة تحويل الارقم اللى مكتبو بصيغة الاسترانج الى رقام
+              div(class='dir-ltr')
+                p(class='lead')  +"100"; = 100
+                p(class='lead')  +"-100"; = -100
+                p(class='lead')  +null; = 0
+                p(class='lead')  +false; = 0
+                p(class='lead')  +true; = 1
+                p(class='lead') Number("100")
+          //-  طريقة اضافة قيمة على القيمة اللى موجودة
+          div(class='explain') 
+            div(class='form-floating parent-code')
+              div(class='h3') طريقة اضافة قيمة على القيمة اللى موجودة
+              textarea(class='form-control text-start copy mb-4' style='height: 120px') 
+                |let b = "Hossam";
+                |b += " Rashad";
+                |console.log(`B = ${b}`);
+              p(class='lead') += معناه قيمة العنصر + القيمة الجديدة اللى بعد علامة =
+              p(class='lead') النتيجة هى Hossam Rashad
+          //- طريقة التعامل م الارقام
+          div(class='explain') 
+            h2(class='h1 text-center') Numbers
+            div(class='form-floating parent-code')
+              div(class='h3')  طريقة التعامل م الارقام
+              div(class='clear-float')
+                p(class='lead float-end') سهولة القراه لرقام زاى المليون
+                p(class='lead float-start dir-ltr') console.log(1_000_000);
+                br
+              p(class='lead  mt-3 mb-3 text-center') output = 1000000
+              div(class='clear-float')
+                p(class='lead float-end') e يعنى كام رقم صفر عاوزة بعد الرقم اللى بكتبو
+                p(class='lead float-start dir-ltr') console.log(1e6);
+                br
+              p(class='lead  mt-3 mb-3 text-center') output = 1000000
+              div(class='clear-float')
+                p(class='lead float-end') اعلا رقم امن فى الجافا اسكربت
+                p(class='lead float-start dir-ltr') console.log(Number.MAX_SAFE_INTEGER);
+                br
+              p(class='lead  mt-3 mb-3 text-center') output = 9007199254740991
+              div(class='clear-float')
+                p(class='lead float-end') اعلا قيمة فى الجافا اسكربت
+                p(class='lead float-start dir-ltr') console.log(Number.MAX_MAX_VALUE);
+                br
+              p(class='lead  mt-3 mb-3 text-center') output = 1.7976931348623157e+308
+          //-  خواص التعامل مع الارقام
+          div(class='explain') 
+            h2(class='h1 text-center') Numbers
+            div(class='form-floating parent-code')
+              div(class='h3') خواص التعامل مع الارقام
+              p(class='lead')  تحويل الرقم الى استرانج
+                span(class='font-bold pr-20') toString
+              textarea(class='form-control text-start copy mb-3') 
+                |(100).toString()
+              textarea(class='form-control text-start copy') 
+                |100..toString()
+              p(class='lead') تتحكم فيى الكسور عاوز كام رقم يرجعو فى الكسور ولو الرقم اللى بعد عدد الارقام اللى انت عاوز تخرجها 5 الى فوق بيجيب الرقم اللى بعدو و لو هو اصغر من خمسة بيرجع الرقم زاى ما هو وبيرجاع الراقم كا استرانج
+                span(class='font-bold pr-20') toFixed
+              textarea(class='form-control text-start copy')
+                |(100.554555).toFixed(2)
+              p(class='lead') بترجع من الاسترنج الرقم يعنى لو رقام و بعدو استرانج بتشيل الاسترانج و بتخرج منو الرقم و بترجع ععد صحيح من غير كسور 
+                span(class='font-bold pr-20') parseInt
+              textarea(class='form-control text-start copy')
+                |parseInt("100 Hossam")
+              p(class='lead') بيرجع من الاسترانج الرقم و بيخراج نوع البينات ارقام و بيخراج كمان الكسور 
+                span(class='font-bold pr-20') parseFloat
+              textarea(class='form-control text-start copy')
+                |parseFloat("100.5000 Hossam")
+              p(class='lead') التاكد من الرقم هل هو عدد صحيح 
+                span(class='font-bold pr-20') isInteger
+              textarea(class='form-control text-start copy')
+                |Number.isInteger("100") = false
+              textarea(class='form-control text-start copy')
+                |Number.isInteger(100.54321) = false
+              textarea(class='form-control text-start copy')
+                |Number.isInteger(100) = true
+              p(class='lead') التاكد من البينات اللى رجعة ارقام
+              textarea(class='form-control text-start copy')
+                |Number.isNaN("Osama" / 20)
+          //- التعامل مع الارقام في الاوبجاكت
+          div(class='explain') 
+            h2(class='h1 text-center') Numbers
+            div(class='form-floating parent-code')
+              div(class='h3')  التعامل مع الارقام في الاوبجاكت
+              p(class='lead text-center') علشان تكتاب خاصية من خواص الماث لازم تبدا بى ماس وو بعدين الخاصية
+              p(class='lead') الراوند بيقارب الرقم لرقم صحيح من غير كسور و ليه شروط تحت ال 5 بيقربو لتحت و 5 الى فوق بيقربو لفوق 
+                span(class='font-bold') round
+              textarea(class='form-control text-start copy mb-3') 
+                |Math.round(99.2) = 99
+              textarea(class='form-control text-start copy mb-3') 
+                |Math.round(99.5) = 100
+              p(class='') الثيل بيقارب الرقم العشرى الى اعلى قيمة علشان يكون رقم صحيح 
+                span(class='font-bold') ceil
+              textarea(class='form-control text-start copy mb-3') 
+                |Math.ceil(99.2) = 100
+              p(class='') الفلور بيقارب الرقم العشرى الى اقل قيمة فية علشان يرجع عدد صحيح  
+                span(class='font-bold') floor
+              textarea(class='form-control text-start copy mb-3')
+                |Math.floor(99.9) = 99 
+              p(class='lead') بيجيب اقل رقم فى مجموعة ارقام 
+                span(class='font-bold') min
+              textarea(class='form-control text-start copy mb-3') 
+                |Math.min(10, 20, 100, -100, 90) = -100
+              p(class='lead') بيجيب اعلا رقم فى مجموعة ارقام 
+                span(class='font-bold') max
+              textarea(class='form-control text-start copy mb-3') 
+                |Math.max(10, 20, 100, -100, 90) = 100
+              p(class='lead') اللى هو الرقم اللى بيتضرب فى نفسة كام مرة 
+                span(class='font-bold') pow
+              textarea(class='form-control text-start copy mb-3' style='height:100px')
+                |Math.pow(2, 4) = 16
+                |Math.pow(2, 5) = 32
+              p(class='lead') بيخارج رقم عشوائى
+                span(class='font-bold') random
+              textarea(class='form-control text-start copy mb-3')
+                |Math.random()
+              p(class='lead') بيشيل الكثور و بيرجع عدد صحيح
+                span(class='font-bold') trunc
+              textarea(class='form-control text-start copy mb-3')
+                |Math.trunc()
+          //- String
+          div(class='explain') 
+            h2(class='h1 text-center') String
+            div(class='form-floating parent-code')
+              div(class='h3') التعامل مع الاسترانج 
+              p(class='lead dir-ltr') let theName = "  Hossam  ";
+              p(class='lead') علشان تعراف الحرف رقم كام فى الاسترانج 
+              p(class='lead dir-ltr') theName[2] = H
+              p(class='lead') بتديلو رقم بيرجاعلك الحرف اللى فى المكان ده
+              p(class='lead dir-ltr') theName.charAt(2) = H
+              p(class='lead')  بيعد العناصر اللى فى المتغير
+              p(class='lead dir-ltr') theName.length
+              p(class='lead') بيشيل المسافات اللى بره الاسترانج
+              p(class='lead dir-ltr') theName.trim()
+              p(class='lead') بيحول التكست الى حروف كبيرة
+              p(class='lead dir-ltr') theName.toUpperCase()
+              p(class='lead') بيحول الاسترانج الى حروف صغيرة
+              p(class='lead dir-ltr') theName.toLowerCase()
+              p(class='lead font-bold dir-ltr') let a = "Rovan Web School";
+              p(class='lead')  بتديلو استرانج يدور علية و برجعلاك مكان الاكتست فى الاسترانج و لو ملقهاش بيرجاع ثالب واحد
+                span(class='font-bold') indexOf
+              p(class='lead dir-ltr') a.indexOf("Web") = 6
+              p(class='lead dir-ltr') a.indexOf("Web", 8) = -1
+              p(class='lead ') بيدوار فى الاسترانج من الاخر الى الاول و لو خليتو يبدا من مكان معين بيبدا منو للاخر
+                span(class='font-bold') lastIndexOf
+              p(class='lead dir-ltr') a.lastIndexOf("Web") = 6
+              p(class='lead') بيخارج من الاسترانج جزاء انت محتاجو وبيقبال يمة بى الثالب
+                span(class='font-bold') slice
+              p(class='lead dir-ltr') a.slice(2, 6)
+              p(class='lead') هو تقرار العنصر
+                span(class='font-bold') repeat
+              p(class='lead dir-ltr') a.repeat('', 6)
+              p(class='lead') بيرجاع الاسترانج كا اراى
+                span(class='font-bold') split
+              p(class='lead dir-ltr') a.split('', 6)
+          //- String
+          div(class='explain') 
+            h2(class='h1 text-center') String
+            div(class='form-floating parent-code')
+              div(class='h3') التعامل مع الاسترانج 
+              p(class='lead ') بيخارج من الاسترانج جزاء انت محتاجو وبيقبال يمة بى الثالب
+                span(class='font-bold') substring
+              p(class='lead dir-ltr') a.substring(2, 6)
+              p(class='lead ')  بيخارج من الاسترانج جزاء انت محتاجو وبيقبال يمة بى الثالب
+                span(class='font-bold') substr
+              p(class='lead dir-ltr') a.substr(0, 6)
+              p(class='lead ') هلى الاسترانج يحتوى على كلمة و بيرجع ترو و فلص
+                span(class='font-bold') includes
+              p(class='lead dir-ltr') a.includes("Web")
+              p(class='lead ')  هلى الاسترانج بيبدا كلمة  و بيرجع ترو و فلص
+                span(class='font-bold') startsWith
+              p(class='lead dir-ltr') a.startsWith("E")
+              p(class='lead ')  هلى الاسترانج ينتهى كلمة  و بيرجع ترو و فلص
+                span(class='font-bold') endsWith
+              p(class='lead dir-ltr') a.endsWith("E")
+          //-  Comparison Operators المقارنات
+          div(class='explain') 
+            h2(class='h1 text-center') Comparison Operators المقارنات
+            div(class='form-floating parent-code')
+              div(class='h3') 
+              p(class='lead') = يساوى  
+              p(class='lead') == يساوى القيمة 
+              p(class='lead') === يساوى القيمة و نوع البينات
+              p(class='lead') > اكبار من
+              p(class='lead') < اصغر من 
+              p(class='lead') >= اكبر من او يساوى
+              p(class='lead') <= اصغر من او يساوى
+              p(class='lead') ! لا تساوى
+              p(class='lead') != لا تساوى القيمة
+              p(class='lead') !== لا تساوى القيمة ولا نوع البيانات
+              p(class='lead') && و and 
+              p(class='lead') || او or 
+          //-  If Conditions شروط
+          div(class='explain') 
+            h2(class='h1 text-center') شروط If Conditions 
+            div(class='form-floating parent-code')
+              p(class='lead') الاف كندشان اللى هو الشروط ( فى حالى كود معين يحصال امر معين )
+              p(class='lead') بيان if ينفذ بيانًا إذا كان الشرط المحدد صحيحًا. إذا كان الشرط خاطئًا ، يمكن تنفيذ عبارة أخرى.
+              p(class='lead') يمكن عمل اف كندشان جوها اف كندشان اخرى اللى هو بيسما النستاند اللى هو اف كندشان جوة اف كندشان تانى 
+              textarea(class='form-control text-start copy mb-3' style='height:400px')
+                |let price = 100;
+                |let discount = true;
+                |let discountAmount = 30;
+                |let country = "KSA";
+                |if (discount === true) {
+                |  price -= discountAmount; // price = price - discountAmount
+                |} else if (country === "Egypt") {
+                |  price -= 40;
+                |} else if (country === "Syria") {
+                |  price -= 50;
+                |} else {
+                |  price -= 10;
+                |}
+                |
+                |console.log(price);
+          //-  If Conditions شروط المختصرة
+          div(class='explain') 
+            h2(class='h1 text-center')  شروط المختصرة If Conditions 
+            div(class='form-floating parent-code')
+              p(class='lead') الاف كندشان المختصرة 
+              p(class='lead') العامل الشرطي (الثلاثي) هو عامل JavaScript الوحيد الذي يأخذ ثلاثة معاملات: شرط متبوع بعلامة استفهام (؟) ، ثم تعبير لتنفيذه إذا كان الشرط صحيحًا متبوعًا بنقطتين (:) ، وأخيراً التعبير إلى نفذ إذا كان الشرط خاطئًا. يتم استخدام هذا العامل بشكل متكرر كاختصار لعبارة if.
+              p(class='lead dir-ltr') // Condition ? If True : If False
+              p(class='lead dir-ltr') let theGender = "Male" 
+              textarea(class='form-control text-start copy mb-3')
+                |theGender === "Male"  ?  "Mr" : "Mrs"
+          //-   القيمة الفتراضية للمتغير
+          div(class='explain') 
+            h2(class='h1 text-center')  القيمة الفتراضية للمتغير
+            div(class='form-floating parent-code')
+              p(class='lead') هو فى حالة انو القيمة فاضية بتاعت المتغير او القيمة صفر او انو القيمة null او undefined او false او استرنج فاضى يرجع قيمة انت عملها تكون بديلة للقيمة اللى بترجع القيم دى اللى هى فوق زاى الاسترنج الفاضى او القيمة سالب او النال او المتغير الفاضى
+              p(class='lead dir-ltr') let price = 0;
+              textarea(class='form-control text-start copy mb-3')
+                |console.log(`The Price Is ${price || 200}`);
+              textarea(class='form-control text-start copy mb-3') || هى القيم Null + Undefined + Any Falsy Value
+              p(class='lead mt-5 mb-5') 
+                span(class='dir-ltr text-start font-bold') Boolean()
+                | الابجاكت ده بيخارجلك القيمة اللى انت بتدهالو بيخرج منها القيمة هلى هى ترو ولا فالس 
+              p(class='lead mt-5 mb-5') يتم تحويل القيمة التي تم تمريرها كمعامل أول إلى قيمة منطقية ، إذا لزم الأمر. إذا تم حذف القيمة أو كانت 0 أو -0 أو فارغة أو خطأ أو NaN أو غير معرف أو سلسلة فارغة ("") ، فسيكون للكائن قيمة أولية للخطأ. جميع القيم الأخرى ، بما في ذلك أي كائن ، أو مصفوفة فارغة ([]) ، أو السلسلة النصية "false" ، تنشئ كائنًا بقيمة أولية هي true.
+              p(class='lead mt-5 mb-5') 
+                span(class='font-bold') Nullish Coalescing Operator ??
+                | هو بيتعامل مع القيمة الان دفيناد و القيمة النال و بيرجع القيمة اللى  زاى الصفر لو هو اللى خارج
+          //- switch case
+          div(class='explain') 
+            h2(class='h1 text-center')  switch case  حالة التبديل 
+            div(class='form-floating parent-code')
+              p(class='lead') هو المقارنات هى شبيها بى الاف و الالس و هى تستخدام فى الحالات اللى بيكون الشروط فيها كتير يعنى زاى الشهر لكل يوم حالة معين يبقال الافضال من انو انت تستخدام اللاف و الالس تستخدام السواتش 
+              p(class='lead') لكل كيس بريك علشان ينفز الكود فى حالة انو الشرط تم التاكيد انو هو اللى بيساوي القيمة 
+              p(class='lead') الديفالت اللى هى فى حالة انو القيمة اللى بتقارن بيها الحالة بيرجع الديفالت
+              p(class='lead') فى حالة انو انت عنداك 2 كيس بيادو نفس الوظيفة ممكن تعملهم فى جروب 
+              textarea(class='form-control text-start copy mb-3' style='height: 640px')
+                |switch (new Date().getDay()) {
+                |   case 0:
+                |       day = "Sunday";
+                |       break;
+                |   case 1:
+                |       day = "Monday";
+                |       break;
+                |   case 2:
+                |       day = "Tuesday";
+                |       break;
+                |   case 3:
+                |       day = "Wednesday";
+                |       break;
+                |   case 4:
+                |       day = "Thursday";
+                |       break;
+                |   case 5:
+                |       day = "Friday";
+                |       break;
+                |   case 6:
+                |       day = "Sunday";
+                |       break;
+                |   default :
+                |       day = "Unknown Day";
+                |       break;
+          //- Array مجموعة مصفوفة
+          div(class='explain') 
+            h2(class='h1 text-center')  Array مجموعة مصفوفة
+            div(class='form-floating parent-code')
+              p(class='lead') * مجموعة هو كائن يستخدم لتخزين مجموعة. يمكن أن تكون هذه المجموعة أي شيء: أرقام ، كائنات ، المزيد من المصفوفات ، إلخ. في JavaScript ، تُستخدم المصفوفات لتخزين قيم متعددة في متغير واحد يمكن الوصول إليه من خلال فهرس (يبدأ من الصفر). تسمى القيم المخزنة في المصفوفة بالعناصر ويشار عادةً إلى عدد العناصر المخزنة في المصفوفة بطول المصفوفة .
+              p(class='lead') *  فى حالة انو انت ضافت فى الاراى عنصار و انت ضفتو اكبار من عدد عناصر الاراى هيحطلك عناصر فاضية اد عدد الاماكن الفاضية اللى انت سبتها اللى هو لو انت عنداك اربع عناصر فى الاراى و انت حطيط فى الاندكس رقم ستة هيحطلك عنصرين اراى فضين
+              p(class='lead font-bold')  طريقة طباعة جميع عناصر الاراى
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |let arrayName = ["facebook", "youtube", "google"];
+                |console.log(`Item 1 : ${array}`);
+              p(class='lead font-bold') طريقة طباعة عنصر من عناصر الاراى
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |let arrayName = ["facebook", "youtube", "google"];
+                |console.log(`Item 1 : ${array[0]}`);
+              p(class='lead font-bold') طريقة تغير عنصر من عناصر الاراى
+              textarea(class='form-control text-start copy mb-3' style='height: 120px')
+                |let arrayName = ["facebook", "youtube", "google"];
+                |array[0] = "linkedin.com";
+                |console.log(`Item 1 : ${array}`);
+              p(class='lead font-bold') طريقة اضافة عنصار فى اخر الاراى
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |arrayName[arrayName.length] = `Last Item In Array`;
+              p(class='lead font-bold') طريقة تحديث اخر قيمة فى الاراى دينمك
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |arrayName[arrayName.length - 1] = `Last Item In Array`;
+              p(class='lead font-bold') طريقة البحث فى الاراى
+              p(class='lead font-bold') الاندكس و الاست اندكس بترجع رقم العنصر فى الاراى
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |arrayName.indexOf("Ahmed");
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |arrayName.lastIndexOf("Ahmed");
+              p(class='lead font-bold') الانكلود بترجع يا ترو يا فالس
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |arrayName.includes("Ahmed");
+              p(class='lead font-bold') ترتيب الاراى ابجدى 
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |arrayName.sort();
+              p(class='lead font-bold') ترتيب الاراى ابجدى معكوس
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |arrayName.reverse();
+              p(class='lead font-bold') اخراج شريحة من الاراى
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |arrayName.slice(0, 5);
+              p(class='lead font-bold') اخراج شريحة من الاراى
+              p(class='lead') الاسبليس هى تستخدام فى حزف عناصر من الاراى و اضافة عناصر للاراى فى الاول
+              p(class='lead ') طريقة الاستخدام الرقم اللى فى الاو هو بداية الاراى و الرقم اللى فى النص هو عدد العناصر اللى انت محتاج تحزفها من الاراى و الاسترانج هو العناصر اللى انت بتضيفها فى الاراى
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |array.splice(start, deleteCount, addElement);
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |arrayName.splice(0, 5,);
+              p(class='lead font-bold') دامج الاراى
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |array.concat(arrayNew);
+              p(class='lead font-bold') الفصلة اللى بين عناصر الاراى
+              textarea(class='form-control text-start copy mb-3' style='height: 100px')
+                |array.join(" ");
+          //-  Concept Of Loop مفهوم التقرار
+          div(class='explain') 
+            h2(class='h1 text-center') Concept Of Loop مفهوم التقرار
+            div(class='form-floating parent-code')
+              p(class='lead font-bold') تكرر الحلقات نفس كتلة الكود حتى يتم استيفاء شرط معين. إنها مفيدة للعديد من مهام البرمجة المتكررة.
+              p(class='lead') على سبيل المثال ، قد يكون لديك قائمتان من الأسماء - الأسماء الأولى والألقاب - التي تريد دمجها في قائمة الأسماء الكاملة. يمكنك كتابة سطر من التعليمات البرمجية لكل اسم ، ولكن قد يتطلب ذلك مئات الأسطر من التعليمات البرمجية إذا كانت القائمة طويلة. بالإضافة إلى ذلك ، ماذا لو لم تكن متأكدًا من طول القائمة؟ هنا يمكنك استخدام حلقة تكرر كتلة مشابهة من التعليمات البرمجية تدمج كل عنصر من عناصر القائمة.
+              textarea(class='form-control text-start copy mb-3' style='height: 120px')
+                |for (let i = 0; i < array.length; i++) {
+                |   console.log(i);
+                |}
+              p(class='lead font-bold') ميثال اراى فيها استرانج و ارقام و انا عاوز اخراج الاسترنج بس
+              p(class='') بتعمال اراى فاضية علشان تخزن فيها الاسترانج اللى راجع من الاف كندشان
+              p(class='lead') let array = [1, 2, "Osama", "Ahmed", 3, 4, "Sayed", 6, "Ali"];
+              p(class='lead') let onlyNames = [];
+              textarea(class='form-control text-start copy mb-3' style='height: 170px')
+                |for (let i = 0; i < myFriends.length; i++) {
+                |   if (typeof myFriends[i] === "string") {
+                |       onlyNames.push(myFriends[i]);
+                |   }
+                |}
+              p(class='lead font-bold') اللوب اللى جوه تقرار اللوب الفرعي بعد كل عنصر من عناصر اللوب الاثاثى 
+              p(class='lead') let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+              p(class='lead') let colors = ["Red", "Green", "Black"];
+              p(class='lead') let models = [2020, 2021];
+              textarea(class='form-control text-start copy mb-3' style='height: 305px')
+                |for (let i = 0; i < products.length; i++) {
+                |   console.log(`# ${products[i]}`);
+                |   console.log("Colors: ");
+                |   for (let j = 0; j < colors.length; j++) {
+                |       console.log(`- ${colors[j]}`);
+                |   }
+                |   console.log("Models: ");
+                |   for (let k = 0; k < models.length; k++) {
+                |       console.log(`- ${models[k]}`);
+                |   }
+                |}
+              p(class='lead font-bold') Break, Continue, Label 
+              p(class='lead font-bold') البريك بيوقف اللوب عند كندشان معين
+              p(class='lead') الفور ده بيجيب جميع عناصر الاراى و الاف كندشان اللى جوها فى حلة انو التقرار = البان بيوقف عمل اللوب 
+              p(class='lead dir-ltr') let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+              textarea(class='form-control text-start copy mb-3' style='height: 160px')
+                |for (let i = 0; i < products.length; i++) {
+                | if (products[i] === "Pen") {
+                |   break;
+                | }
+                |}
+              p(class='lead font-bold') الكونتينيو بيشيل الشرط اللى بيطابق الكندشان و يكمل اللوب
+              p(class='lead') الفور ده بيجيب جميع عناصر الاراى و الاف كندشان اللى جوها فى حلة انو التقرار = ارقام بيشيل الارقام و يكمال التقرار 
+              p(class='lead dir-ltr') let products = ["Keyboard", 20, 60, "Mouse", "Pen", 80, 100, "Pad", "Monitor"];
+              textarea(class='form-control text-start copy mb-3' style='height: 160px')
+                |for (let i = 0; i < products.length; i++) {
+                | if (typeof products[i] === "number") {
+                |   continue;
+                | }
+                |}
+              p(class='lead font-bold') الليبال هو تسمية للفور 
+              p(class='lead') let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+              p(class='lead') let colors = ["Red", "Green", "Black"];
+              textarea(class='form-control text-start copy mb-3' style='height: 260px')
+                |mainLoop: for (let i = 0; i < products.length; i++) {
+                | console.log(products[i]);
+                | nestedLoop: for (let j = 0; j < colors.length; j++) {
+                |   console.log(`- ${colors[j]}`);
+                |   if (colors[j] === "Green") {
+                |     break mainLoop;
+                |   }
+                | }
+                |}
+              p(class='lead font-bold') ميثال اضافه عناصر الاراى فى الصفحة 
+              p(class='lead') مع التحكم فى عدد المنتجات اللى يتام عرضها 
+              p(class='lead') عمال ناستاند لوب جوه اللوب الاساسي
+              p(class='lead dir-ltr') let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor", "iPhone"];
+              p(class='lead dir-ltr') let colors = ["Red", "Green", "Blue"];
+              p(class='lead dir-ltr') let showCount = 5;
+              textarea(class='form-control text-start copy mb-3' style='height: 300px')
+                |document.write(`<h1>Show ${showCount} Products</h1>`);
+                |for (let i = 0; i < showCount; i++) {
+                | document.write(`<div>`);
+                | document.write(`<h3>[${i + 1}] ${products[i]}</h3>`);
+                | for (let j = 0; j < colors.length; j++) {
+                |   document.write(`<p>${colors[j]}</p>`);
+                | }
+                | document.write(`<p>${colors.join(" | ")}</p>`);
+                |document.write(`</div>`);
+                |}
+              h3(class='h2') While هو طريق للتقرار الكود بى استخدام الويل
+              p(class='lead dir-ltr') let array = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor", "iPhone"];
+              p(class='lead') 
+              textarea(class='form-control text-start copy mb-3' style='height: 230px')
+                |let i = 0;
+                |while (i < array.length) {
+                | console.log(array[i]);
+                |// تقرار الايى 
+                |// i++;
+                |// فى حالة انو انت عاوز تطبع عنصر و تسيب التانى
+                |i += 2;
+                |} 
+              p(class='lead mb-3 mt-3') فى حالة انو انت عاوز توقف اللوب عند مكان معين
+              textarea(class='form-control text-start copy mb-3' style='height: 230px')
+                |let i = 0;
+                |while (i < array.length) {
+                | console.log(`${i + 1} = ${array[i]}`);
+                | i += 1;
+                | if (array[i] === "Monitor") {
+                |   break;
+                | }
+                |} 
+              h3(class='h2') do + while 
 
 
 
@@ -509,21 +581,20 @@ html(lang="ar" dir="rtl" data-theme="light")
 
 
 
+    include fixedMenu/fixedMenu.pug
 
-        include fixedMenu/fixedMenu.pug
+    include script/script.pug
 
-        include script/script.pug
+    //- Javascript
+    script(src="js/js/js.js")
+    //- Jquery Tools
+    script(src="js/jquery/jquery.js")
 
-        //- Javascript
-        script(src="js/js/js.js" async)
-        //- Jquery Tools
-        script(src="js/jquery/jquery.js")
+    //- sweetalert
+    script(src="js/libs/sweetalert/sweetalert.min.js") 
 
-        //- sweetalert
-        script(src="js/libs/sweetalert/sweetalert.min.js") 
-
-        //- Live Reload
-        script(src="http://localhost:35729/livereload.js")
+    //- Live Reload
+    script(src="http://localhost:35729/livereload.js")
 
 
-        //- end body
+    //- end body

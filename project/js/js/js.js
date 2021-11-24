@@ -316,6 +316,16 @@ $(document).ready(function () {
 // .splice(0, 0, "");      => اضافة عنصر فى الاول
 // .concat(arrayNew);      => دامج الاراى
 // .join(" ");             =>  الفصلة اللى بين عناصر الاراى
+// continue;               => بيشيل الشرط اللى بيطابق الكندشان و يكمل اللوب
+// break;                  => البريك بيوقف اللوب عند كندشان معين
+//
+//
+//
+//
+//
+//
+//
+//
 
 /*
   ============
@@ -350,22 +360,30 @@ $(document).ready(function () {
 //
 
 /*
-  Loop Control
-  - Break
-  - Continue
-  - Label
+  Loop
+  - Do / While
 */
 
-let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+/*
+  Loop Challenge
+*/
 
-let colors = ["Red", "Green", "Black"];
+let myAdmins = ["Ahmed", "Osama", "Sayed", "Stop", "Samera"];
 
-mainLoop: for (let i = 0; i < products.length; i++) {
-  console.log(products[i]);
-  nestedLoop: for (let j = 0; j < colors.length; j++) {
-    console.log(`- ${colors[j]}`);
-    if (colors[j] === "Green") {
-      break mainLoop;
-    }
-  }
-}
+let myEmployees = [
+  "Amgad",
+  "Samah",
+  "Ameer",
+  "Omar",
+  "Othman",
+  "Amany",
+  "Samia",
+  "Anwar",
+];
+
+document.write(`<div>We Have X Admins</div>`);
+document.write(`<div>We Have ${myAdmins.length} Admins</div>`);
+
+let boolean = true;
+
+let array = ["facebook", "youtube", "google"];

@@ -493,6 +493,72 @@ console.log(`Item 1 : ${array}`);</textarea>
       console.log(`- ${models[k]}`);
   }
 }</textarea>
+              <p class="lead font-bold">Break, Continue, Label </p>
+              <p class="lead font-bold">البريك بيوقف اللوب عند كندشان معين</p>
+              <p class="lead">الفور ده بيجيب جميع عناصر الاراى و الاف كندشان اللى جوها فى حلة انو التقرار = البان بيوقف عمل اللوب </p>
+              <p class="lead dir-ltr">let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];</p>
+              <textarea class="form-control text-start copy mb-3" style="height: 160px">for (let i = 0; i < products.length; i++) {
+if (products[i] === "Pen") {
+  break;
+}
+}</textarea>
+              <p class="lead font-bold">الكونتينيو بيشيل الشرط اللى بيطابق الكندشان و يكمل اللوب</p>
+              <p class="lead">الفور ده بيجيب جميع عناصر الاراى و الاف كندشان اللى جوها فى حلة انو التقرار = ارقام بيشيل الارقام و يكمال التقرار </p>
+              <p class="lead dir-ltr">let products = ["Keyboard", 20, 60, "Mouse", "Pen", 80, 100, "Pad", "Monitor"];</p>
+              <textarea class="form-control text-start copy mb-3" style="height: 160px">for (let i = 0; i < products.length; i++) {
+if (typeof products[i] === "number") {
+  continue;
+}
+}</textarea>
+              <p class="lead font-bold">الليبال هو تسمية للفور </p>
+              <p class="lead">let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];</p>
+              <p class="lead">let colors = ["Red", "Green", "Black"];</p>
+              <textarea class="form-control text-start copy mb-3" style="height: 260px">mainLoop: for (let i = 0; i < products.length; i++) {
+console.log(products[i]);
+nestedLoop: for (let j = 0; j < colors.length; j++) {
+  console.log(`- ${colors[j]}`);
+  if (colors[j] === "Green") {
+    break mainLoop;
+  }
+}
+}</textarea>
+              <p class="lead font-bold">ميثال اضافه عناصر الاراى فى الصفحة </p>
+              <p class="lead">مع التحكم فى عدد المنتجات اللى يتام عرضها </p>
+              <p class="lead">عمال ناستاند لوب جوه اللوب الاساسي</p>
+              <p class="lead dir-ltr">let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor", "iPhone"];</p>
+              <p class="lead dir-ltr">let colors = ["Red", "Green", "Blue"];</p>
+              <p class="lead dir-ltr">let showCount = 5;</p>
+              <textarea class="form-control text-start copy mb-3" style="height: 300px">document.write(`<h1>Show ${showCount} Products</h1>`);
+for (let i = 0; i < showCount; i++) {
+document.write(`<div>`);
+document.write(`<h3>[${i + 1}] ${products[i]}</h3>`);
+for (let j = 0; j < colors.length; j++) {
+  document.write(`<p>${colors[j]}</p>`);
+}
+document.write(`<p>${colors.join(" | ")}</p>`);
+document.write(`</div>`);
+}</textarea>
+              <h3 class="h2">While هو طريق للتقرار الكود بى استخدام الويل</h3>
+              <p class="lead dir-ltr">let array = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor", "iPhone"];</p>
+              <p class="lead"> </p>
+              <textarea class="form-control text-start copy mb-3" style="height: 230px">let i = 0;
+while (i < array.length) {
+console.log(array[i]);
+// تقرار الايى 
+// i++;
+// فى حالة انو انت عاوز تطبع عنصر و تسيب التانى
+i += 2;
+} </textarea>
+              <p class="lead mb-3 mt-3">فى حالة انو انت عاوز توقف اللوب عند مكان معين</p>
+              <textarea class="form-control text-start copy mb-3" style="height: 230px">let i = 0;
+while (i < array.length) {
+console.log(`${i + 1} = ${array[i]}`);
+i += 1;
+if (array[i] === "Monitor") {
+  break;
+}
+} </textarea>
+              <h3 class="h2">do + while </h3>
             </div>
           </div>
         </div>
@@ -553,7 +619,7 @@ console.log(`Item 1 : ${array}`);</textarea>
     <script src="js/libs/nivo-slider/jquery.nivo.slider.pack.js"></script>
     <script src="js/libs/nivo-slider/jquery.nivo.slider.js"></script>
     <script src="js/libs/vue/vue.js"> </script>
-    <script src="js/js/js.js" async></script>
+    <script src="js/js/js.js"></script>
     <script src="js/jquery/jquery.js"></script>
     <script src="js/libs/sweetalert/sweetalert.min.js"> </script>
     <script src="http://localhost:35729/livereload.js"></script>
