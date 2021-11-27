@@ -559,13 +559,212 @@ html(lang="ar" dir="rtl" data-theme="light")
                 | }
                 |} 
               h3(class='h2') do + while 
-
-
-
-
-
-
-
+          //- Function
+          div(class='explain') 
+            h2(class='h1 text-center') Function
+            div(class='form-floating parent-code')
+              p(class='lead') الفانكشان عبارة عن بلوك اوف كود بينفز تاسك معين 
+              p(class='lead') فايدة الفانكشان انو هى بتنفز الكود كل ما تستدعيها 
+              p(class='lead font-bold') يوجد نوعين من الفانكشان 
+              p(class='lead')  1 - الفنكشان اللى موجودة فى اللغه نفسها 
+              p(class='lead')  2 - الفنكشان اللى انت بتبنيها بى نفسك
+              p(class='lead font-bold') Syntax + Basic Usage طريقة كتابة الفانكشان
+              textarea(class='form-control text-start copy mb-3' style='height: 135px')
+                |function sayHello() {
+                | console.log(`Hi Hossam`);
+                |}
+                |sayHello();
+              p(class='lead') الفانكشان مع البراميتار 
+              p(class='lead') البراميتار هو الشياء اللى هيطبق جوة الفانكشان بمعن تانى البراميتار هو المتغير اللى هيطبق علية الفانكشان زاى المثال ده هو انو انت بتكتاب اسم المتغير جوة الاستدعا بتاع الفنكشان 
+              textarea(class='form-control text-start copy mb-3' style='height: 135px')
+                |function Hello(userName) {
+                | console.log(`Hi ${userName}`);
+                |}
+                |Hello('Hossam');
+              p(class='lead font-bold') الفانكشان مع الاف كندشان
+              p(class='lead') الفانكشان دى بتشيك على السان هل هو اصغر من 20 سنة بيكون النتيجة اللى فى الاف و فى حالة انو السن اكبر من 20 سنة بتكون النتيجة اللى فى الاف 
+              textarea(class='form-control text-start copy mb-3' style='height: 310px')
+                |function sayHello(userName, age) {
+                | if (age < 20) {
+                |   console.log(`App is Not Suitable For You`);
+                | } else {
+                |   console.log(`Hello ${userName} Your Age is ${age}`);
+                | }
+                |}
+                |sayHello("Hossam", 30);
+                |sayHello("Ali", 18);
+              p(class='lead mt-3 mb-3 font-bold') استخدام البراميتار مع الاف كندشان 
+              p(class='lead') الفانكشان دى بتنشاء سلكت بكس فية السنين و كمان لو عاوز تشيل سنة من السنين 
+              textarea(class='form-control text-start copy mb-3' style='height: 600px')
+                |function createYears(Start, End, exclude) {
+                | // Create Select
+                | var select = document.createElement("select");
+                | for (let years = Start; years <= End; years++) {
+                |   if (years === exclude) {
+                |     continue;
+                |   }
+                |   // Create Option
+                |   var option = document.createElement("option");
+                |   option.setAttribute("value", years);
+                |   option.textContent = years;
+                |   select.appendChild(option);
+                |  }
+                | let output = document.getElementById("idName");
+                | output.appendChild(select);
+                |}
+                |createYears(1991, 2021, 2020);
+              p(class='lead') 
+                span(class='font-bold mx-3') return
+                | الريتارن بترجع قيمة من الفانكشان
+                span(class='lead d-block') وكمان ممكن تخزان القيمة فى متغير و تعمل فية اى اكشان تانى 
+                span(class='lead d-block') الريتارن مينفعش يكون بعدةا اى كود لانو بتوقف عمل الكود اللى بعدو بمعنى فى المثال اللى جى الاف كندشان دة بيوقف القيمة لو تساوى 15
+                p(class='')
+                textarea(class='form-control text-start copy mb-3' style='height: 150px')
+                  |function sayHello(userName) {
+                  | return `Hello ${userName}`;
+                  |}
+                  |console.log(sayHello("Hossam"));
+                p(class='lead') تسجيل القيمة فى متغير 
+                textarea(class='form-control text-start copy mb-3' style='height: 160px')
+                  |function sayHello(userName) {
+                  | return `Hello ${userName}`;
+                  |}
+                  |let result = sayHello("Hossam");
+                  |console.log(result);
+                textarea(class='form-control text-start copy mb-3' style='height: 160px')
+                  |function calc(num1, num2) {
+                  | return num1 + num2;
+                  |}
+                  |let result = calc(10, 20);
+                  |console.log(result + 100);
+                p(class='lead') المثال دة استخدامت الريتارن جوة الاف علشان توقف عمل الكود فى حالة انو اللوب اللى موجود يساوى 15
+                textarea(class='form-control text-start copy mb-3' style='height: 260px')
+                  |function generate(start, end) {
+                  | for (let i = start; i <= end; i++) {
+                  |   if (i === 15) {
+                  |     return;
+                  |   }
+                  |   console.log(i);
+                  | }
+                  |}
+                  |generate(10, 20);
+          //- Function
+          div(class='explain') 
+            h2(class='h1 text-center') Function
+            div(class='form-floating parent-code')
+              p(class='lead font-bold') Function Default Parameters
+              p(class='lead') القيمة الافتراضية للفنكشان فى حالة انو القيمة ان دفين
+              p(class='lead') يوجد 3 طرق لعمل ديفالت فاليو للبرميتار اللى جوة الفانكشان
+              p(class='lead') 1 - طريقة ال اى اس 6 و دى الاسهال 
+              p(class='lead') 2 - عن طريق اللوجكال او
+              p(class='lead') 3 - عن طريق الاف كندشان
+              textarea(class='form-control text-start copy mb-3' style='height: 360px')
+                |// 1 - By Es6 This Is Good
+                |function sayHello(username = "Unknown", age = "Unknown") {
+                | // 1 - By If
+                | // if (age === undefined) {
+                |   //   age = "Unknown";
+                | //}
+                | // 2 - By Or |
+                | // age = age || "Unknown";
+                | return `Hello ${username} Your Age Is ${age}`;
+                |}
+                |console.log(sayHello(`Hossam`, 30));
+              p(class='lead font-bold dir-ltr') Function Rest Parameters
+              p(class='lead ') الراست بارميتارز  هى انو انت مش عارف عدد البراميتار اللى هتتكتب جوة الفانكشان 
+              p(class='lead') الراست بارميتار بيخراج العناصر كا اراى 
+              p(class='lead') بتستخدام واحد بس فى الفنكشان يعنى مش المفروض انو انت تستخدام اكتار من 2 راست براميتار فى الفنكشان الوحدة 
+              p(class='lead') بتخالى الراست براميتار هو اخر براميتار و لو عنداك براميتار تانى بتضيفهم فى الاول 
+              textarea(class='form-control text-start copy mb-3' style='height: 360px')
+                |function calc(...numbers) {
+                | // console.log(Array.isArray(numbers));
+                | let result = 0;
+                | for (let i = 0; i < numbers.length; i++) {
+                |   result += numbers[i]; // result = result + numbers[i]
+                | }
+                | return `Final Result Is ${result}`;
+                |}
+                |console.log(calc(10, 20, 10, 30, 50, 30));
+                |output = Final Result Is 150
+              p(class='lead font-bold') تطبيق على الفانكشان
+              p(class='lead') المطلوب من الفنكشان: 
+                span(class='d-block') 1 - استخدام الديفالت براميتار 
+                span(class='d-block') 2 - استخدام الرست براميتارر
+                span(class='d-block') 3 - استخدام اللواب 
+                span(class='d-block') 4 - استحدام الاف كندشان 
+                span(class='d-block') *** --- طبيعة عمل الفانكشان هى انو انا اظهار اسم الشخص و السن و سعر الساعة و كمان ابشان اظهار الاسكالز ولا لا و كمان اضيف الاسكالز
+                textarea(class='form-control text-start copy mb-3' style='height: 700px')
+                  |function showInfo(us = "Un", ag = "Un", rt = 0, show = "Yes", ...sk) {
+                  | document.write(`<div class='box-card'>`);
+                  | document.write(`<h2>Welcome Mr: ${us}</h2>`);
+                  | document.write(`<p>Age: ${ag}</p>`);
+                  | document.write(`<p>Hour Rate: $${rt}</p>`);
+                  | if (show === "Yes") {
+                  |   if (sk.length > 0) {
+                  |     // document.write(`<p>Skills: ${sk.join(" | ")}</p>`);
+                  |     for (let i = 0; i < sk.length; i++) {
+                  |       document.write(`<span>${sk[i]}</span>`);
+                  |     }
+                  |   } else {
+                  |     document.write(`<p>Skills: No Skills</p>`);
+                  |   }
+                  | } else {
+                  |   document.write(`<p>Skills Is Hidden</p>`);
+                  | }
+                  | document.write(`</div>`);
+                  |}
+                  |showInfo("Hossam", 30, 20, "Yes", "Html", "CSS");
+                p(class='lead') تمرين على الفانكشان الفانكشان دى انت متعرفش اية اللى هيتكتب من البراميتار الاول هل هو نوع البينات رقام و لا استرانج ولا بولين فا بتعمال اف كندشان و كمان لوب و كمان بتستعمل الاف كندشان المختصرة
+                textarea(class='form-control text-start copy mb-3' style='height: 760px')
+                  |function showDetails(a, b, c) {
+                  | let info = [a, b, c],
+                  |   name,
+                  |   age,
+                  |   available,
+                  |   status;
+                  | for (let i = 0; i < info.length; i++) {
+                  |   typeof info[i] === "string"
+                  |     ? (name = info[i])
+                  |     : typeof info[i] === "number"
+                  |     ? (age = info[i])
+                  |     : typeof info[i] === "boolean"
+                  |     ? (available = info[i])
+                  |     : `Type Data No Known`;
+                  | }
+                  | available === true
+                  |   ? (status = "You are avaliable For Hire")
+                  |   : (status = "You are not avaliable For Hire");
+                  | console.log(`Hello ${name}, Your Age Is ${age}, ${status}`);
+                  | let one = document.getElementById("one");
+                  | one.innerHTML = `Hello ${name}, Your Age Is ${age}, ${status}`;
+                  |showDetails("Hossam", 30, true);
+                  |showDetails(30, "Hossam", true);
+                  |showDetails(true, 30, "Hossam");
+                  |showDetails(false, "Hossam", 30);
+                div(class='lead dir-ltr' id='one')
+                p(class='lead font-bold') Anonymous Function
+                span(class='') الانيونيومس فانكشان هى الفانكشان اللى من غير اسم | هى الفانكشان اللى انت بتشغلها فى حالة حصال حدث فى الصفحة او عن طريق اكشان بيتام فى عنصر 
+                  | بتشغال الفانكشان بى اسم المتخير اللى انت مخلية يساوى الفانكشان
+                p(class='lead font-bold') الحالت اللى انت بتستخدم فيها الامونيمس فانكشان 
+                span(class='d-block') 1 - الفانكشان اللى انت بتستخدمها لاكشان معين فى الصفحة و مش هتستخدمها تانى 
+                span(class='d-block') 2 - السات تايم 
+                button(class='' id='show') show
+                textarea(class='form-control text-start copy mb-3' style='height: 160px')
+                  |let calculator = function (num1, num2) {
+                  |return num1 + num2;
+                  |}
+                  |console.log(calculator(10, 20));
+                p(class='lead dir-ltr') Function With Event
+                textarea(class='form-control text-start copy mb-3' style='height: 160px')
+                  |function sayHello() {
+                  | console.log("Hello Hossam");
+                  |}
+                  |document.getElementById("show").onclick = sayHello;
+                p(class='lead dir-ltr') SetTimeout With Function 
+                textarea(class='form-control text-start copy mb-3' style='height: 160px')
+                  |setTimeout(function () {
+                  | console.log("Good");
+                  |}, 2000};
 
 
 

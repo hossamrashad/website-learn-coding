@@ -360,30 +360,26 @@ $(document).ready(function () {
 //
 
 /*
-  Loop
-  - Do / While
+  Function
+  - Anonymous Function
+  - Calling Named Function vs Anonymous Function
+  - Argument To Other Function
+  - Task Without Name
+  - SetTimeout
 */
 
-/*
-  Loop Challenge
-*/
+let calculator = function (num1, num2) {
+  return num1 + num2;
+};
 
-let myAdmins = ["Ahmed", "Osama", "Sayed", "Stop", "Samera"];
+console.log(calculator(10, 20));
 
-let myEmployees = [
-  "Amgad",
-  "Samah",
-  "Ameer",
-  "Omar",
-  "Othman",
-  "Amany",
-  "Samia",
-  "Anwar",
-];
+function sayHello() {
+  console.log("Hello Osama");
+}
 
-document.write(`<div>We Have X Admins</div>`);
-document.write(`<div>We Have ${myAdmins.length} Admins</div>`);
+document.getElementById("show").onclick = sayHello;
 
-let boolean = true;
-
-let array = ["facebook", "youtube", "google"];
+setTimeout(function () {
+  console.log("Good");
+}, 2000);
